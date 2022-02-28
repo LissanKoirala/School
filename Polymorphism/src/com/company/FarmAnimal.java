@@ -10,7 +10,7 @@ public class FarmAnimal {
     }
 
     public FarmAnimal() {
-        long time = System.currentTimeMillis(); // returns current time in milli seconds
+        long time = System.currentTimeMillis(); // returns current time in milliseconds
         this.serialNumber = (int) time;
         this.name = "NULL"; // default unspecified name
     }

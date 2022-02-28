@@ -1,0 +1,33 @@
+
+polymorphism in the user class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+polymorphism in the stock class
+which than branches off to different sectors/categories which sets different parameters
+then the sector themselves branch into individual stocks which can override the methods according to
+them specifically.
