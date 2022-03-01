@@ -6,6 +6,10 @@ public class Cow extends FarmAnimal {
         super(name);
     }
 
+    public Cow(){
+        super();
+    }
+
     @Override // override decorator
     public String noise() { // overrides method noise from FarmAnimal
         return "moo";

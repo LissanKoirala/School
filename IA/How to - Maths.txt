@@ -1,0 +1,29 @@
+The Weighted Mean
+
+In some cases, you might want a number to have more weight. In that case, you’ll want to find the weighted mean.
+To find the weighted mean:
+
+Multiply the numbers in your data set by the weights.
+Add the results up.
+
+For that set of number above with equal weights (1/5 for each number), the math to find the weighted mean would be:
+1(*1/5) + 3(*1/5) + 5(*1/5) + 7(*1/5) + 10(*1/5) = 5.2.
+
+Example problem: You take three 100-point exams in your statistics class and score 80, 80 and 95.
+The last exam is much easier than the first two, so your professor has given it less weight.
+The weights for the three exams are:
+
+Exam 1: 40 % of your grade. (Note: 40% as a decimal is .4.)
+Exam 2: 40 % of your grade.
+Exam 3: 20 % of your grade.
+What is your final weighted average for the class?
+
+Multiply the numbers in your data set by the weights:
+.4(80) = 32
+.4(80) = 32
+.2(95) = 19
+Add the numbers up. 32 + 32 + 19 = 83.
+
+
+-------------------------------------------------------------------------------------------------------------------
+

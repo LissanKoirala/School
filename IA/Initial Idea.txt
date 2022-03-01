@@ -8,7 +8,7 @@ then create a model that weights in certain factor more over another for categor
 if one stock is like in tech but hyped up it will be calculated two times, both results will be shown
 
 combine the twitter analysis... news (got some apis in safari), etc...
-also will get data from multiple apis... some of which will be mine own.
+also, will get data from multiple apis... some of which will be mine own.
 then the app will also have a api for itself which can be called, so not just an gui interface, but
 also an option to interact with the api.
 
