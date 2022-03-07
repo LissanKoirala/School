@@ -1,7 +1,7 @@
 package com.company;
 
 public class LinkedList {
-    private Node head;
+    public Node head;
 
     public LinkedList() {
         head = null;
@@ -12,7 +12,7 @@ public class LinkedList {
         if (head == null) {
             head = n;
         } else {
-            // walk the list to the end
+            // walk the the list to the end
             Node current = head;
             Node previous = null;
             while (current != null) {
@@ -21,5 +21,6 @@ public class LinkedList {
             }
             previous.setNext(n);
         }
+
     }
 }
