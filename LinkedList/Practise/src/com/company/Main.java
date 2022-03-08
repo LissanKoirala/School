@@ -12,12 +12,12 @@ class Main {
         n1.display();
 
         // create a linked list
-        LinkedList myList = new LinkedList();
-        myList.addItem(12);
-        myList.addItem(6);
-        myList.addItem(67);
+        int[] data = {1,2,3,4,5};
+        LinkedList myList = new LinkedList(data);
         myList.head.display();
         myList.head.getNext().display();
         myList.head.getNext().getNext().display();
+        myList.head.getNext().getNext().getNext().display();
+        myList.head.getNext().getNext().getNext().getNext().display();
     }
 }
