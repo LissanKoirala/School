@@ -11,7 +11,7 @@ class Main {
         n2.setNext(n3);
 
         // create a linked list
-        int[] data = {1,2,3,4,5};
+        int[] data = {1,2,3,3,4,5};
         LinkedList myList = new LinkedList(data);
 
         System.out.println("Using display method");
@@ -19,5 +19,13 @@ class Main {
         System.out.println(myList.get(1));
         myList.set(1,5);
         System.out.println(myList.get(1));
+        System.out.println("size : " + myList.size());
+        System.out.println(myList.getLast());
+        System.out.println(myList.getFirst());
+        System.out.println(myList.contains(1));
+        System.out.println(myList.contains(0));
+        System.out.println(myList.indexOf(3));
+        myList.clear();
+        System.out.println(myList.size());
     }
 }

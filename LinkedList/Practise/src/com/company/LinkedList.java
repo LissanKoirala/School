@@ -17,6 +17,21 @@ public class LinkedList {
         }
     }
 
+    public void clear(){
+        Node current = head;
+        head.setNext(null);
+    }
+
+    public int size(){
+        Node current = head;
+        int counter = 0;
+        while (current != null) {
+            current = current.getNext();
+            counter++;
+        }
+        return counter;
+    }
+
     public void addItem(int v) {
         Node n = new Node(v);
         if (head == null) {
@@ -35,39 +50,74 @@ public class LinkedList {
 
     public int get(int index){
         Node current = head;
-        Node previous = null;
         int counter = 0;
         while (current != null) {
             if(counter == index){
                 return current.getValue();
             }
-            previous = current;
             current = current.getNext();
             counter++;
         }
         return -1;
     }
 
+    public int getFirst(){
+        return get(0);
+    }
+
+    public int getLast(){
+        int size = size();
+        return get(size-1);
+    }
+
     public void set(int index, int n){
         Node current = head;
-        Node previous = null;
         int counter = 0;
         while (current != null) {
             if(counter == index){
                 current.setValue(n);
             }
-            previous = current;
             current = current.getNext();
             counter++;
         }
     }
 
+    public boolean contains(int value){
+
+//        short form but thought not the way you would want us to do.
+//        int result = get(value);
+//        if(result != -1){
+//            return true;
+//        }
+//        return false;
+
+        Node current = head;
+        while (current != null) {
+            if(value == current.getValue()){
+                return true;
+            }
+            current = current.getNext();
+        }
+        return false;
+    }
+
+    public int indexOf(int value){
+        Node current = head;
+        int counter = 0;
+        while (current != null) {
+            if(current.getValue() == value){
+                return counter;
+            }
+            current = current.getNext();
+            counter++;
+        }
+        return -1;
+    }
+
     public void display(){
         Node current = head;
-        Node previous = null;
         while (current != null) {
             System.out.println(current.getValue()); // displays the current node value
-            previous = current;
             current = current.getNext();
         }
     }
