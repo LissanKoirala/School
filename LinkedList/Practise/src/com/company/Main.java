@@ -9,15 +9,15 @@ class Main {
         Node n3 = new Node(68);
         n1.setNext(n2);
         n2.setNext(n3);
-        n1.display();
 
         // create a linked list
         int[] data = {1,2,3,4,5};
         LinkedList myList = new LinkedList(data);
-        myList.head.display();
-        myList.head.getNext().display();
-        myList.head.getNext().getNext().display();
-        myList.head.getNext().getNext().getNext().display();
-        myList.head.getNext().getNext().getNext().getNext().display();
+
+        System.out.println("Using display method");
+        myList.display();
+        System.out.println(myList.get(1));
+        myList.set(1,5);
+        System.out.println(myList.get(1));
     }
 }

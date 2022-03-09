@@ -22,7 +22,7 @@ public class LinkedList {
         if (head == null) {
             head = n;
         } else {
-            // walk the the list to the end
+            // walk the list to the end
             Node current = head;
             Node previous = null;
             while (current != null) {
@@ -33,17 +33,42 @@ public class LinkedList {
         }
     }
 
-    public void display(){
-        // TODO : Go through all the nodes and display their value
+    public int get(int index){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while (current != null) {
+            if(counter == index){
+                return current.getValue();
+            }
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }
+        return -1;
+    }
 
+    public void set(int index, int n){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while (current != null) {
+            if(counter == index){
+                current.setValue(n);
+            }
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }
+    }
+
+    public void display(){
         Node current = head;
         Node previous = null;
         while (current != null) {
+            System.out.println(current.getValue()); // displays the current node value
             previous = current;
             current = current.getNext();
-            // System.out.println(Current....);
         }
-
     }
-
 }

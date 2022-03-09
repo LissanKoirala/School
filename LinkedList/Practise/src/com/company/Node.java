@@ -17,7 +17,11 @@ public class Node {
         return next;
     }
 
-    public void display() {
-        System.out.println(value);
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int n){
+        this.value = n;
     }
 }
