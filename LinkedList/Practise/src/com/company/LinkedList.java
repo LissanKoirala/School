@@ -22,6 +22,27 @@ public class LinkedList {
         head.setNext(null);
     }
 
+    public void remove(){
+        Node currenthead = head;
+        Node secondnode = currenthead.getNext();
+        head = secondnode;
+    }
+
+    public void remove(int index){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while (current != null) {
+            if(counter == index){
+                previous.setNext(current.getNext());
+                break;
+            }
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }
+    }
+
     public int size(){
         Node current = head;
         int counter = 0;
@@ -45,6 +66,30 @@ public class LinkedList {
                 current = current.getNext();
             }
             previous.setNext(n);
+        }
+    }
+
+    public void addFirst(int value){
+        Node currenthead = head;
+        Node newhead = new Node(value);
+        newhead.setNext(currenthead);
+        head = newhead;
+    }
+
+    public void add(int index, int value){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while (current != null) {
+            if(counter == index){
+                Node newnode = new Node(value);
+                previous.setNext(newnode);
+                newnode.setNext(current);
+                break;
+            }
+            previous = current;
+            current = current.getNext();
+            counter++;
         }
     }
 

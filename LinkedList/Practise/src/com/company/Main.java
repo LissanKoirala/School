@@ -25,7 +25,19 @@ class Main {
         System.out.println(myList.contains(1));
         System.out.println(myList.contains(0));
         System.out.println(myList.indexOf(3));
-        myList.clear();
-        System.out.println(myList.size());
+        System.out.println("---");
+        myList.display();
+        System.out.println("Setting new value");
+        myList.addFirst(0);
+        myList.display();
+        System.out.println("---");
+        myList.remove();
+        myList.display();
+        System.out.println("---");
+        myList.remove(1);
+        myList.display();
+        System.out.println("---");
+        myList.add(3,5);
+        myList.display();
     }
 }
