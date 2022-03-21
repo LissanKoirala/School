@@ -2,13 +2,16 @@ package com.company;
 
 public class LinkedList {
     public Node head;
+    private Node cursor;
 
     public LinkedList() {
         head = null;
+        cursor = head;
     }
 
     public LinkedList(int[] values) {
         head = new Node(values[0]);
+        cursor = head;
         Node n = head;
         for (int i=1; i<values.length; i++) {
             Node adding = new Node(values[i]);
@@ -57,6 +60,7 @@ public class LinkedList {
         Node n = new Node(v);
         if (head == null) {
             head = n;
+            cursor = head;
         } else {
             // walk the list to the end
             Node current = head;
@@ -165,5 +169,28 @@ public class LinkedList {
             System.out.println(current.getValue()); // displays the current node value
             current = current.getNext();
         }
+    }
+
+
+    // Stack code
+
+    public int getNext() {
+        int v = cursor.getValue();
+        cursor = cursor.getNext();
+        return v;
+    }
+
+    public void resetNext() {
+        cursor = head;
+    }
+
+    public boolean hasNext() {
+        // returns true if there is a valid node at cursor
+        return (cursor != null);
+    }
+
+    public boolean isEmpty() {
+        // return true if the list has no elements
+        return (head == null);
     }
 }

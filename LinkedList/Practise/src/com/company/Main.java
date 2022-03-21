@@ -39,5 +39,12 @@ class Main {
         System.out.println("---");
         myList.add(3,5);
         myList.display();
+
+        System.out.println("--------------");
+        // Stack Code
+        Stack stack = new Stack();
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.size());
+
     }
 }
