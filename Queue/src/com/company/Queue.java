@@ -19,15 +19,15 @@ public class Queue extends LinkedList{
 
     public void en_Queue(int n) { // adds n to the rear of the queue
         Node new_node = new Node(n);
-        last.setNext(new_node);
-        last = new_node;
+        last.setNext(new_node); // adding new node to the last
+        last = new_node; // changing the last pointer to the new node
     }
 
     public int de_Queue() { // removes the item at the front of the queue
         int value = front.getValue(); // saves toe value to return it
         front = front.getNext(); // sets the front to the next in the queue
         remove(); // removes the front Node;
-        return value;
+        return value; // no use of this, but was asked in the exercise
     }
 
     public boolean isEmpty(){
