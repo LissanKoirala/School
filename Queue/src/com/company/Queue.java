@@ -30,4 +30,10 @@ public class Queue extends LinkedList{
         return value;
     }
 
+    public boolean isEmpty(){
+        return size() == 0;
+    }
+
+    // Size is already implemented in LinkedList and this Queue inherits from it...
+
 }
