@@ -1,0 +1,15 @@
+External APIs
+
+Yahoo Finance for getting historical data:
+query url
+
+https://query1.finance.yahoo.com/v7/finance/download/TSLA?period1=1269907200&period2=1648598400&interval=1d&events=history&includeAdjustedClose=true
+https://query1.finance.yahoo.com/v7/finance/download/{stock}?period1={start}&period2={end}&interval={interval}&events=history&includeAdjustedClose=true
+
+1269907200 unix time --> Tue Mar 30 2010 00:00:00 GMT+0000
+# turn that day's 00:00:00 time to unix
+
+
+
+OpenAI GPT-3 Model
+I might use it later if to do the sentiment analysis and more...

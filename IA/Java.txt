@@ -1,0 +1,7 @@
+- I will have a parent class with basic things a stock requires, ticker, name...
+- Then each different category will be a child class with its own different features, like the way it behaves,
+it will have different parameters.
+- The historical data will be pulled from the yahoo finance's api and be processed
+- the now usable data format of the historical data will be processed according to each stock's parameters
+
+- It will work on past data for now, then the improvement factor will for it to work with live data
