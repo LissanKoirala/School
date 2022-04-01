@@ -10,6 +10,12 @@ https://query1.finance.yahoo.com/v7/finance/download/{stock}?period1={start}&per
 # turn that day's 00:00:00 time to unix
 
 
+Alpaca Historical Data API Endpoint
+
+https://alpaca.markets/docs/api-references/market-data-api/news-data/historical/
+
+
+
 
 OpenAI GPT-3 Model
 I might use it later if to do the sentiment analysis and more...

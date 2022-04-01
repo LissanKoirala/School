@@ -1,0 +1,4 @@
+Now make a function to parse the csv, potentially creating a arraylist or just implementing my own
+data type to store the historical price data
+also figure out a way to track the progress and mainly how to structure the code in a clean way as there's
+going to be a bunch of things that this can do.
