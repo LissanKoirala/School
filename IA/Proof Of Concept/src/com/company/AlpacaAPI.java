@@ -19,7 +19,6 @@ public class AlpacaAPI {
 
     public JsonArray clock() throws Exception {
         String request_url = base_url+"/v2/clock";
-        // TODO : make the numbers of cookies dynamic, pass it as a array or something!
         return make_request(request_url);
     }
 
@@ -28,13 +27,11 @@ public class AlpacaAPI {
         return make_request(request_url);
     }
 
-    // TODO: breaks string to json, has []
     public JsonArray orders() throws Exception {
         String request_url = base_url+"/v2/orders";
         return make_request(request_url);
     }
 
-    // TODO: breaks string to json, has []
     public JsonArray positions() throws Exception {
         String request_url = base_url+"/v2/positions";
         return make_request(request_url);

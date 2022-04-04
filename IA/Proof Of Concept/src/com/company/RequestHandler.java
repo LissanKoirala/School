@@ -56,7 +56,7 @@ public class RequestHandler {
         return jsonify(data);
     }
 
-    // Accepts cookies for alpaca specifically for now, make it cookie dynamic
+    // TODO : make the numbers of cookies dynamic, pass it as a array or something!
     public JsonArray get(String uri, String header_name_1, String header_value_1, String header_name_2, String header_value_2) throws Exception {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
