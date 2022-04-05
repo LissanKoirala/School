@@ -1,14 +1,12 @@
-package com.company;
-
-import java.net.http.HttpRequest;
-import java.net.http.HttpClient;
-import java.net.http.HttpResponse;
-import java.net.URI;
-import java.util.Arrays;
+package com.api;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 
 public class RequestHandler {
@@ -16,7 +14,7 @@ public class RequestHandler {
     public RequestHandler(){
     }
 
-    // Used JsonArray to meke all use the same type, cause the api sometimes returns JsonObject and sometimes JsonArray
+    // Used JsonArray to meke all use the same type, cause the stock.com.api sometimes returns JsonObject and sometimes JsonArray
     // So this, converts the JsonObject to JsonArray
     public JsonArray jsonify(String data){
         try {

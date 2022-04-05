@@ -1,8 +1,8 @@
 package com.company;
 
-import com.google.gson.JsonArray;
-
-import java.util.ArrayList;
+import com.api.AlpacaAPI;
+import com.stock.Stock;
+import com.utils.SentimentAnalysis;
 
 public class Main {
 
@@ -12,7 +12,7 @@ public class Main {
 //        String historical_data = YFHandler.get_historical("TSLA");
 //        System.out.println(historical_data);
 //
-//        AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+        AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
 //        System.out.println(AlpacaAPIHandler.clock());
 //        System.out.println(AlpacaAPIHandler.account());
 //        System.out.println(AlpacaAPIHandler.orders());
@@ -26,7 +26,8 @@ public class Main {
 //
 //        System.out.println(AlpacaAPIHandler.portfolio_history());
 //        //System.out.println(AlpacaAPIHandler.stock_trades("TSLA"));
-//        System.out.println(AlpacaAPIHandler.get_news());
+        System.out.println(AlpacaAPIHandler.get_news());
+        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
 //
 //        Math Math = new Math();
 //        ArrayList<Integer> numbs = new ArrayList<>();
@@ -39,8 +40,6 @@ public class Main {
 //        System.out.println(average);
 
         Stock stock = new Stock("TSLA");
-
-
 
     }
 }

@@ -1,7 +1,9 @@
-package com.company;
+package com.stock;
 
-import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
+import com.api.AlpacaAPI;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class Stock {
     public String ticker;

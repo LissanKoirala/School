@@ -1,4 +1,4 @@
-package com.company;
+package com.api;
 
 import com.google.gson.JsonArray;
 
@@ -11,8 +11,8 @@ public class AlpacaAPI {
     public AlpacaAPI(){
     }
 
-    // makes the final request with the headers necessary like the api keys, etc
-    // This is useful as I don't have to repeat it in every method, like specifying the api keys etc...
+    // makes the final request with the headers necessary like the stock.com.api keys, etc
+    // This is useful as I don't have to repeat it in every method, like specifying the stock.com.api keys etc...
     public JsonArray make_request(String request_url) throws Exception {
         return ReqHandler.get(request_url, "APCA-API-KEY-ID", api_key_id, "APCA-API-SECRET-KEY", api_secret_key);
     }
@@ -84,6 +84,12 @@ public class AlpacaAPI {
 
     public JsonArray get_news() throws Exception {
         String request_url = "https://data.alpaca.markets/v1beta1/news";
+        return make_request(request_url);
+    }
+
+    // Can add multiples if separated with +
+    public JsonArray get_news(String tickers) throws Exception {
+        String request_url = "https://data.alpaca.markets/v1beta1/news?symbols="+tickers;
         return make_request(request_url);
     }
 

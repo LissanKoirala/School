@@ -1,11 +1,6 @@
-package com.company;
+package com.utils;
 
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.IOException;
-
+import java.io.*;
 import java.util.ArrayList;
 
 public class FileHandler {
