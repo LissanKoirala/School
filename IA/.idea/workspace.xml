@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e083e2c7-82de-4202-90df-51dc51ce382e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Progress.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/Proof Of Concept.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/src/com/company/AlpacaAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/src/com/company/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/src/com/company/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Proof Of Concept/src/com/company/YahooFinanceApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/External.txt" beforeDir="false" afterPath="$PROJECT_DIR$/External.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/Starter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/src/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Starter/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Proof Of Concept" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,5 +54,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
