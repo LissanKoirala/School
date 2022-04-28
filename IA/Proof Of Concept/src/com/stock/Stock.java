@@ -1,6 +1,7 @@
 package com.stock;
 
 import com.api.AlpacaAPI;
+import com.api.YahooFinanceApi;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -19,7 +20,9 @@ public class Stock {
     public JsonArray historical_data;
 
     private AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+    private YahooFinanceApi YFApiHandler = new YahooFinanceApi();
 
+    // instantiate the stock with getting useful data automatically
     public Stock(String ticker) throws Exception {
         JsonArray data = AlpacaAPIHandler.ticker_info(ticker);
 
@@ -46,14 +49,12 @@ public class Stock {
             } else {
                 System.out.printf(message);
             }
-
         }
-
-
     }
 
-    public void getHistorical_data() {
+    public String getHistorical_data() throws Exception {
         // this.historical_data =
+        return YFApiHandler.get_historical(ticker); // just returns the url
     }
 
 }
