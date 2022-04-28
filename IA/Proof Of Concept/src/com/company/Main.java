@@ -1,6 +1,7 @@
 package com.company;
 
 import com.api.AlpacaAPI;
+import com.gui.GUICaller;
 import com.stock.Stock;
 import com.utils.SentimentAnalysis;
 
@@ -40,6 +41,9 @@ public class Main {
 //        System.out.println(average);
 
         Stock stock = new Stock("TSLA");
+
+        GUICaller GUICaller = new GUICaller();
+        GUICaller.StockChooser();
 
     }
 }

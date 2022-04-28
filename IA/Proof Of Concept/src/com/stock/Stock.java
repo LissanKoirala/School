@@ -12,6 +12,8 @@ public class Stock {
     public String exchange;
     public String type;
 
+    public JsonObject info;
+
     // points to a class of price data and news data, they will be created on the constructor of the class
     // data will be parsed and stored in a way that can be processed later
     public String[] price_data;
@@ -28,7 +30,7 @@ public class Stock {
 
         String res = data.get(0).toString();
         JsonObject response = new JsonParser().parse(res).getAsJsonObject();
-        System.out.println(response);
+        info = response;
 
         try {
             this.ticker = response.get("symbol").getAsString();

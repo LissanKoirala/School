@@ -4,12 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6222c89d-8d2f-4b77-8660-163a23e84fde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gui/StockChooser.java" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Restructured the Classes into packages">
+      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/api/RequestHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Math.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/PersistentArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/SentimentAnalysis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Starter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/StockChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockChooser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Starter/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/project-template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/project-template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/Starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/Starter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Starter/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +52,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="28NhigIy1YouBiZxSda1H0axuZs" />
-  <component name="ProjectLevelVcsManager">
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="27FwKmfbgORDGs9TdNQMLQErPQs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -36,15 +70,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Starter" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="trusted.hosts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company" />
+      <recent name="com.utils" />
+      <recent name="com.stock" />
+      <recent name="com" />
+      <recent name="stock" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Proof Of Concept" />
       <method v="2">
@@ -55,12 +104,34 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6222c89d-8d2f-4b77-8660-163a23e84fde" name="Changes" comment="" />
-      <created>1651063079624</created>
+      <changelist id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="" />
+      <created>1648929083891</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1651063079624</updated>
+      <updated>1648929083891</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added a RequestHandler Class to handle GET request, Yahoo Finance Class for historical data, and some many other methods">
+      <created>1649016027914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649016027914</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Improvements and functionality across all the Classes">
+      <created>1649072912943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649072912943</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Restructured the Classes into packages">
+      <created>1649192269990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649192269990</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -77,5 +148,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added a RequestHandler Class to handle GET request, Yahoo Finance Class for historical data, and some many other methods" />
+    <MESSAGE value="Improvements and functionality across all the Classes" />
+    <MESSAGE value="Restructured the Classes into packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructured the Classes into packages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.google.gson.JsonSyntaxException" package="com.google.gson" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -25,20 +25,25 @@ public class StockChooser extends JPanel {
         textfield = new JTextField();
         textfield.setBounds(120,0, 100, 30);
 
+
+        label = new JLabel("");
+        label.setBounds(0,50, 1000000, 40);
+
+
         add(button);
         add(textfield);
+        add(label);
 
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
-                String textFieldValue = textfield.getText();
+                String textFieldValue = textfield.getText().toUpperCase();
                 System.out.println(textFieldValue);
 
                 try {
                     Stock stock = new Stock(textFieldValue);
                     String historical_data = stock.getHistorical_data();
 
-                    label = new JLabel(historical_data);
-                    label.setBounds(0,50, 100, 40);
+                    label.setText(stock.info + "\n" + historical_data);
 
 
                 } catch (Exception e) {
