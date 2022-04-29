@@ -2,6 +2,7 @@ package com.utils;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class FileHandler {
 
@@ -18,6 +19,7 @@ public class FileHandler {
                 line = br.readLine();
             }
         }
+
         catch (IOException e) { // Handling io exceptions
             System.out.println("Error occurred.");
             e.printStackTrace();
@@ -43,5 +45,24 @@ public class FileHandler {
         ArrayList<String> data = readFromFile(fileName);
         return data.get(lineNumber-1); // Line 2, is index 1
     }
+
+
+    // finding the number of rows in the file, lines
+    public int getRowNumber(String fileName){
+        int row = 0;
+
+        try{
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+            while(bufferedReader.readLine() != null){ // until, the line is empty
+                row++;
+            }
+
+        } catch (Exception e){
+            System.out.println(e);
+        }
+
+        return row;
+    }
+
 
 }

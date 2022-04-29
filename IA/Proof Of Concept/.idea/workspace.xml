@@ -4,38 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Restructured the Classes into packages">
-      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/RequestHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Math.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/PersistentArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/SentimentAnalysis.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Starter/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="StockChooser GUI works">
+      <change afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proof Of Concept.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Source Code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/StockChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockChooser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/description.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/project-template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/project-template.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/Starter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/Starter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../GUI/Starter/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Starter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -95,7 +78,20 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Proof Of Concept" />
+      <module name="Source Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Source Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Source Code" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,8 +127,18 @@
       <option name="project" value="LOCAL" />
       <updated>1649192269990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="StockChooser GUI works">
+      <created>1651177516687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651177516687</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -151,7 +157,9 @@
     <MESSAGE value="Added a RequestHandler Class to handle GET request, Yahoo Finance Class for historical data, and some many other methods" />
     <MESSAGE value="Improvements and functionality across all the Classes" />
     <MESSAGE value="Restructured the Classes into packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructured the Classes into packages" />
+    <MESSAGE value="StockChooser works" />
+    <MESSAGE value="StockChooser GUI works" />
+    <option name="LAST_COMMIT_MESSAGE" value="StockChooser GUI works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

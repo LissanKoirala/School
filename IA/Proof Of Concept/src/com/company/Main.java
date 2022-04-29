@@ -1,9 +1,15 @@
 package com.company;
 
 import com.api.AlpacaAPI;
+import com.api.YahooFinanceApi;
 import com.gui.GUICaller;
+import com.stock.HistoricalData;
 import com.stock.Stock;
+import com.utils.FileHandler;
 import com.utils.SentimentAnalysis;
+
+import java.io.File;
+import java.util.Arrays;
 
 public class Main {
 
@@ -11,8 +17,11 @@ public class Main {
 
 //        YahooFinanceApi YFHandler = new YahooFinanceApi();
 //        String historical_data = YFHandler.get_historical("TSLA");
-//        System.out.println(historical_data);
 //
+//        FileHandler FileHandler = new FileHandler();
+//        FileHandler.writeToFile("TSLA.csv", historical_data, false);
+
+
         AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
 //        System.out.println(AlpacaAPIHandler.clock());
 //        System.out.println(AlpacaAPIHandler.account());
@@ -27,8 +36,8 @@ public class Main {
 //
 //        System.out.println(AlpacaAPIHandler.portfolio_history());
 //        //System.out.println(AlpacaAPIHandler.stock_trades("TSLA"));
-        System.out.println(AlpacaAPIHandler.get_news());
-        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
+//        System.out.println(AlpacaAPIHandler.get_news());
+//        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
 //
 //        Math Math = new Math();
 //        ArrayList<Integer> numbs = new ArrayList<>();
@@ -41,9 +50,11 @@ public class Main {
 //        System.out.println(average);
 
         Stock stock = new Stock("TSLA");
+        System.out.println(Arrays.deepToString(stock.historical_data));
 
-        GUICaller GUICaller = new GUICaller();
-        GUICaller.StockChooser();
+//        GUICaller GUICaller = new GUICaller();
+//        GUICaller.StockChooser();
+
 
     }
 }

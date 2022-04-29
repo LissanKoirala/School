@@ -1,7 +1,6 @@
 package com.stock;
 
 import com.api.AlpacaAPI;
-import com.api.YahooFinanceApi;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -19,10 +18,12 @@ public class Stock {
     public String[] price_data;
     public String[] news_data;
 
-    public JsonArray historical_data;
+    public Float[][] historical_data;
 
     private AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
-    private YahooFinanceApi YFApiHandler = new YahooFinanceApi();
+    private HistoricalData HistoricalData = new HistoricalData();
+
+
 
     // instantiate the stock with getting useful data automatically
     public Stock(String ticker) throws Exception {
@@ -37,26 +38,29 @@ public class Stock {
             this.name = response.get("name").getAsString();
             this.exchange = response.get("exchange").getAsString();
             this.type = response.get("class").getAsString();
+            getHistorical_data();
+
 
         } catch (Exception e){ // if stock doesn't exists
 
             System.out.println(e);
 
             String error_message = "asset not found for " + ticker;
-
             String message = response.get("message").getAsString();
 
             if (error_message.equals(message)) {
                 System.out.println("Stock Not Found");
             } else {
-                System.out.printf(message);
+                System.out.print(message);
             }
         }
+
     }
 
-    public String getHistorical_data() throws Exception {
-        // this.historical_data =
-        return YFApiHandler.get_historical(ticker); // just returns the url
+    // gets and updates the historical data, can also be accessed directly by the shared variable
+    public Float[][] getHistorical_data() throws Exception {
+        this.historical_data = HistoricalData.get(ticker);
+        return historical_data;
     }
 
 }

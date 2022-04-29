@@ -1,8 +1,64 @@
 package com.utils;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
 public class Utils {
     public Utils(){
     }
+
+    // convert to multi Dimension array
+    public String[][] convertToMultiDArray(String fileName, int column){ // only needs columns cause can find row with preious methods
+        FileHandler FileHandler = new FileHandler();
+
+        int row = 0;
+        String[][] array = new String[FileHandler.getRowNumber(fileName)][column];
+
+        try{
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+            String line = null;
+
+            while((line=bufferedReader.readLine()) != null){
+                StringTokenizer tokenizer = new StringTokenizer(line, ",");
+                while(tokenizer.hasMoreTokens()){
+                    for(int col = 0; col<column; col++){
+                        array[row][col] = tokenizer.nextToken();
+                    }
+                }
+                row++;
+            }
+
+        } catch (Exception e){
+            System.out.println(e);
+        }
+
+        return array;
+    }
+
+
+
+    public Float[][] convertStringArrayToFloatArray(String[][] array){ // returns a float arraylist
+
+        Float[][] floatArray = new Float[array.length][array[0].length]; // figuring out how big the original array was
+
+        for (int x = 0; x < array.length; x++){
+            for (int y = 0; y < array[x].length; y++){
+                if (y == 0) { // if it's a date, convert to unix timestamp...
+                    floatArray[x][y] = new Float(0); // TODO: change this to actual time
+                } else {
+                    floatArray[x][y] = new Float(array[x][y]);
+                }
+            }
+        }
+
+        return floatArray;
+    }
+
+
+
 
     // Bubble sort to sort either in ascending or descending
     public int[] sortArray(int[] array, boolean ascending){
