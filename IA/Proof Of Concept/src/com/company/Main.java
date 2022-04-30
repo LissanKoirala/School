@@ -1,5 +1,6 @@
 package com.company;
 
+import com.analyzer.Analyze;
 import com.api.AlpacaAPI;
 import com.api.YahooFinanceApi;
 import com.gui.GUICaller;
@@ -9,6 +10,7 @@ import com.utils.FileHandler;
 import com.utils.SentimentAnalysis;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -49,8 +51,17 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Stock stock = new Stock("TSLA");
-        System.out.println(Arrays.deepToString(stock.historical_data));
+        Stock stock = new Stock("AAPL");
+        //System.out.println(Arrays.deepToString(stock.historical_data));
+
+        Analyze Analyzer = new Analyze();
+        ArrayList<Float> sma_data = Analyzer.sma(stock, 50);
+        Float sma_1 = sma_data.get(sma_data.size()-1);
+        System.out.println(sma_1);
+
+        ArrayList<Float> sma_data_2 = Analyzer.sma(stock, 180);
+        Float sma_2 = sma_data_2.get(sma_data_2.size()-1);
+        System.out.println(sma_2);
 
 //        GUICaller GUICaller = new GUICaller();
 //        GUICaller.StockChooser();

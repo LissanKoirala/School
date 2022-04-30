@@ -18,4 +18,16 @@ public class Math {
         return (sum / numbers.size());
     }
 
+    public float averageFromFloat(ArrayList<Float> numbers) {
+        float sum = 0;
+
+        //compute sum
+        for(Float num:numbers) {
+            sum += num;
+        }
+
+        //compute average
+        return (sum / numbers.size());
+    }
+
 }
