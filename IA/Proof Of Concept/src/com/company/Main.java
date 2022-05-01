@@ -1,6 +1,7 @@
 package com.company;
 
 import com.analyzer.Analyze;
+import com.analyzer.strategies.SMACrossover;
 import com.api.AlpacaAPI;
 import com.api.YahooFinanceApi;
 import com.gui.GUICaller;
@@ -51,17 +52,13 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Stock stock = new Stock("AAPL");
+        Stock stock = new Stock("EBAY");
         //System.out.println(Arrays.deepToString(stock.historical_data));
 
         Analyze Analyzer = new Analyze();
-        ArrayList<Float> sma_data = Analyzer.sma(stock, 50);
-        Float sma_1 = sma_data.get(sma_data.size()-1);
-        System.out.println(sma_1);
 
-        ArrayList<Float> sma_data_2 = Analyzer.sma(stock, 180);
-        Float sma_2 = sma_data_2.get(sma_data_2.size()-1);
-        System.out.println(sma_2);
+        SMACrossover smaCrossover = new SMACrossover();
+        System.out.println(smaCrossover.check(stock, 50, 180)); // returns true or false, over or under.
 
 //        GUICaller GUICaller = new GUICaller();
 //        GUICaller.StockChooser();
