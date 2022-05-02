@@ -22,3 +22,7 @@ and then we can also add in an AI model to predict things for the improvement pa
 of it towards the end and that final could go on the resume, like i continued on the project later on.
 
 some aspects have I have already done before... look in the drive...
+
+
+
+make it look at the VIX to see the market volatility to predict the price movement or also the quarterly reports
