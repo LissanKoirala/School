@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added data Analyzers">
-      <change afterPath="$PROJECT_DIR$/data/EBAY.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/WMT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/analyzer/strategies/SMACrossover.java" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="SMA Crossover Works">
+      <change afterPath="$PROJECT_DIR$/src/com/stock/NewsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AAPL.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/EBAY.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/EBAY.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651360108568</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="SMA Crossover Works">
+      <created>1651414422861</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651414422861</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -155,7 +161,8 @@
     <MESSAGE value="StockChooser GUI works" />
     <MESSAGE value="Pre-processed data, converted historical prices to floats" />
     <MESSAGE value="Added data Analyzers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added data Analyzers" />
+    <MESSAGE value="SMA Crossover Works" />
+    <option name="LAST_COMMIT_MESSAGE" value="SMA Crossover Works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

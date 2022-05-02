@@ -53,6 +53,7 @@ public class Main {
 //        System.out.println(average);
 
         Stock stock = new Stock("EBAY");
+        System.out.println(stock.getNewsData());
         //System.out.println(Arrays.deepToString(stock.historical_data));
 
         Analyze Analyzer = new Analyze();

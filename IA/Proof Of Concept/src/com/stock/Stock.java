@@ -63,4 +63,9 @@ public class Stock {
         return historical_data;
     }
 
+    public JsonArray getNewsData() throws Exception {
+        NewsData newsData = new NewsData();
+        return newsData.get(ticker);
+    }
+
 }
