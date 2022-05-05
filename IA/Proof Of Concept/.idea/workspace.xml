@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="SMA Crossover Works">
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/Login.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/src/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../GUI/Login/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Starter/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/RequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Math.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/PersistentArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/SentimentAnalysis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
