@@ -24,5 +24,6 @@ of it towards the end and that final could go on the resume, like i continued on
 some aspects have I have already done before... look in the drive...
 
 
-
+Also:
 make it look at the VIX to see the market volatility to predict the price movement or also the quarterly reports
+add a backtesting to test how the algorithm or trading strategy would have performed.
