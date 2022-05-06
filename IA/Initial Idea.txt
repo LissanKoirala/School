@@ -27,3 +27,8 @@ some aspects have I have already done before... look in the drive...
 Also:
 make it look at the VIX to see the market volatility to predict the price movement or also the quarterly reports
 add a backtesting to test how the algorithm or trading strategy would have performed.
+
+Backtest the strategy for all the stocks, of course make a shortlist, then test the strategy with different
+parameters for example, for the SMA crossover, try with all the possible (and reasonable) smas, then get the
+performance data for each one of them and see what's worked the best for that stock over the time and use that
+KIND OF LIKE A SIMULATION...

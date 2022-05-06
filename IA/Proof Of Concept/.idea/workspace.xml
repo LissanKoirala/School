@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="SMA Crossover Works">
-      <change afterPath="$PROJECT_DIR$/src/com/gui/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/api/RequestHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Math.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/PersistentArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/SentimentAnalysis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" beforeDir="false" />
-    </list>
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Login GUI Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651414422861</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Login GUI Added">
+      <created>1651741740915</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651741740915</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -172,7 +164,8 @@
     <MESSAGE value="Pre-processed data, converted historical prices to floats" />
     <MESSAGE value="Added data Analyzers" />
     <MESSAGE value="SMA Crossover Works" />
-    <option name="LAST_COMMIT_MESSAGE" value="SMA Crossover Works" />
+    <MESSAGE value="Login GUI Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login GUI Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
