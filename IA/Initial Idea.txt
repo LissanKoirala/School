@@ -32,3 +32,8 @@ Backtest the strategy for all the stocks, of course make a shortlist, then test 
 parameters for example, for the SMA crossover, try with all the possible (and reasonable) smas, then get the
 performance data for each one of them and see what's worked the best for that stock over the time and use that
 KIND OF LIKE A SIMULATION...
+
+See what data are available in platforms like webull and try to make use of that too...
+
+
+Check the gradient of the moving averages and if it's relatively flat, do nothing.
