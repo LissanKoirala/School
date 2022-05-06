@@ -40,7 +40,7 @@ public class Main {
 //        System.out.println(AlpacaAPIHandler.portfolio_history());
 //        //System.out.println(AlpacaAPIHandler.stock_trades("TSLA"));
 //        System.out.println(AlpacaAPIHandler.get_news());
-//        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
+        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
 //
 //        Math Math = new Math();
 //        ArrayList<Integer> numbs = new ArrayList<>();
@@ -52,7 +52,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Stock stock = new Stock("EBAY");
+        Stock stock = new Stock("WIX");
         System.out.println(stock.getNewsData());
         //System.out.println(Arrays.deepToString(stock.historical_data));
 
@@ -62,7 +62,7 @@ public class Main {
         System.out.println(smaCrossover.check(stock, 50, 180)); // returns true or false, over or under.
 
 //        GUICaller GUICaller = new GUICaller();
-//        GUICaller.StockChooser();
+//        GUICaller.Login();
 
 
     }

@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/Login.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/src/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Login/src/Main.java" afterDir="false" />
+    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Updated some ideas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Starter/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Python/AlpacaDataStream.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Python/AlpacaDataStream.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +21,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/IA/Proof Of Concept" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\Java\IA\Proof Of Concept" />
+      <recent name="N:\Java\IA" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,6 +38,14 @@
       <option name="presentableId" value="Default" />
       <updated>1651176566679</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated some ideas">
+      <created>1651831498220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651831498220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -55,5 +58,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated some ideas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated some ideas" />
   </component>
 </project>

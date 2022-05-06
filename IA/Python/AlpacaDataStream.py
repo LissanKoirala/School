@@ -6,7 +6,6 @@ from alpaca_trade_api.common import URL
 async def trade_callback(t):
     print('trade', t)
 
-
 async def quote_callback(q):
     print('quote', q)
 
@@ -22,6 +21,6 @@ stream = Stream("PKZLW20DRB2DJFPPRMZV",
 
 # subscribing to event
 #stream.subscribe_trades(trade_callback, 'AAPL')
-#stream.subscribe_quotes(quote_callback, 'TSLA')
+stream.subscribe_quotes(quote_callback, 'USDGBP')
 stream.subscribe_news(news_callback, '*')
 stream.run()
