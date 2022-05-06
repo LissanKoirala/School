@@ -54,7 +54,6 @@ public class Stock {
                 System.out.print(message);
             }
         }
-
     }
 
     // gets and updates the historical data, can also be accessed directly by the shared variable

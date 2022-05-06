@@ -27,7 +27,7 @@ public class HistoricalData {
         Float[][] final_data = Utils.convertStringArrayToFloatArray(data);
 
         // printing the array out
-        System.out.println(Arrays.deepToString(final_data));
+        // System.out.println(Arrays.deepToString(final_data));
 
         return final_data;
 

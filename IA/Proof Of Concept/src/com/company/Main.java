@@ -1,6 +1,7 @@
 package com.company;
 
 import com.analyzer.Analyze;
+import com.analyzer.backtesting.SMACrossoverTester;
 import com.analyzer.strategies.SMACrossover;
 import com.api.AlpacaAPI;
 import com.api.YahooFinanceApi;
@@ -40,7 +41,7 @@ public class Main {
 //        System.out.println(AlpacaAPIHandler.portfolio_history());
 //        //System.out.println(AlpacaAPIHandler.stock_trades("TSLA"));
 //        System.out.println(AlpacaAPIHandler.get_news());
-        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
+//        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
 //
 //        Math Math = new Math();
 //        ArrayList<Integer> numbs = new ArrayList<>();
@@ -52,18 +53,22 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Stock stock = new Stock("WIX");
+        Stock stock = new Stock("TSLA");
         System.out.println(stock.getNewsData());
         //System.out.println(Arrays.deepToString(stock.historical_data));
 
-        Analyze Analyzer = new Analyze();
+//        Analyze Analyzer = new Analyze();
 
-        SMACrossover smaCrossover = new SMACrossover();
-        System.out.println(smaCrossover.check(stock, 50, 180)); // returns true or false, over or under.
+//        SMACrossover smaCrossover = new SMACrossover();
+//        System.out.println(smaCrossover.check(stock, 50, 180)); // returns true or false, over or under.
 
-        GUICaller GUICaller = new GUICaller();
-        GUICaller.Login();
+//        GUICaller GUICaller = new GUICaller();
+//        GUICaller.Login();
 
+        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
+
+        // run a simulation to figure out which one smas would have done the best for this stock...
+        System.out.println(smaCrossoverTester.test(50, 180));
 
     }
 }
