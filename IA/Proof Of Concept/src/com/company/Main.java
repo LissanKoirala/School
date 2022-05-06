@@ -61,8 +61,8 @@ public class Main {
         SMACrossover smaCrossover = new SMACrossover();
         System.out.println(smaCrossover.check(stock, 50, 180)); // returns true or false, over or under.
 
-//        GUICaller GUICaller = new GUICaller();
-//        GUICaller.Login();
+        GUICaller GUICaller = new GUICaller();
+        GUICaller.Login();
 
 
     }
