@@ -20,7 +20,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 //        YahooFinanceApi YFHandler = new YahooFinanceApi();
-//        String historical_data = YFHandler.get_historical("TSLA");
+//        String historical_data = YFHandler.get_historical("DOGE-USD");
+//        System.out.println(historical_data);
 //
 //        FileHandler FileHandler = new FileHandler();
 //        FileHandler.writeToFile("TSLA.csv", historical_data, false);
@@ -41,7 +42,7 @@ public class Main {
 //        System.out.println(AlpacaAPIHandler.portfolio_history());
 //        //System.out.println(AlpacaAPIHandler.stock_trades("TSLA"));
 //        System.out.println(AlpacaAPIHandler.get_news());
-//        System.out.println(AlpacaAPIHandler.get_news("TWTR"));
+//        System.out.println(AlpacaAPIHandler.get_news("DOGEUSD"));
 //
 //        Math Math = new Math();
 //        ArrayList<Integer> numbs = new ArrayList<>();
@@ -54,8 +55,10 @@ public class Main {
 //        System.out.println(average);
 
         Stock stock = new Stock("TSLA");
+        System.out.println(stock.info);
         System.out.println(stock.getNewsData());
-        //System.out.println(Arrays.deepToString(stock.historical_data));
+
+//        System.out.println(Arrays.deepToString(stock.historical_data));
 
 //        Analyze Analyzer = new Analyze();
 

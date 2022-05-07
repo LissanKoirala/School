@@ -7,6 +7,8 @@ import com.google.gson.JsonParser;
 
 public class Stock {
     public String ticker;
+    public String tickerYF; // ticker for YF, as it's different for crypto. DOGEUSD is DOGE-USD
+
     public String name;
     public String exchange;
     public String type;
@@ -38,6 +40,13 @@ public class Stock {
             this.name = response.get("name").getAsString();
             this.exchange = response.get("exchange").getAsString();
             this.type = response.get("class").getAsString();
+
+            if (type.equals("crypto")){ // changing the ticker format to YF; DOGEUSD to DOGE-USD
+                tickerYF = ticker.replace("USD", "-USD");
+            } else { // if it's just a stock, make it the same
+                tickerYF = ticker;
+            }
+
             getHistorical_data();
 
 
@@ -58,7 +67,7 @@ public class Stock {
 
     // gets and updates the historical data, can also be accessed directly by the shared variable
     public Float[][] getHistorical_data() throws Exception {
-        this.historical_data = HistoricalData.get(ticker);
+        this.historical_data = HistoricalData.get(tickerYF); // using Yahoo Finance ticker format...
         return historical_data;
     }
 
