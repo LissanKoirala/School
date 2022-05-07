@@ -21,7 +21,8 @@ public class HistoricalData {
         FileHandler.writeToFile(filename, historical_data, false); // storing it to make it easy to process, also to save having to ask everytime
 
 
-        System.out.println(FileHandler.getRowNumber(filename));
+//        System.out.println(FileHandler.getRowNumber(filename)); // this many data points, could look good in console...
+
         String[][] data = Utils.convertToMultiDArray(filename, 7); // 7 because it stays the same, 7 things in the column
 
         Float[][] final_data = Utils.convertStringArrayToFloatArray(data);

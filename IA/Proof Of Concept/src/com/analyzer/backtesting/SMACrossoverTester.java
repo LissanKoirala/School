@@ -26,14 +26,12 @@ public class SMACrossoverTester {
         ArrayList<Float> sma_data_1 =  SMA_1.getSMAData(stock);
         ArrayList<Float> sma_data_2 =  SMA_2.getSMAData(stock);
 
-        System.out.println(Arrays.deepToString(sma_data_1.toArray()));
-        System.out.println(Arrays.deepToString(sma_data_2.toArray()));
+//        System.out.println(Arrays.deepToString(sma_data_1.toArray()));
+//        System.out.println(Arrays.deepToString(sma_data_2.toArray()));
 
         int total_data_size = sma_data_1.size();
 
-
-
-        System.out.println(sma1 + " : " + sma2);
+//        System.out.println(sma1 + " : " + sma2);
 
         // creating an array with info if the sma1 was above or below sma2
         Boolean[] crossover = new Boolean[total_data_size];
@@ -63,10 +61,10 @@ public class SMACrossoverTester {
         }
 
 
-        // printing the final results
-        for (int i = 0; i < total_data_size; i++){
-            System.out.println(sma_data_1.get(i) + " : " + sma_data_2.get(i) + " - " + crossover[i] + " -------- " + buy_sell[i]);
-        }
+//        // printing the final results
+//        for (int i = 0; i < total_data_size; i++){
+//            System.out.println(sma_data_1.get(i) + " : " + sma_data_2.get(i) + " - " + crossover[i] + " -------- " + buy_sell[i]);
+//        }
 
 
         // Calculating the total gain made...
@@ -78,7 +76,7 @@ public class SMACrossoverTester {
 
             if (buy_sell[i] != null) { // making sure the data exists as it won't for the last index due to i+1 used previously in buy_sell
                 if (buy_sell[i] == 1) {
-                    last_bought = historicalData[i][5]; // always 5 as it's the closing price...
+                    last_bought = (historicalData[i][5] + historicalData[i][1])/2; // average price of the day... 5 - close, 1 - open
                 }
 
                 if (buy_sell[i] == 0) {
@@ -92,5 +90,26 @@ public class SMACrossoverTester {
         }
 
         return total_gain*100;
+    }
+
+    public void simulate() throws Exception {
+        float result;
+        float highest_returns = 0;
+        int bestSMA1 = 0;
+        int bestSMA2 = 0;
+
+        for (int sma1 = 0; sma1<201; sma1++){
+            for (int sma2 = 0; sma2<201; sma2++){
+                result = test(sma1,sma2);
+//                System.out.println(sma1 + " & " + sma2 + " - " + result);
+                if (result > highest_returns){
+                    highest_returns = result;
+                    bestSMA1 = sma1;
+                    bestSMA2 = sma2;
+                }
+            }
+        }
+
+        System.out.println("Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns);
     }
 }

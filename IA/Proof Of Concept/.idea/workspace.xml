@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added Backtester for SMACrossovers">
-      <change afterPath="$PROJECT_DIR$/data/BTC-USD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BTCUSD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/DOGE-USD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/DOGEUSD.csv" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Fixed ticker for Crypto Usage, Fixed YF timeframe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AAPL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DOGE-USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/DOGE-USD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -156,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651866484931</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed ticker for Crypto Usage, Fixed YF timeframe">
+      <created>1651911042343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1651911042344</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -185,7 +189,8 @@
     <MESSAGE value="SMA Crossover Works" />
     <MESSAGE value="Login GUI Added" />
     <MESSAGE value="Added Backtester for SMACrossovers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Backtester for SMACrossovers" />
+    <MESSAGE value="Fixed ticker for Crypto Usage, Fixed YF timeframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ticker for Crypto Usage, Fixed YF timeframe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
