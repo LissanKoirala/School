@@ -45,7 +45,7 @@ public class SMA {
         ArrayList<Float> sma = new ArrayList<>(); // array with the SMA prices accordingly
 
         ArrayList<Float> total = new ArrayList<>(); // array with all the prices
-        Float[][] historical_data = stock.getHistorical_data();
+        Float[][] historical_data = stock.historical_data;
 
         for(int x = 0; x < historical_data.length; x++){
             total.add(historical_data[x][5]); // takes the avg close price

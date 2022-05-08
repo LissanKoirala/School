@@ -105,8 +105,10 @@ public class SMACrossoverTester {
         int bestSMA1 = 0;
         int bestSMA2 = 0;
 
-        for (int sma1 = 0; sma1<201; sma1++){
-            for (int sma2 = 0; sma2<201; sma2++){
+        // starting with the lowest sma of 5 as lower numbers produce insanely high uncertainty
+        // TODO: Figure out best best lower sma to start at
+        for (int sma1 = 5; sma1<201; sma1++){
+            for (int sma2 = 5; sma2<201; sma2++){
                 result = test(sma1,sma2);
                 System.out.println(sma1 + "," + sma2 + "," + result);
                 if (result > highest_returns){
@@ -117,6 +119,6 @@ public class SMACrossoverTester {
             }
         }
 
-        System.out.println("Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns);
+        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns);
     }
 }

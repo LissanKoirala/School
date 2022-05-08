@@ -68,14 +68,14 @@ public class Main {
 //        GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 
-        Stock stock = new Stock("DOGEUSD");
+        Stock stock = new Stock("TSLA");
         System.out.println(stock.name);
         System.out.println(stock.getNewsData());
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
-//        System.out.println("\n\nSMA1 : 50 & SMA2 : 180 - " + smaCrossoverTester.test(50, 180));
+        System.out.println("\n\nSMA1 : 50 & SMA2 : 180 - " + smaCrossoverTester.test(50, 180));
         System.out.println("\n\nRunning simulation to figure out the best");
         smaCrossoverTester.simulate();
 

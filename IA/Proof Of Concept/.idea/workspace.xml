@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Simulation on SMACrossover">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Few Improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BTCUSD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DOGE-USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/DOGE-USD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DOGEUSD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/TSLA.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/NewsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/NewsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/utils/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -171,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651952463655</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Few Improvements">
+      <created>1652030672635</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652030672635</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -202,7 +208,8 @@
     <MESSAGE value="Added Backtester for SMACrossovers" />
     <MESSAGE value="Fixed ticker for Crypto Usage, Fixed YF timeframe" />
     <MESSAGE value="Simulation on SMACrossover" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simulation on SMACrossover" />
+    <MESSAGE value="Few Improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Few Improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
