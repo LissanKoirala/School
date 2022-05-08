@@ -10,9 +10,9 @@ public class SMACrossoverTester {
     private Stock stock;
     private Float[][] historicalData;
 
-    public SMACrossoverTester(Stock stock){
+    public SMACrossoverTester(Stock stock) throws Exception {
         this.stock = stock;
-        this.historicalData = stock.historical_data;
+        this.historicalData = stock.getHistorical_data();
     }
 
     // Simulating the data to figure out the gain made... if had bought at the closing price

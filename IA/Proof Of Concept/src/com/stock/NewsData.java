@@ -5,6 +5,7 @@ import com.google.gson.JsonArray;
 
 public class NewsData {
     AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+
     public NewsData(){
     }
 

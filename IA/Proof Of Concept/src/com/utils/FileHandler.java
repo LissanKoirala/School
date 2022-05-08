@@ -2,9 +2,12 @@ package com.utils;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class FileHandler {
+
+    public boolean checkIsFile(String filename){
+        return new File(filename).isFile();
+    }
 
     public ArrayList<String> readFromFile(String fileName) {
         ArrayList<String> data = new ArrayList<>(); // initiating the arary
@@ -63,6 +66,5 @@ public class FileHandler {
 
         return row;
     }
-
 
 }

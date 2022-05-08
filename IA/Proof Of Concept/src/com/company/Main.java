@@ -69,7 +69,8 @@ public class Main {
 //        GUICaller.Login();
 
         Stock stock = new Stock("DOGEUSD");
-        System.out.println("AAPL");
+        System.out.println(stock.name);
+        System.out.println(stock.getNewsData());
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 

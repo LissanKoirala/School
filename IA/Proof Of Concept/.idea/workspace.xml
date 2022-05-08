@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Simulation on SMACrossover">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AAPL.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BTCUSD.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/DOGE-USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/DOGE-USD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DOGEUSD.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/NewsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/NewsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
