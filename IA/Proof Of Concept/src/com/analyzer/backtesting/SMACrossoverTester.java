@@ -30,6 +30,7 @@ public class SMACrossoverTester {
 //        System.out.println(Arrays.deepToString(sma_data_2.toArray()));
 
         int total_data_size = sma_data_1.size();
+        int numbers_of_trades = 0;
 
 //        System.out.println(sma1 + " : " + sma2);
 
@@ -52,8 +53,12 @@ public class SMACrossoverTester {
             if (previous != next){
                 if (previous == true && next == false){ // if small crosses the higher, sell
                     buy_sell[i] = 0; // 1 - buy & 0 - sell
+                    numbers_of_trades++;
+
                 } else if (previous == false && next == true){ // if small crosses the higher, buy
                     buy_sell[i] = 1;
+                    numbers_of_trades++;
+
                 } else {
                     buy_sell[i] = -1; // if the same, nothing
                 }
@@ -83,13 +88,15 @@ public class SMACrossoverTester {
 
                     if (last_bought != 0) { // if the stock has been bought once before...
                         last_sold = historicalData[i][5];
-                        total_gain = total_gain + (last_sold / last_bought);
+                        total_gain = total_gain + (last_sold-last_bought)/last_bought;
                     }
                 }
             }
         }
 
-        return total_gain*100;
+        System.out.print(numbers_of_trades+",");
+
+        return (total_gain*100);
     }
 
     public void simulate() throws Exception {
@@ -101,7 +108,7 @@ public class SMACrossoverTester {
         for (int sma1 = 0; sma1<201; sma1++){
             for (int sma2 = 0; sma2<201; sma2++){
                 result = test(sma1,sma2);
-//                System.out.println(sma1 + " & " + sma2 + " - " + result);
+                System.out.println(sma1 + "," + sma2 + "," + result);
                 if (result > highest_returns){
                     highest_returns = result;
                     bestSMA1 = sma1;

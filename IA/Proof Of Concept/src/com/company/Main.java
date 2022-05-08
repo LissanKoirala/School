@@ -68,8 +68,8 @@ public class Main {
 //        GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 
-        Stock stock = new Stock("TSLA");
-        System.out.println("TSLA");
+        Stock stock = new Stock("DOGEUSD");
+        System.out.println("AAPL");
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 

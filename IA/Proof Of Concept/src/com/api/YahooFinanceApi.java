@@ -14,8 +14,8 @@ public class YahooFinanceApi {
     // Constructs an url to request
     public String get_historical(String ticker) throws Exception {
         long unixNow = now.getTime() / 1000L;
-
-        String request_url = String.format(historical_data_url, ticker, "-5364662325", unixNow, "1d"); // url, ticker, start time, end time, time interval eg: 1d, 1M
+        // "-5364662325"
+        String request_url = String.format(historical_data_url, ticker, "1620469437", unixNow, "1d"); // url, ticker, start time, end time, time interval eg: 1d, 1M
         return ReqHandler.getString(request_url);
     }
 
