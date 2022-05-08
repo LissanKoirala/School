@@ -1,0 +1,3 @@
+// TODO: Start SMACrossover backtesting from a minium SMA of 5 as i think there's a level of uncertainty and it increase as you decrease the smas and the 
+uncertainty decreases as you increase the sma numbers as we're buying for the average price of the day
+This will prevent it from getting insanely high returns
