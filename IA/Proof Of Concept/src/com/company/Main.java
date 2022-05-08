@@ -69,15 +69,23 @@ public class Main {
 //        GUICaller.Login();
 
         Stock stock = new Stock("TSLA");
-        System.out.println(stock.name);
-        System.out.println(stock.getNewsData());
+//        System.out.println(stock.name);
+//        System.out.println(stock.getNewsData());
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
-        System.out.println("\n\nSMA1 : 50 & SMA2 : 180 - " + smaCrossoverTester.test(50, 180));
-        System.out.println("\n\nRunning simulation to figure out the best");
-        smaCrossoverTester.simulate();
+//        System.out.println("\n\nSMA1 : 50 & SMA2 : 180 - " + smaCrossoverTester.test(50, 180));
+        System.out.println("\n\nRunning simulation to figure out the best SMAs");
+//        smaCrossoverTester.simulate();
 
+        // Simulating for a array of stocks...
+        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","PFE","BAC","KO","DIS","MCD","INTC","NFLX","BLK","BA","TDOC"};
+        for (String s: stocks){
+            stock = new Stock(s);
+            smaCrossoverTester = new SMACrossoverTester(stock);
+            smaCrossoverTester.simulate();
+
+        }
     }
 }

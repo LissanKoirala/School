@@ -41,11 +41,10 @@ public class Stock {
             this.exchange = response.get("exchange").getAsString();
             this.type = response.get("class").getAsString();
 
-            if (type.equals("crypto")){ // changing the ticker format to YF; DOGEUSD to DOGE-USD
-                tickerYF = ticker.replace("USD", "-USD");
-            } else { // if it's just a stock, make it the same
-                tickerYF = ticker;
-            }
+            // changing the ticker format to YF; DOGEUSD to DOGE-USD
+            tickerYF = ticker.replace(".", "-"); // eg : BRK.B - BRK-B
+            tickerYF = tickerYF.replace("USD", "-USD");
+
 
             getHistorical_data();
 

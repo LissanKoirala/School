@@ -94,7 +94,7 @@ public class SMACrossoverTester {
             }
         }
 
-        System.out.print(numbers_of_trades+",");
+//        System.out.print(numbers_of_trades+",");
 
         return (total_gain*100);
     }
@@ -110,7 +110,7 @@ public class SMACrossoverTester {
         for (int sma1 = 5; sma1<201; sma1++){
             for (int sma2 = 5; sma2<201; sma2++){
                 result = test(sma1,sma2);
-                System.out.println(sma1 + "," + sma2 + "," + result);
+//                System.out.println(sma1 + "," + sma2 + "," + result);
                 if (result > highest_returns){
                     highest_returns = result;
                     bestSMA1 = sma1;
