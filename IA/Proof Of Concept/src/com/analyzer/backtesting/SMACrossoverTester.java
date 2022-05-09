@@ -4,11 +4,13 @@ import com.analyzer.tools.SMA;
 import com.stock.Stock;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
+// TODO: Might wanna log the calculations to a csv file so that it can be processed in exel if wanted to
+// TODO: save the things to be logged to a arraylist then pass it to a thread to save to a file...
 public class SMACrossoverTester {
     private Stock stock;
     private Float[][] historicalData;
+
 
     public SMACrossoverTester(Stock stock) throws Exception {
         this.stock = stock;
@@ -17,8 +19,10 @@ public class SMACrossoverTester {
 
     // Simulating the data to figure out the gain made... if had bought at the closing price
     // TODO: make it accept other values such as opening price or average day price...
-    public float test(int sma1, int sma2) throws Exception {
+    // returns the total_gain with number of trades made...
+    public float[] test(int sma1, int sma2) throws Exception {
         float total_gain = 0;
+        float numbers_of_trades = 0;
 
         SMA SMA_1 = new SMA(sma1);
         SMA SMA_2 = new SMA(sma2);
@@ -30,7 +34,6 @@ public class SMACrossoverTester {
 //        System.out.println(Arrays.deepToString(sma_data_2.toArray()));
 
         int total_data_size = sma_data_1.size();
-        int numbers_of_trades = 0;
 
 //        System.out.println(sma1 + " : " + sma2);
 
@@ -53,11 +56,11 @@ public class SMACrossoverTester {
             if (previous != next){
                 if (previous == true && next == false){ // if small crosses the higher, sell
                     buy_sell[i] = 0; // 1 - buy & 0 - sell
-                    numbers_of_trades++;
+                    numbers_of_trades += 1.0;
 
                 } else if (previous == false && next == true){ // if small crosses the higher, buy
                     buy_sell[i] = 1;
-                    numbers_of_trades++;
+                    numbers_of_trades += 1.0;
 
                 } else {
                     buy_sell[i] = -1; // if the same, nothing
@@ -94,13 +97,14 @@ public class SMACrossoverTester {
             }
         }
 
-//        System.out.print(numbers_of_trades+",");
+//        System.out.println(numbers_of_trades);
 
-        return (total_gain*100);
+        return new float[]{(total_gain * 100), numbers_of_trades};
     }
 
     public void simulate() throws Exception {
-        float result;
+        int number_of_trades = 0;
+        float[] result;
         float highest_returns = 0;
         int bestSMA1 = 0;
         int bestSMA2 = 0;
@@ -109,16 +113,29 @@ public class SMACrossoverTester {
         // TODO: Figure out best best lower sma to start at
         for (int sma1 = 20; sma1<201; sma1++){
             for (int sma2 = 20; sma2<201; sma2++){
-                result = test(sma1,sma2);
-//                System.out.println(sma1 + "," + sma2 + "," + result);
-                if (result > highest_returns){
-                    highest_returns = result;
+                // TODO: if sma1 is bigger than sma2, this means that shorting is going one instead of buying, make this clear
+
+                result = test(sma1, sma2);
+                float gain = result[0];
+
+                // TODO: this is the calculation for each smas, add it to a csv through a thread
+//                System.out.println(stock.ticker + "," + sma1 + "," + sma2 + "," + gain + "," + number_of_trades);
+
+                if (gain > highest_returns) {
+                    highest_returns = gain;
                     bestSMA1 = sma1;
                     bestSMA2 = sma2;
+                    number_of_trades = (int) result[1];
                 }
+
             }
         }
 
-        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns);
+        String position_type = "long";
+        if(bestSMA1>bestSMA2){position_type = "short";}
+
+//        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns + " | No. of Trades : " + number_of_trades + " | Type : " + position_type);
+        System.out.println(stock.ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades + "," + position_type);
+
     }
 }

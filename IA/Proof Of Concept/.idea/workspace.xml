@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Fixed Stock ticker bug, simulating a array of stocks...">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added Multi-Threading to simulation...">
+      <change afterPath="$PROJECT_DIR$/data/null.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AAPL.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AMZN.csv" afterDir="false" />
@@ -28,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/data/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/TSLA.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/V.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/V.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
@@ -208,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652044058420</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added Multi-Threading to simulation...">
+      <created>1652116203123</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652116203123</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -242,7 +250,8 @@
     <MESSAGE value="Few Improvements" />
     <MESSAGE value="Skipped the caching of HistoricalData for now" />
     <MESSAGE value="Fixed Stock ticker bug, simulating a array of stocks..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Stock ticker bug, simulating a array of stocks..." />
+    <MESSAGE value="Added Multi-Threading to simulation..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Multi-Threading to simulation..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
