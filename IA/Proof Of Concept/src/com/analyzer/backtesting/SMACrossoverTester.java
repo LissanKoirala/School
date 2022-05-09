@@ -107,8 +107,8 @@ public class SMACrossoverTester {
 
         // starting with the lowest sma of 5 as lower numbers produce insanely high uncertainty
         // TODO: Figure out best best lower sma to start at
-        for (int sma1 = 5; sma1<201; sma1++){
-            for (int sma2 = 5; sma2<201; sma2++){
+        for (int sma1 = 20; sma1<201; sma1++){
+            for (int sma2 = 20; sma2<201; sma2++){
                 result = test(sma1,sma2);
 //                System.out.println(sma1 + "," + sma2 + "," + result);
                 if (result > highest_returns){

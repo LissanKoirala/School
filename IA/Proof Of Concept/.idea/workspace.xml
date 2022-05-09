@@ -4,32 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Skipped the caching of HistoricalData for now">
-      <change afterPath="$PROJECT_DIR$/data/AMZN.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BAC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BLK.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BRK-B.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/BRK.B.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/DIS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/FB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/GOOG.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/INTC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/JPM.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/KO.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/MA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/MCD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/MSFT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/NFLX.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/NVDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/PFE.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/TDOC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/V.csv" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Fixed Stock ticker bug, simulating a array of stocks...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AAPL.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AMZN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BAC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BAC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BLK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BLK.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BRK-B.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BRK-B.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DIS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/DIS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/FB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/FB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/GOOG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/GOOG.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/INTC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/INTC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/JPM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/JPM.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/KO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/KO.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/MA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MCD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/MCD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NFLX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/NFLX.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/NVDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/NVDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PFE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/PFE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TDOC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/TDOC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/TSLA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/V.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/V.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652033978962</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed Stock ticker bug, simulating a array of stocks...">
+      <created>1652044058420</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652044058420</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -234,7 +241,8 @@
     <MESSAGE value="Simulation on SMACrossover" />
     <MESSAGE value="Few Improvements" />
     <MESSAGE value="Skipped the caching of HistoricalData for now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skipped the caching of HistoricalData for now" />
+    <MESSAGE value="Fixed Stock ticker bug, simulating a array of stocks..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Stock ticker bug, simulating a array of stocks..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

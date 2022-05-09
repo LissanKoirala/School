@@ -68,6 +68,11 @@ public class Main {
 //        GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 
+//        for(int i = 0; i < 5; i++) {
+//            MultiThreadRunner multiThreadRunner = new MultiThreadRunner();
+//            multiThreadRunner.start();
+//        }
+
         Stock stock = new Stock("TSLA");
 //        System.out.println(stock.name);
 //        System.out.println(stock.getNewsData());
@@ -84,8 +89,16 @@ public class Main {
         for (String s: stocks){
             stock = new Stock(s);
             smaCrossoverTester = new SMACrossoverTester(stock);
-            smaCrossoverTester.simulate();
 
+            SMACrossoverTester finalSmaCrossoverTester = smaCrossoverTester;
+            new Thread(() -> {
+                try {
+                    finalSmaCrossoverTester.simulate();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }).start();
         }
+
     }
 }
