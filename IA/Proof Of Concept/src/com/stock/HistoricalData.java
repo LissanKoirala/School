@@ -15,7 +15,13 @@ public class HistoricalData {
 
 
     public Float[][] get(String ticker) throws Exception {
-        String filename = "data/" + ticker + ".csv";
+
+        // changing the ticker format to YF; DOGEUSD to DOGE-USD
+        ticker = ticker.replace(".", "-"); // eg : BRK.B - BRK-B
+        ticker = ticker.replace("USD", "-USD");
+
+
+        String filename = "data/ticker/" + ticker + ".csv";
         String historical_data = YFHandler.get_historical(ticker); // gets the data
         historical_data = historical_data.replace("Date,Open,High,Low,Close,Adj Close,Volume\n", ""); // cleaning up
         fileHandler.writeToFile(filename, historical_data, false); // storing it to make it easy to process, also to save having to ask everytime

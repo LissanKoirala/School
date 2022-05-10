@@ -102,7 +102,7 @@ public class SMACrossoverTester {
         return new float[]{(total_gain * 100), numbers_of_trades};
     }
 
-    public void simulate() throws Exception {
+    public int[] simulate() throws Exception {
         int number_of_trades = 0;
         float[] result;
         float highest_returns = 0;
@@ -137,5 +137,6 @@ public class SMACrossoverTester {
 //        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns + " | No. of Trades : " + number_of_trades + " | Type : " + position_type);
         System.out.println(stock.ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades + "," + position_type);
 
+        return new int[]{bestSMA1,bestSMA2};
     }
 }

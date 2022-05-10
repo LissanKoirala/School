@@ -21,6 +21,6 @@ stream = Stream("PKZLW20DRB2DJFPPRMZV",
 
 # subscribing to event
 #stream.subscribe_trades(trade_callback, 'AAPL')
-stream.subscribe_quotes(quote_callback, 'USDGBP')
+stream.subscribe_quotes(quote_callback, 'AAPL')
 stream.subscribe_news(news_callback, '*')
 stream.run()

@@ -10,6 +10,7 @@ public class SMACrossover {
     }
 
     // checks if the stock's sma1 is over or under sma2, returns true or false
+    // TODO: This function doesn't actually check for crossovers yet, make it do so
     public boolean check(Stock stock, int sma1, int sma2) throws Exception {
         SMA SMA_1 = new SMA(sma1);
         ArrayList<Float> sma_data =  SMA_1.getSMAData(stock);

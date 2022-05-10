@@ -2,13 +2,12 @@ package com.stock;
 
 import com.api.AlpacaAPI;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class Stock {
     public String ticker;
-    public String tickerYF; // ticker for YF, as it's different for crypto. DOGEUSD is DOGE-USD
-
     public String name;
     public String exchange;
     public String type;
@@ -41,11 +40,6 @@ public class Stock {
             this.exchange = response.get("exchange").getAsString();
             this.type = response.get("class").getAsString();
 
-            // changing the ticker format to YF; DOGEUSD to DOGE-USD
-            tickerYF = ticker.replace(".", "-"); // eg : BRK.B - BRK-B
-            tickerYF = tickerYF.replace("USD", "-USD");
-
-
             getHistorical_data();
 
 
@@ -64,9 +58,12 @@ public class Stock {
         }
     }
 
+
+
     // gets and updates the historical data, can also be accessed directly by the shared variable
+    // TODO : make a cache of the files for efficiency...
     public Float[][] getHistorical_data() throws Exception {
-        this.historical_data = HistoricalData.get(tickerYF); // using Yahoo Finance ticker format...
+        this.historical_data = HistoricalData.get(ticker);
         return historical_data;
     }
 
@@ -74,5 +71,26 @@ public class Stock {
         NewsData newsData = new NewsData();
         return newsData.get(ticker);
     }
+
+    public String buy(int number){
+        // TODO: Add this method to AlpacaAPI
+        return "Done";
+    }
+
+    public String sell(int number){
+        // TODO: Add this method to AlpacaAPI
+        return "Done";
+    }
+
+    public void getPositions() throws Exception {
+        JsonElement positions = AlpacaAPIHandler.positions(ticker);
+        System.out.println(positions);
+    }
+    
+    public void getTrades() throws Exception {
+        JsonElement trades = AlpacaAPIHandler.stock_trades(ticker);
+        System.out.println(trades);
+    }
+
 
 }
