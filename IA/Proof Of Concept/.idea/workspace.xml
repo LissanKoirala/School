@@ -4,11 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Bug Fixes in backtesting and added simulation results">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Labelled data">
+      <change afterPath="$PROJECT_DIR$/data/simulation-result-1-year.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/simulation-result-2-year.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result-since-ipo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AAPL/AAPL.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AAPL/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AMZN/AMZN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AMZN/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/BA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BA/BA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BA/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/BAC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BAC/BAC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BAC/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/BLK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BLK/BLK.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BLK/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/BRK-B.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BRK-B/BRK-B.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BRK-B/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/DIS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/DIS/DIS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/DIS/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/FB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/FB/FB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/FB/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/GOOG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/GOOG/GOOG.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/GOOG/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/INTC/INTC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/INTC/INTC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/INTC/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/INTC/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/JPM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/JPM/JPM.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/JPM/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/KO/KO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/KO/KO.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/KO/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/KO/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/MA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MA/MA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MA/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/MCD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MCD/MCD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MCD/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MSFT/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MSFT/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/NFLX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NFLX/NFLX.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NFLX/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/NVDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NVDA/NVDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NVDA/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/PFE/PFE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/PFE/PFE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/PFE/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/PFE/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/TDOC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TDOC/TDOC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TDOC/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TSLA/TSLA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TSLA/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/V.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/V/V.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/simulation-sma.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/V/simulation-sma.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652295911534</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Labelled data">
+      <created>1652296076547</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652296076547</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -261,7 +311,8 @@
     <MESSAGE value="Few improvements and Added Trader class" />
     <MESSAGE value="Added more links to data sources..." />
     <MESSAGE value="Bug Fixes in backtesting and added simulation results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes in backtesting and added simulation results" />
+    <MESSAGE value="Labelled data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Labelled data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
