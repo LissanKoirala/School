@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Updated some ideas">
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/api/YahooFinanceApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

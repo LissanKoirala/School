@@ -1,3 +1,4 @@
+Algo-Type,Ticker,SMA1,SMA2,Profit,No. of Trades,Type
 SMA-Crossover,FB,145,197,583.89465,9.0,long
 SMA-Crossover,TSLA,43,105,2014.8247,32.0,long
 SMA-Crossover,TDOC,31,158,550.06244,7.0,long
