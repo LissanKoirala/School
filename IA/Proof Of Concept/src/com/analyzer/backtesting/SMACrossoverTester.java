@@ -6,6 +6,7 @@ import com.utils.FileHandler;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 // TODO: Might wanna log the calculations to a csv file so that it can be processed in exel if wanted to
 // TODO: save the things to be logged to a arraylist then pass it to a thread to save to a file...
@@ -25,7 +26,7 @@ public class SMACrossoverTester {
     // returns the total_gain with number of trades made...
     public float[] test(int sma1, int sma2) throws Exception {
         float total_gain = 0;
-        float numbers_of_trades = 0;
+        int numbers_of_trades = 0;
 
         SMA SMA_1 = new SMA(sma1);
         SMA SMA_2 = new SMA(sma2);
@@ -57,13 +58,13 @@ public class SMACrossoverTester {
             boolean next = crossover[i+1];
 
             if (previous != next){
-                if (previous == true && next == false){ // if small crosses the higher, sell
+                if (previous == true & next == false){ // if small crosses the higher, sell
                     buy_sell[i] = 0; // 1 - buy & 0 - sell
-                    numbers_of_trades += 1.0;
+                    numbers_of_trades += 1;
 
-                } else if (previous == false && next == true){ // if small crosses the higher, buy
+                } else if (previous == false & next == true){ // if small crosses the higher, buy
                     buy_sell[i] = 1;
-                    numbers_of_trades += 1.0;
+                    numbers_of_trades += 1;
 
                 } else {
                     buy_sell[i] = -1; // if the same, nothing
@@ -108,9 +109,12 @@ public class SMACrossoverTester {
     public int[] simulate() throws Exception {
         int number_of_trades = 0;
         float[] result;
+
         float highest_returns = 0;
         int bestSMA1 = 0;
         int bestSMA2 = 0;
+        int number_of_trades_best = 0; // number of trades for the best smas
+
         StringBuilder simulation_log = new StringBuilder();
 
         // Ticker...
@@ -127,17 +131,17 @@ public class SMACrossoverTester {
 
                 result = test(sma1, sma2);
                 float gain = result[0];
+                number_of_trades = (int) result[1];
 
                 // Comment this out to not log... TODO: Add a section in Preferences...
                 String log = sma1 + "," + sma2 + "," + gain + "," + number_of_trades+"\n";
                 simulation_log.append(log); // TODO: Include in Criterion - FAR FAR FAR more effieicne then just String += log; less time and processing power
 
-
                 if (gain > highest_returns) {
                     highest_returns = gain;
                     bestSMA1 = sma1;
                     bestSMA2 = sma2;
-                    number_of_trades = (int) result[1];
+                    number_of_trades_best = number_of_trades;
                 }
 
             }
@@ -147,13 +151,12 @@ public class SMACrossoverTester {
         if(bestSMA1>bestSMA2){position_type = "short";}
 
 //        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns + " | No. of Trades : " + number_of_trades + " | Type : " + position_type);
-        String final_result = "SMA-Crossover," + stock.ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades + "," + position_type;
+        String final_result = "SMA-Crossover," + stock.ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades_best + "," + position_type;
         System.out.println(final_result);
 
 
         // Logging to a file...
         fileHandler.writeToFile("data/stock/"+ticker+"/simulation-sma.csv", simulation_log.toString(),false);
-        fileHandler.writeToFile("data/stock/"+ticker+"/simulation-result.csv",final_result,true);
         fileHandler.writeToFile("data/simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
 
 

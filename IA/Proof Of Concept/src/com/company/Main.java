@@ -73,16 +73,16 @@ public class Main {
 //            multiThreadRunner.start();
 //        }
 
-        Stock stock = new Stock("TSLA");
+        Stock stock = new Stock("AAPL");
 //        System.out.println(stock.name);
 //        System.out.println(stock.getNewsData());
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
-//        System.out.println("\n\nSMA1 : 50 & SMA2 : 180 - " + Arrays.toString(smaCrossoverTester.test(61, 39)));
+//        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39)));
 
-        System.out.println("\n\nRunning simulation to figure out the best SMAs");
+//        System.out.println("\n\nRunning simulation to figure out the best SMAs");
 //        smaCrossoverTester.simulate();
 
         // Simulating for a array of stocks...
