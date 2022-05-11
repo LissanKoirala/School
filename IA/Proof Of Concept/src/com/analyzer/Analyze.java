@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Analyze {
     private Math Math = new Math();
 
+    // TODO : https://finnhub.io/docs/api/technical-indicator - add some of these indicators, hard to code all of them
     public Analyze(){
     }
 

@@ -4,64 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Made huge improvements to the backtesting">
-      <change afterPath="$PROJECT_DIR$/data/ticker/AAPL.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/AMZN.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/BA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/BAC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/BLK.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/BRK-B.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/DIS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/DOGE-USD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/FB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/GOOG.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/INTC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/JPM.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/KO.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/MA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/MCD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/MSFT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/NFLX.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/NVDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/PFE.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/TDOC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/TSLA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ticker/V.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/trader/Trader.java" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Few improvements and Added Trader class">
+      <change afterPath="$PROJECT_DIR$/src/com/gui/StockInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/stock/Calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/stock/RealtimeData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AAPL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/AMZN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BAC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BLK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BRK-B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BRK.B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BTC-USD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DIS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DOGE-USD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/EBAY.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/FB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/GOOG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/INTC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/JPM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/KO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MCD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MSFT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NFLX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/NVDA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/PFE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TDOC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TSLA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/V.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WIX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/WMT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/null.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/strategies/SMACrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/strategies/SMACrossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ticker/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ticker/AMZN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ticker/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ticker/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ticker/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ticker/TSLA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/analyzer/Analyze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/Analyze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/NewsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/NewsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Python/AlpacaDataStream.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/AlpacaDataStream.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/SentimentAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652120350676</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Few improvements and Added Trader class">
+      <created>1652210344946</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652210344946</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -290,7 +252,8 @@
     <MESSAGE value="Fixed Stock ticker bug, simulating a array of stocks..." />
     <MESSAGE value="Added Multi-Threading to simulation..." />
     <MESSAGE value="Made huge improvements to the backtesting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made huge improvements to the backtesting" />
+    <MESSAGE value="Few improvements and Added Trader class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Few improvements and Added Trader class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

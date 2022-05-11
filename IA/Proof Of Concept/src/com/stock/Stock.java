@@ -92,5 +92,14 @@ public class Stock {
         System.out.println(trades);
     }
 
+    // TODO : https://finnhub.io/docs/api/company-basic-financials | https://finnhub.io/docs/api/financials-reported
+    public void getFinancials(){
+    }
+
+    // Other Data
+    // https://finnhub.io/docs/api/recommendation-trends
+    // https://finnhub.io/docs/api/company-earnings
+
+    // https://finnhub.io/docs/api/indices-constituents
 
 }

@@ -39,5 +39,8 @@ public class HistoricalData {
 
     }
 
+    // TODO: https://finnhub.io/docs/api/stock-candles | https://finnhub.io/docs/api/crypto-candles - useful for smaller resolution, intra-day trades...
+
+
 
 }
