@@ -15,18 +15,27 @@ public class SMACrossoverTester {
     private Float[][] historicalData;
     private FileHandler fileHandler = new FileHandler();
 
+    String ticker;
+
 
     public SMACrossoverTester(Stock stock) throws Exception {
         this.stock = stock;
         this.historicalData = stock.getHistorical_data();
+
+        ticker = stock.ticker.replace(".", "-"); // eg : BRK.B - BRK-B
+        ticker = ticker.replace("USD", "-USD"); // for crypto...
     }
 
     // Simulating the data to figure out the gain made... if had bought at the closing price
     // TODO: make it accept other values such as opening price or average day price...
     // returns the total_gain with number of trades made...
-    public float[] test(int sma1, int sma2) throws Exception {
+    public float[] test(int sma1, int sma2, boolean log_trades) throws Exception {
         float total_gain = 0;
         int numbers_of_trades = 0;
+
+        StringBuilder buy_sell_log = new StringBuilder();
+        String log = "";
+
 
         SMA SMA_1 = new SMA(sma1);
         SMA SMA_2 = new SMA(sma2);
@@ -89,19 +98,30 @@ public class SMACrossoverTester {
             if (buy_sell[i] != null) { // making sure the data exists as it won't for the last index due to i+1 used previously in buy_sell
                 if (buy_sell[i] == 1) {
                     last_bought = (historicalData[i][5] + historicalData[i][1])/2; // average price of the day... 5 - close, 1 - open
+                    if (log_trades) {
+                        log = "buy,"+last_bought+"\n";
+                        buy_sell_log.append(log);
+                    }
                 }
 
                 if (buy_sell[i] == 0) {
 
                     if (last_bought != 0) { // if the stock has been bought once before...
                         last_sold = historicalData[i][5];
-                        total_gain = total_gain + (last_sold-last_bought)/last_bought;
+                        float gain = (last_sold-last_bought)/last_bought;
+                        total_gain = total_gain + gain;
+                        if (log_trades) {
+                            log = "sell," + last_sold + "," + gain*100 + "\n";
+                            buy_sell_log.append(log);
+                        }
                     }
                 }
             }
         }
 
-//        System.out.println(numbers_of_trades);
+        if (log_trades) {
+            fileHandler.writeToFile("data/stock/"+ticker+"/since-ipo-best-sma-crossover-simulation-trades.csv", String.valueOf(buy_sell_log),false);
+        }
 
         return new float[]{(total_gain * 100), numbers_of_trades};
     }
@@ -117,11 +137,6 @@ public class SMACrossoverTester {
 
         StringBuilder simulation_log = new StringBuilder();
 
-        // Ticker...
-        String ticker = stock.ticker.replace(".", "-"); // eg : BRK.B - BRK-B
-        ticker = ticker.replace("USD", "-USD");
-
-
 
         // starting with the lowest sma of 5 as lower numbers produce insanely high uncertainty
         // TODO: Figure out best best lower sma to start at
@@ -129,7 +144,7 @@ public class SMACrossoverTester {
             for (int sma2 = 20; sma2<201; sma2++){
                 // TODO: if sma1 is bigger than sma2, this means that shorting is going one instead of buying, make this clear
 
-                result = test(sma1, sma2);
+                result = test(sma1, sma2, false);
                 float gain = result[0];
                 number_of_trades = (int) result[1];
 
@@ -151,13 +166,14 @@ public class SMACrossoverTester {
         if(bestSMA1>bestSMA2){position_type = "short";}
 
 //        System.out.println(stock.name + " | Best SMA1 : " + bestSMA1 + " & SMA2 : " + bestSMA2 + " | Returns : " + highest_returns + " | No. of Trades : " + number_of_trades + " | Type : " + position_type);
-        String final_result = "SMA-Crossover," + stock.ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades_best + "," + position_type;
+        String final_result = "SMA-Crossover," + ticker + "," + bestSMA1 + "," + bestSMA2 + "," + highest_returns + "," + number_of_trades_best + "," + position_type;
         System.out.println(final_result);
 
 
         // Logging to a file...
-        fileHandler.writeToFile("data/stock/"+ticker+"/simulation-sma.csv", simulation_log.toString(),false);
-        fileHandler.writeToFile("data/simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
+        test(bestSMA1,bestSMA2,true); // making it log the trades...
+        fileHandler.writeToFile("data/stock/"+ticker+"/since-ipo-simulation-sma.csv", simulation_log.toString(),false);
+        fileHandler.writeToFile("data/since-ipo-simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
 
 
         return new int[]{bestSMA1,bestSMA2};

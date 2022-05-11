@@ -1,0 +1,21 @@
+Algo-Type,Ticker,SMA1,SMA2,Profit,No. of Trades,Type
+SMA-Crossover,AAPL,60,94,51.200348,5,long
+SMA-Crossover,MSFT,27,61,57.967888,5,long
+SMA-Crossover,AMZN,56,24,50.419853,17,short
+SMA-Crossover,TSLA,39,61,149.26106,8,long
+SMA-Crossover,GOOG,20,102,83.78063,3,long
+SMA-Crossover,BRK-B,20,24,49.739212,27,long
+SMA-Crossover,FB,39,40,46.480087,46,long
+SMA-Crossover,NVDA,92,111,129.00983,3,long
+SMA-Crossover,JPM,63,76,83.88927,5,long
+SMA-Crossover,V,57,53,50.01211,25,short
+SMA-Crossover,MA,59,50,65.608444,19,short
+SMA-Crossover,BAC,24,36,78.561066,11,long
+SMA-Crossover,DIS,32,34,53.27746,49,long
+SMA-Crossover,MCD,27,47,32.93301,10,long
+SMA-Crossover,NFLX,43,20,56.86425,13,short
+SMA-Crossover,BLK,63,26,45.56796,7,short
+SMA-Crossover,BA,123,62,63.359512,3,short
+SMA-Crossover,TDOC,106,46,62.726368,3,short
+SMA-Crossover,BTC-USD,24,41,447.65683,13,long
+SMA-Crossover,ETH-USD,23,51,730.5161,13,long

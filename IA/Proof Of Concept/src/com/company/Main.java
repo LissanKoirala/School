@@ -80,13 +80,13 @@ public class Main {
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
-//        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39)));
+//        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39, true)));
 
 //        System.out.println("\n\nRunning simulation to figure out the best SMAs");
 //        smaCrossoverTester.simulate();
 
         // Simulating for a array of stocks...
-        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","PFE","BAC","KO","DIS","MCD","INTC","NFLX","BLK","BA","TDOC"};
+        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","BAC","DIS","MCD","NFLX","BLK","BA","TDOC","BTCUSD","ETHUSD"};
         for (String s: stocks){
             stock = new Stock(s);
             SMACrossoverTester smaCrossoverTester1 = new SMACrossoverTester(stock);

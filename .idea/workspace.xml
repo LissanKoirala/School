@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Updated some ideas">
+    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Added simulation results for SMACrossovers">
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/2-year-simulation-result.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/since-ipo-simulation-result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result-1-year.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/1-year-simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result-2-year.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result-since-ipo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/AAPL/AAPL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/AAPL/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/AMZN/AMZN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/AMZN/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BA/BA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BA/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BAC/BAC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BAC/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BLK/BLK.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BLK/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BRK-B/BRK-B.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/BRK-B/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/DIS/DIS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/DIS/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/FB/FB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/FB/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/GOOG/GOOG.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/GOOG/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/INTC/INTC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/INTC/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/JPM/JPM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/JPM/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/KO/KO.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/KO/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MA/MA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MA/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MCD/MCD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MCD/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MSFT/MSFT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/MSFT/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/NFLX/NFLX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/NFLX/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/NVDA/NVDA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/NVDA/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/PFE/PFE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/PFE/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/TDOC/TDOC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/TDOC/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/TSLA/TSLA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/TSLA/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/V/V.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/stock/V/simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651831498220</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added simulation results for SMACrossovers">
+      <created>1652296397761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652296397761</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added simulation results for SMACrossovers">
+      <created>1652296461683</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652296461683</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -64,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated some ideas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated some ideas" />
+    <MESSAGE value="Added simulation results for SMACrossovers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added simulation results for SMACrossovers" />
   </component>
 </project>
