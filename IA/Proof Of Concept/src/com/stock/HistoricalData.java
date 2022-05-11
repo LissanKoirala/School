@@ -4,6 +4,8 @@ import com.api.YahooFinanceApi;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
+import java.io.File;
+
 public class HistoricalData {
     private YahooFinanceApi YFHandler = new YahooFinanceApi();
     private FileHandler fileHandler = new FileHandler();
@@ -20,10 +22,15 @@ public class HistoricalData {
         ticker = ticker.replace(".", "-"); // eg : BRK.B - BRK-B
         ticker = ticker.replace("USD", "-USD");
 
-
-        String filename = "data/ticker/" + ticker + ".csv";
+        String filename = "data/stock/" + ticker + "/" + ticker + ".csv";
         String historical_data = YFHandler.get_historical(ticker); // gets the data
         historical_data = historical_data.replace("Date,Open,High,Low,Close,Adj Close,Volume\n", ""); // cleaning up
+
+        File directory = new File("data/stock/" + ticker);
+        if (! directory.exists()){
+            directory.mkdirs();
+        }
+
         fileHandler.writeToFile(filename, historical_data, false); // storing it to make it easy to process, also to save having to ask everytime
 
 //        System.out.println(FileHandler.getRowNumber(filename)); // this many data points, could look good in console...

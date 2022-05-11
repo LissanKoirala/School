@@ -2,65 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Updated some ideas">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AAPL.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AMZN.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BAC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BLK.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BRK-B.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/DIS.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/DOGE-USD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/FB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/GOOG.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/INTC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/JPM.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/KO.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MCD.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MSFT.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NFLX.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NVDA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/PFE.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TDOC.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TSLA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/V.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/trader/Trader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/AAPL.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/AMZN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BAC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BLK.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BRK-B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BRK.B.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/BTC-USD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/DIS.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/DOGE-USD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/EBAY.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/FB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/GOOG.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/INTC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/JPM.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/KO.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/MA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/MCD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/MSFT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/NFLX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/NVDA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/PFE.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/TDOC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/TSLA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/V.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/WIX.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/WMT.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/null.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/strategies/SMACrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/strategies/SMACrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/HistoricalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IA/Python/AlpacaDataStream.py" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Python/AlpacaDataStream.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AAPL.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/AMZN.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BAC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BAC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BLK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BLK.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BRK-B.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/BRK-B.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/DIS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/DIS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/DOGE-USD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/FB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/FB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/GOOG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/GOOG.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/INTC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/INTC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/JPM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/JPM.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/KO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/KO.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MCD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MCD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NFLX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NFLX.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NVDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/NVDA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/PFE.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/PFE.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TDOC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TDOC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/TSLA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/V.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/ticker/V.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
