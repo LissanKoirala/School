@@ -107,7 +107,8 @@ public class SMACrossoverTester {
                 if (buy_sell[i] == 0) {
 
                     if (last_bought != 0) { // if the stock has been bought once before...
-                        last_sold = historicalData[i][5];
+                        // TODO: When would you sell? At the next day's open or at that day's close? - Make the decision
+                        last_sold = (historicalData[i][5] + historicalData[i][1])/2; // average price of the day...
                         float gain = (last_sold-last_bought)/last_bought;
                         total_gain = total_gain + gain;
                         if (log_trades) {
@@ -120,7 +121,7 @@ public class SMACrossoverTester {
         }
 
         if (log_trades) {
-            fileHandler.writeToFile("data/stock/"+ticker+"/since-ipo-best-sma-crossover-simulation-trades.csv", String.valueOf(buy_sell_log),false);
+            fileHandler.writeToFile("data/stock/"+ticker+"/best-sma-crossover-simulation-trades.csv", String.valueOf(buy_sell_log),false);
         }
 
         return new float[]{(total_gain * 100), numbers_of_trades};
@@ -172,8 +173,8 @@ public class SMACrossoverTester {
 
         // Logging to a file...
         test(bestSMA1,bestSMA2,true); // making it log the trades...
-        fileHandler.writeToFile("data/stock/"+ticker+"/since-ipo-simulation-sma.csv", simulation_log.toString(),false);
-        fileHandler.writeToFile("data/since-ipo-simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
+        fileHandler.writeToFile("data/stock/"+ticker+"/simulation-sma.csv", simulation_log.toString(),false);
+        fileHandler.writeToFile("data/simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
 
 
         return new int[]{bestSMA1,bestSMA2};

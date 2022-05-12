@@ -100,5 +100,6 @@ public class Main {
             }).start();
         }
 
+        // TODO: Add dates to the trades log... [for backtesting log]
     }
 }
