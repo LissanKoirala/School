@@ -161,8 +161,9 @@ public class SMACrossoverTester {
                 }
 
             }
-        }
-
+        }   
+        
+        // TODO: This doesn't work currently, update it to the lastest trade it mades, currently if it does long,long,short, it says it shorted, ignoring the rest
         String position_type = "long";
         if(bestSMA1>bestSMA2){position_type = "short";}
 
