@@ -1,10 +1,20 @@
 package com.stock;
 
 import com.api.AlpacaAPI;
+import com.api.FinnhubAPI;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Stock {
     public String ticker;
@@ -12,7 +22,14 @@ public class Stock {
     public String exchange;
     public String type;
 
+    // TODO: might save the icon the a local directory, then get it from there, if not then call this url, will allow to add icons manually... or ship the product with famous ones already
+    public ImageIcon icon = new ImageIcon("data/default/default.jpg"); // if icon not found... will only happen for crypto
+
+    public String country, industry, weburl, marketcap, ipo;
+
     public JsonObject info;
+
+    public boolean other_info_flag = true; // will be false if fetching other info was unsuccessful...
 
     // points to a class of price data and news data, they will be created on the constructor of the class
     // data will be parsed and stored in a way that can be processed later
@@ -22,25 +39,71 @@ public class Stock {
     public Float[][] historical_data;
 
     private AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+    FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
+
+
     private HistoricalData HistoricalData = new HistoricalData();
 
 
 
     // instantiate the stock with getting useful data automatically
     public Stock(String ticker) throws Exception {
-        JsonArray data = AlpacaAPIHandler.ticker_info(ticker);
+        // using two sources to get the relevant data about the stock...
+        JsonObject response = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();
 
-        String res = data.get(0).toString();
-        JsonObject response = new JsonParser().parse(res).getAsJsonObject();
         info = response;
 
+        // info about the stock
         try {
-            this.ticker = response.get("symbol").getAsString();
-            this.name = response.get("name").getAsString();
-            this.exchange = response.get("exchange").getAsString();
-            this.type = response.get("class").getAsString();
+            this.ticker = info.get("symbol").getAsString();
+            this.name = info.get("name").getAsString();
+            this.exchange = info.get("exchange").getAsString();
+            this.type = info.get("class").getAsString();
 
             getHistorical_data();
+
+
+            // checking if local file for icon exists // TODO: add this to criterion for caching complexity
+            File local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
+            if (local_icon.exists()) {
+                this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
+            }
+
+            // Trying to get other info from finnhub... won't work for cryptos...
+            // we only want to run this if it's not a crypto // TODO: make it neater by perhaps adding it to a different function
+
+            if (!type.equals("crypto")) { // speeds us the program as doesn't need to do unnecessary requests...
+                try {
+
+                    JsonObject other_data = FinnhubAPIHandler.company_profile(ticker).get(0).getAsJsonObject();
+
+                    this.country = other_data.get("country").getAsString();
+                    this.industry = other_data.get("finnhubIndustry").getAsString();
+                    this.marketcap = other_data.get("marketCapitalization").getAsString();
+                    this.ipo = other_data.get("ipo").getAsString();
+                    this.weburl = other_data.get("weburl").getAsString();
+
+
+                    // checking if local file for icon exists // TODO: add this to criterion for caching complexity
+                    if (local_icon.exists() == false) { // if file doesn't exists// setting the icon to the local file if exists
+
+                        String url = other_data.get("logo").getAsString();
+                        System.out.println("coming up");
+                        System.out.println(url);
+                        try (InputStream in = new URL(url).openStream()) {
+                            Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
+                        }
+
+                        this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
+
+                    }
+
+                } catch (Exception e) {
+                    System.out.println("Stock not found in Finnhub...");
+                    other_info_flag = false; // flagging it that no info was found, helps other methods...
+                }
+            }
+
 
 
         } catch (Exception e){ // if stock doesn't exists

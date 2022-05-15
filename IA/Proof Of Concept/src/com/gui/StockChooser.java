@@ -8,8 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
+// TODO: Considering making this the home page so will include other info as well...
 public class StockChooser extends JPanel {
     // canvas for other GUI widgets
+    GUICaller GUICaller = new GUICaller();
 
     JButton button;
     JTextField textfield;
@@ -45,14 +47,11 @@ public class StockChooser extends JPanel {
 
                 try {
                     Stock stock = new Stock(textFieldValue);
-                    Float[][] historical_data = stock.getHistorical_data();
-
-                    label.setText(stock.name + "   Type: " + stock.type);
-                    label1.setText(Arrays.deepToString(historical_data));
-
+                    GUICaller.StockInfo(stock);
 
                 } catch (Exception e) {
                     System.out.println("Stock Doesn't Exists"); // TODO: check if it's true if not print the error message
+                    System.out.println(e);
                 }
             }
         });

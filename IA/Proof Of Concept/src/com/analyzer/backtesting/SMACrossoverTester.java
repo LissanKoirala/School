@@ -20,10 +20,8 @@ public class SMACrossoverTester {
 
     public SMACrossoverTester(Stock stock) throws Exception {
         this.stock = stock;
+        this.ticker = stock.ticker;
         this.historicalData = stock.getHistorical_data();
-
-        ticker = stock.ticker.replace(".", "-"); // eg : BRK.B - BRK-B
-        ticker = ticker.replace("USD", "-USD"); // for crypto...
     }
 
     // Simulating the data to figure out the gain made... if had bought at the closing price

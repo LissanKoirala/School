@@ -3,13 +3,14 @@ package com.gui;
 import com.stock.Stock;
 
 import javax.swing.*;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class GUICaller {
     public GUICaller(){
     }
 
     public void StockChooser(){
-        // demo GUI
         System.out.println("SEQUENCE: Stock Chooser");
         JFrame frame = new JFrame("Stock");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,8 +20,16 @@ public class GUICaller {
         frame.setVisible(true);
     }
 
+    public void StockInfo(Stock stock) throws IOException {
+        System.out.println("SEQUENCE: Stock Info");
+        JFrame frame = new JFrame("Stock");
+        StockInfo myGUI = new StockInfo(600, 400, stock);
+        frame.add(myGUI);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
     public void Login(){
-        // demo GUI
         System.out.println("SEQUENCE: Login");
         JFrame frame = new JFrame("Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -5,59 +5,169 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Labelled data">
-      <change afterPath="$PROJECT_DIR$/../../.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/analyzer/Analyze.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/analyzer/strategies/SMACrossover.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/analyzer/tools/SMA.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/RequestHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/Calendar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/HistoricalData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/NewsData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/RealtimeData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/trader/Trader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/user/Preferences.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/FileHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Math.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/PersistentArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/SentimentAnalysis.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/default/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/api/FinnhubAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/AAPL.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AAPL/AAPL.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/AMZN.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/AMZN/AMZN.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/BA/BA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BA/BA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/BAC/BAC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BAC/BAC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/BLK/BLK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BLK/BLK.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/BRK-B.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BRK-B/BRK-B.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/BTC-USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/BTC-USD/BTC-USD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/DIS/DIS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/DIS/DIS.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/ETH-USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/ETH-USD/ETH-USD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/FB/FB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/FB/FB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/GOOG.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/GOOG/GOOG.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/JPM/JPM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/JPM/JPM.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/MA/MA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MA/MA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/MCD/MCD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MCD/MCD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/MSFT/MSFT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/NFLX.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NFLX/NFLX.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/NVDA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/NVDA/NVDA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/TDOC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TDOC/TDOC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/TSLA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/TSLA/TSLA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stock/V/V.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/stock/V/V.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/AAPL.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AAPL/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/AMZN.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/AMZN/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/BA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BA/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/BAC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BAC/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/BLK.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BLK/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/BRK-B.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BRK-B/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/BTC-USD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/BTC-USD/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/DIS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/DIS/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/ETH-USD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/ETH-USD/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/FB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/FB/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/GOOG.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/GOOG/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/JPM.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/JPM/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/MA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MA/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/MCD.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MCD/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/MSFT.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/MSFT/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/NFLX.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NFLX/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/NVDA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/NVDA/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/TDOC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TDOC/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/TSLA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/TSLA/since-ipo-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/1-year-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/1-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/2-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/2-year-simulation-sma.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/V.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/since-ipo-best-sma-crossover-simulation-trades.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stock/V/since-ipo-simulation-sma.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/StockChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/StockInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/HistoricalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stock/HistoricalData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +213,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/stock/ETHUSD" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\stock\ETHUSD" />
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\stock\ETH-USD" />
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\default" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.company" />
       <recent name="com.utils" />
@@ -294,7 +409,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
