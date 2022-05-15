@@ -9,3 +9,6 @@
         }
         return historical_data;
     }
+
+
+// TODO: I came the the realisation that as I have been curve fitting for the SMAs, it might not work for the future, however the algorithm does self update as the days pass but still there might be something I can do to generalise it a bit instead of just fitting it to get best returns on the data already available.
