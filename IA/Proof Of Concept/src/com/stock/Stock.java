@@ -91,8 +91,6 @@ public class Stock {
                     if (local_icon.exists() == false) { // if file doesn't exists// setting the icon to the local file if exists
 
                         String url = other_data.get("logo").getAsString();
-                        System.out.println("coming up");
-                        System.out.println(url);
                         try (InputStream in = new URL(url).openStream()) {
                             Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
                         }

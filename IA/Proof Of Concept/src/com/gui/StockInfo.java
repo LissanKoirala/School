@@ -21,9 +21,7 @@ public class StockInfo extends JPanel {
 
     JButton button;
     JTextField textfield;
-    JLabel name;
-    JLabel info;
-    JLabel icon;
+    JLabel name, info, icon, chart;
 
     // TODO: Add a iframe and embed tradingview 
     public StockInfo(int width, int height, Stock stock) throws IOException {
@@ -31,23 +29,29 @@ public class StockInfo extends JPanel {
         setLayout(null);
 
         name = new JLabel(stock.name);
-        name.setBounds(10,50, 100000, 40);
+        name.setBounds(130,45, 100000, 40);
 
         icon = new JLabel(stock.icon);
         icon.setIcon(new ImageIcon(stock.icon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-        icon.setBounds(20,120, 100, 100);
+        icon.setBounds(20,50, 100, 100);
+
+
+        // TODO: Either like this put an image, or just chart a rather simple chart...
+        chart = new JLabel();
+        chart.setIcon(new ImageIcon(new ImageIcon("data/default/chart.png").getImage().getScaledInstance(783, 415, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        chart.setBounds(20,200, 783, 415);
 
 
 
         if (stock.other_info_flag){
             JLabel country_exchange = new JLabel("Exchange : " + stock.exchange + "/" + stock.country);
-            country_exchange.setBounds(10,60, 100000, 40);
+            country_exchange.setBounds(130,65, 100000, 40);
 
             JLabel industry = new JLabel("Industry : " + stock.industry);
-            industry.setBounds(10,70, 100000, 40);
+            industry.setBounds(130,80, 100000, 40);
 
             JLabel marketcap = new JLabel("MarketCap : " + stock.marketcap);
-            marketcap.setBounds(10,80, 100000, 40);
+            marketcap.setBounds(130,95, 100000, 40);
 
 
             add(country_exchange);
@@ -59,5 +63,6 @@ public class StockInfo extends JPanel {
 
         add(name);
         add(icon);
+        add(chart);
     }
 }

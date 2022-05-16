@@ -14,7 +14,7 @@ public class GUICaller {
         System.out.println("SEQUENCE: Stock Chooser");
         JFrame frame = new JFrame("Stock");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        StockChooser myGUI = new StockChooser(600, 400);
+        StockChooser myGUI = new StockChooser(300, 50);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
@@ -23,7 +23,7 @@ public class GUICaller {
     public void StockInfo(Stock stock) throws IOException {
         System.out.println("SEQUENCE: Stock Info");
         JFrame frame = new JFrame("Stock");
-        StockInfo myGUI = new StockInfo(600, 400, stock);
+        StockInfo myGUI = new StockInfo(850, 630, stock);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
