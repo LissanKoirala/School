@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Added simulation results for SMACrossovers" />
+    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Added simulation results for SMACrossovers">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/data/simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/api/YahooFinanceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/stock/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/api/YahooFinanceApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/api/YahooFinanceApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/gui/StockInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/gui/StockInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/stock/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/target/classes/com/stock/Stock.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +93,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
