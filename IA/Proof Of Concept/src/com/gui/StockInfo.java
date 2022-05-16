@@ -25,6 +25,7 @@ public class StockInfo extends JPanel {
     JLabel info;
     JLabel icon;
 
+    // TODO: Add a iframe and embed tradingview 
     public StockInfo(int width, int height, Stock stock) throws IOException {
         this.setPreferredSize(new Dimension(width, height));
         setLayout(null);
