@@ -16,6 +16,9 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
+// TODO: Add Inheritance to this class for crypto and forex, so that their symbols are dealt on their own class, and override methods to get info about them and it's different instead of bunch of ifs and try catch in the main stock class, this means you add inheritance and polymorphism and also will make it a lot cleaner and easier to deal with
+// PROBLEM: How to know if it's what? When you read from watchlist, in the for loop which one do you call? Or have a method or a class do that for you?
 public class Stock {
     public String ticker;
     public String name;
