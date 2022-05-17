@@ -2,7 +2,7 @@ package com.analyzer.tools;
 
 // Source : https://www.geeksforgeeks.org/program-find-simple-moving-average/
 
-import com.stock.Stock;
+import com.stock.Asset;
 
 import java.util.*;
 
@@ -41,11 +41,11 @@ public class SMA {
     }
 
     // returns the SMA data over the period of historical data give, can be plotted too...
-    public ArrayList<Float> getSMAData(Stock stock) throws Exception {
+    public ArrayList<Float> getSMAData(Asset asset) throws Exception {
         ArrayList<Float> sma = new ArrayList<>(); // array with the SMA prices accordingly
 
         ArrayList<Float> total = new ArrayList<>(); // array with all the prices
-        Float[][] historical_data = stock.historical_data;
+        Float[][] historical_data = asset.historical_data;
 
         for(int x = 0; x < historical_data.length; x++){
             total.add(historical_data[x][5]); // takes the avg close price

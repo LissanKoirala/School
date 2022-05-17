@@ -1,12 +1,14 @@
 package com.gui;
 
+import com.stock.Asset;
+import com.stock.Crypto;
+import com.stock.Forex;
 import com.stock.Stock;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 // TODO: Considering making this the home page so will include other info as well...
 public class StockChooser extends JPanel {
@@ -46,8 +48,14 @@ public class StockChooser extends JPanel {
                 System.out.println(textFieldValue);
 
                 try {
-                    Stock stock = new Stock(textFieldValue);
-                    GUICaller.StockInfo(stock);
+                    String type = Asset.type(textFieldValue);
+                    Asset asset = switch (type) {
+                        case "crypto" -> new Crypto(textFieldValue);
+                        case "us_equity" -> new Stock(textFieldValue); // normal stock essentially...
+                        default -> new Forex(textFieldValue);
+                    };
+
+                    GUICaller.StockInfo(asset);
 
                 } catch (Exception e) {
                     System.out.println("Stock Doesn't Exists"); // TODO: check if it's true if not print the error message

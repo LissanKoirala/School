@@ -1,27 +1,25 @@
 package com.analyzer.backtesting;
 
 import com.analyzer.tools.SMA;
-import com.stock.Stock;
+import com.stock.Asset;
 import com.utils.FileHandler;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 // TODO: Might wanna log the calculations to a csv file so that it can be processed in exel if wanted to
 // TODO: save the things to be logged to a arraylist then pass it to a thread to save to a file...
 public class SMACrossoverTester {
-    private Stock stock;
+    private Asset asset;
     private Float[][] historicalData;
     private FileHandler fileHandler = new FileHandler();
 
     String ticker;
 
 
-    public SMACrossoverTester(Stock stock) throws Exception {
-        this.stock = stock;
-        this.ticker = stock.ticker;
-        this.historicalData = stock.getHistorical_data();
+    public SMACrossoverTester(Asset asset) throws Exception {
+        this.asset = asset;
+        this.ticker = asset.ticker;
+        this.historicalData = asset.getHistorical_data();
     }
 
     // Simulating the data to figure out the gain made... if had bought at the closing price
@@ -38,8 +36,8 @@ public class SMACrossoverTester {
         SMA SMA_1 = new SMA(sma1);
         SMA SMA_2 = new SMA(sma2);
 
-        ArrayList<Float> sma_data_1 =  SMA_1.getSMAData(stock);
-        ArrayList<Float> sma_data_2 =  SMA_2.getSMAData(stock);
+        ArrayList<Float> sma_data_1 =  SMA_1.getSMAData(asset);
+        ArrayList<Float> sma_data_2 =  SMA_2.getSMAData(asset);
 
 //        System.out.println(Arrays.deepToString(sma_data_1.toArray()));
 //        System.out.println(Arrays.deepToString(sma_data_2.toArray()));

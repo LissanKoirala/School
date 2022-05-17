@@ -1,10 +1,9 @@
 package com.gui;
 
-import com.stock.Stock;
+import com.stock.Asset;
 
 import javax.swing.*;
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 public class GUICaller {
     public GUICaller(){
@@ -20,10 +19,10 @@ public class GUICaller {
         frame.setVisible(true);
     }
 
-    public void StockInfo(Stock stock) throws IOException {
+    public void StockInfo(Asset asset) throws IOException {
         System.out.println("SEQUENCE: Stock Info");
         JFrame frame = new JFrame("Stock");
-        StockInfo myGUI = new StockInfo(850, 630, stock);
+        StockInfo myGUI = new StockInfo(850, 630, asset);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);

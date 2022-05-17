@@ -3,18 +3,11 @@ package com.gui;
 // https://finnhub.io/docs/api/company-profile2
 
 
-import com.stock.Stock;
+import com.stock.Asset;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Arrays;
 
 public class StockInfo extends JPanel {
     // canvas for other GUI widgets
@@ -24,16 +17,16 @@ public class StockInfo extends JPanel {
     JLabel name, info, icon, chart;
 
     // TODO: Add a iframe and embed tradingview 
-    public StockInfo(int width, int height, Stock stock) throws IOException {
+    public StockInfo(int width, int height, Asset asset) throws IOException {
         this.setPreferredSize(new Dimension(width, height));
         setLayout(null);
 
-        name = new JLabel(stock.name);
+        name = new JLabel(asset.name);
         name.setBounds(130,45, 100000, 40);
 
-        icon = new JLabel(stock.icon);
-        icon.setIcon(new ImageIcon(stock.icon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-        icon.setBounds(20,50, 100, 100);
+        icon = new JLabel(asset.icon);
+        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        icon.setBounds(20,50, 64, 64);
 
 
         // TODO: Either like this put an image, or just chart a rather simple chart...
@@ -43,14 +36,14 @@ public class StockInfo extends JPanel {
 
 
 
-        if (stock.other_info_flag){
-            JLabel country_exchange = new JLabel("Exchange : " + stock.exchange + "/" + stock.country);
+        if (asset.other_info_flag){
+            JLabel country_exchange = new JLabel("Exchange : " + asset.exchange);
             country_exchange.setBounds(130,65, 100000, 40);
 
-            JLabel industry = new JLabel("Industry : " + stock.industry);
+            JLabel industry = new JLabel("Industry : " + asset.industry);
             industry.setBounds(130,80, 100000, 40);
 
-            JLabel marketcap = new JLabel("MarketCap : " + stock.marketcap);
+            JLabel marketcap = new JLabel("MarketCap : " + asset.marketcap);
             marketcap.setBounds(130,95, 100000, 40);
 
 

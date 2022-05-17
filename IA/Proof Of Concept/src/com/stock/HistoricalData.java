@@ -16,18 +16,13 @@ public class HistoricalData {
     }
 
 
-    public Float[][] get(String ticker) throws Exception {
+    public Float[][] get(String ticker, String YFticker) throws Exception {
 
-        // changing the ticker format to YF; DOGEUSD to DOGE-USD
-        String original_ticker = ticker; // for writing to files...
-        ticker = ticker.replace(".", "-"); // eg : BRK.B - BRK-B
-        ticker = ticker.replace("USD", "-USD");
-
-        String filename = "data/stock/" + original_ticker + "/" + original_ticker + ".csv";
-        String historical_data = YFHandler.get_historical(ticker); // gets the data
+        String filename = "data/stock/" + ticker + "/" + ticker + ".csv";
+        String historical_data = YFHandler.get_historical(YFticker); // gets the data
         historical_data = historical_data.replace("Date,Open,High,Low,Close,Adj Close,Volume\n", ""); // cleaning up
 
-        File directory = new File("data/stock/" + original_ticker);
+        File directory = new File("data/stock/" + ticker);
         if (! directory.exists()){
             directory.mkdirs();
         }
@@ -45,6 +40,10 @@ public class HistoricalData {
 
         return final_data;
 
+    }
+
+    public Float[][] get(String ticker) throws Exception {
+        return get(ticker, ticker); // calling the function and passing the same parameters as if YFticker is not given, assumes it's the same
     }
 
     // TODO: https://finnhub.io/docs/api/stock-candles | https://finnhub.io/docs/api/crypto-candles - useful for smaller resolution, intra-day trades...

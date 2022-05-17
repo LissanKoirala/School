@@ -1,23 +1,14 @@
 package com.company;
 
-import com.analyzer.Analyze;
 import com.analyzer.backtesting.SMACrossoverTester;
-import com.analyzer.strategies.SMACrossover;
 import com.api.AlpacaAPI;
+import com.api.CoinMarketCapAPI;
 import com.api.FinnhubAPI;
-import com.api.YahooFinanceApi;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.gui.GUICaller;
-import com.stock.HistoricalData;
+import com.stock.Asset;
+import com.stock.Crypto;
+import com.stock.Forex;
 import com.stock.Stock;
-import com.utils.FileHandler;
-import com.utils.SentimentAnalysis;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
 
@@ -42,8 +33,8 @@ public class Main {
 //
 //        // Gets all the assets
 //        //System.out.println(AlpacaAPIHandler.assets());
-        System.out.println(AlpacaAPIHandler.ticker_info("TSLA"));
-        System.out.println(FinnhubAPIHandler.company_profile("TSLA"));
+//        System.out.println(AlpacaAPIHandler.ticker_info("TSLA"));
+//        System.out.println(FinnhubAPIHandler.company_profile("TSLA"));
 
 
 //
@@ -82,17 +73,22 @@ public class Main {
 //            multiThreadRunner.start();
 //        }
 
+        System.out.println(AlpacaAPIHandler.ticker_info("TSLA"));
+
         Stock stock = new Stock("AAPL");
+        Crypto crypto = new Crypto("ETHUSD");
+        Forex forex = new Forex("GBPUSD");
+
 //        System.out.println(stock.name);
 //        System.out.println(stock.getNewsData());
 
-//        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(stock);
+        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(forex);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
 //        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39, true)));
 
 //        System.out.println("\n\nRunning simulation to figure out the best SMAs");
-//        smaCrossoverTester.simulate();
+        smaCrossoverTester.simulate();
 
         // Simulating for a array of stocks...
 //        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","BAC","DIS","MCD","NFLX","BLK","BA","BTCUSD","ETHUSD"};
