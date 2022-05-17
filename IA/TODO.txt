@@ -20,3 +20,6 @@
 
 // TODO: So in the watchlist, the name will be formatted accordingly even before being passed to the asset classes
 // TODO: as the filename of those don't matter... eg: GBPUSD=X BTC-USD, that's the correct format for them...
+
+// TODO: Might have a dark and light theme option, and for the stock logos, make like a circle or a square and make background of it
+White so it remains consistent, and the rest in dark mode... but might just be a hassle, just an if idea
