@@ -27,17 +27,17 @@ public class Crypto extends Asset {
 
 
         // getting the right logo...
-        JsonObject response = CoinMarketCapAPIHandler.crypto_info(CMCticker).get(0).getAsJsonObject();
-        JsonObject data = response.get("data").getAsJsonObject();
-        data = data.get(CMCticker).getAsJsonObject();
-
 
         // checking if local file for icon exists // TODO: add this to criterion for caching complexity
         File local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
         if (local_icon.exists()) {
             this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
         } else {
-            String url = data.get("logo").getAsString();
+            JsonObject response = CoinMarketCapAPIHandler.crypto_info(CMCticker).get(0).getAsJsonObject();
+            JsonObject data = response.get("data").getAsJsonObject();
+            data = data.get(CMCticker).getAsJsonObject();
+
+            String url = data.get("logo").getAsString().replace("64x64","128x128"); // asking for a higher quality image...
 
             try (InputStream in = new URL(url).openStream()) {
                 Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));

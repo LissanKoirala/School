@@ -4,38 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Labelled data">
-      <change afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/api/CoinMarketCapAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stock/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/Analyze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/Analyze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/strategies/SMACrossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/strategies/SMACrossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/tools/SMA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/StockChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/StockInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stock/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Crypto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/Forex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Forex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/HistoricalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trader/Trader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/trader/Trader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/Analyze.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/Analyze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/strategies/SMACrossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/strategies/SMACrossover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/tools/SMA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/tools/SMA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockChooser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/HistoricalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stock/HistoricalData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stock/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/trader/Trader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/trader/Trader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652296076547</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api">
+      <created>1652816862173</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652816862173</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -301,7 +280,9 @@
     <MESSAGE value="Added more links to data sources..." />
     <MESSAGE value="Bug Fixes in backtesting and added simulation results" />
     <MESSAGE value="Labelled data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Labelled data" />
+    <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets and makes the constructor clean &amp; added a new api" />
+    <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
