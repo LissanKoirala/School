@@ -12,3 +12,11 @@
 
 
 // TODO: I came the the realisation that as I have been curve fitting for the SMAs, it might not work for the future, however the algorithm does self update as the days pass but still there might be something I can do to generalise it a bit instead of just fitting it to get best returns on the data already available.
+
+
+// TODO: Finnhub profile only returns info about stocks... however, it does provide LIVE PRICE DATA FOR STOCKS, CRYPTOS AND FOREX
+// TODO: So I might end up using the websocket of finnhub for live data, however, it is slow compared to alpaca, atleast I think so
+// TODO: if it's the case, as I'm implementing inheritance, I will use alpaca for stocks and crypto and only use finnhub for forex
+
+// TODO: So in the watchlist, the name will be formatted accordingly even before being passed to the asset classes
+// TODO: as the filename of those don't matter... eg: GBPUSD=X BTC-USD, that's the correct format for them...
