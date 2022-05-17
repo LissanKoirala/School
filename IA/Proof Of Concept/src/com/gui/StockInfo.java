@@ -4,13 +4,22 @@ package com.gui;
 
 
 import com.stock.Asset;
+import com.utils.FileHandler;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class StockInfo extends JPanel {
     // canvas for other GUI widgets
+
+    FileHandler FileHandler = new FileHandler();
 
     JButton button;
     JTextField textfield;
@@ -29,10 +38,23 @@ public class StockInfo extends JPanel {
         icon.setBounds(20,50, 64, 64);
 
 
-        // TODO: Either like this put an image, or just chart a rather simple chart...
-        chart = new JLabel();
-        chart.setIcon(new ImageIcon(new ImageIcon("data/default/chart.png").getImage().getScaledInstance(783, 415, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-        chart.setBounds(20,200, 783, 415);
+        // TODO: Implement my own in python and open an api endpoint...
+        // Options : [1m,3m,5m,15m,30m,45m,1h,2h,3h,4h,1d,1w]
+        String url = "https://api.chart-img.com/v1/tradingview/advanced-chart?interval=1d&height=550&width=800&theme=light&format=png&key=00e94094-4d2c-4658-b32e-776be716517b&symbol="+asset.ticker;
+
+        File directory = new File("data/temp/");
+        if (! directory.exists()){
+            directory.mkdirs();
+        }
+
+        try (InputStream in = new URL(url).openStream()) {
+            Files.copy(in, Paths.get("data/temp/chart.png"), StandardCopyOption.REPLACE_EXISTING);
+        }
+
+        chart = new JLabel(new ImageIcon(new ImageIcon("data/temp/chart.png").getImage().getScaledInstance(560, 385, Image.SCALE_SMOOTH)));  // scaling the image properly so that there is no stretch
+        chart.setBounds(20,200, 560, 385);
+
+
 
 
 

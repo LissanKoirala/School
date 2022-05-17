@@ -22,7 +22,7 @@ public class GUICaller {
     public void StockInfo(Asset asset) throws IOException {
         System.out.println("SEQUENCE: Stock Info");
         JFrame frame = new JFrame("Stock");
-        StockInfo myGUI = new StockInfo(850, 630, asset);
+        StockInfo myGUI = new StockInfo(600, 630, asset);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
