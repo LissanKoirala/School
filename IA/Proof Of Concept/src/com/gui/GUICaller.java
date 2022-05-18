@@ -28,6 +28,16 @@ public class GUICaller {
         frame.setVisible(true);
     }
 
+    public void Simulate(Asset asset) throws Exception {
+        System.out.println("SEQUENCE: Simulate");
+        JFrame frame = new JFrame("Backdating");
+        Simulate myGUI = new Simulate(600, 630, asset);
+        frame.add(myGUI);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+
     public void Login(){
         System.out.println("SEQUENCE: Login");
         JFrame frame = new JFrame("Login");

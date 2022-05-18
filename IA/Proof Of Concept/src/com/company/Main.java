@@ -79,6 +79,9 @@ public class Main {
         Crypto crypto = new Crypto("ETHUSD");
         Forex forex = new Forex("GBPUSD");
 
+        GUICaller.Simulate(crypto);
+
+
 //        System.out.println(stock.name);
 //        System.out.println(stock.getNewsData());
 
@@ -88,7 +91,7 @@ public class Main {
 //        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39, true)));
 
 //        System.out.println("\n\nRunning simulation to figure out the best SMAs");
-        smaCrossoverTester.simulate();
+//        smaCrossoverTester.simulate();
 
         // Simulating for a array of stocks...
 //        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","BAC","DIS","MCD","NFLX","BLK","BA","BTCUSD","ETHUSD"};
