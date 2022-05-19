@@ -7,6 +7,8 @@ import com.utils.FileHandler;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,6 +16,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import javax.swing.Timer;
 
 public class Simulate extends JPanel {
     // canvas for other GUI widgets
@@ -58,5 +61,40 @@ public class Simulate extends JPanel {
 
         add(name);
         add(icon);
+
+        // So when the animation is running for a few will be running on screen, it does the actual simulation
+        // TODO: run the simulation for the highest returns in screen at last
+        int[] data = smaCrossoverTester.simulate();
+
     }
+
+    // Basically calculates the sma crossover over and shows the results on screen as it does it...
+    // TODO: name the method as simulateSMACrossover
+    // TODO: do the test() function but in one for loop?
+//    public void paintComponent(Graphics g) {
+//        super.paintComponent(g);
+//        g.setColor(Color.BLACK);
+//        g.fillRect(0, 0, getWidth(), getHeight());
+//        for (Line line : lines) {
+//            // TODO: Draw a horizontal line at the 0 point in the middle of the screen...
+//            // TODO: probably make the line a 2D array, one the value and another one the colour, as profit (above the zero horizontal line) will be green and loss red
+//            line.drawLine(g);
+//        }
+//
+//    }
+
+
+//    // Found this... source : https://stackoverflow.com/a/21801845
+//    Timer timer = new Timer(75, new ActionListener() {
+//        public void actionPerformed(ActionEvent e) {
+//            if (false) { // when you want to stop it...
+//                ((Timer) e.getSource()).stop();
+//            } else {
+//                // TODO: add to the arraylist of lines... then repaint...
+//                repaint();
+//            }
+//        }
+//    });
+
+
 }

@@ -173,7 +173,7 @@ public class SMACrossoverTester {
         fileHandler.writeToFile("data/stock/"+ticker+"/simulation-sma.csv", simulation_log.toString(),false);
         fileHandler.writeToFile("data/simulation-result.csv",final_result,true); // adding all to a since file // TODO: remove duplicates
 
-
-        return new int[]{bestSMA1,bestSMA2};
+        // TODO: Want to return the highest returns as float? 30.73 % seems realistic and believable than 30 %
+        return new int[]{bestSMA1,bestSMA2, (int) highest_returns, number_of_trades};
     }
 }
