@@ -128,6 +128,16 @@ public class Asset {
         return historical_data;
     }
 
+    public float[] getHistorical_data(int row) {
+        float[] row_prices = new float[historical_data.length]; // figuring out how big the original array was
+
+        for (int x = 0; x < historical_data.length; x++){
+            row_prices[x] = historical_data[x][row];
+        }
+        return row_prices;
+    }
+
+
     public JsonArray getNewsData() throws Exception {
         NewsData newsData = new NewsData();
         return newsData.get(ticker);

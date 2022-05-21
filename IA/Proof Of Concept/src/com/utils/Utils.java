@@ -92,4 +92,20 @@ public class Utils {
         return array;
     }
 
+    public static float[] findHighestAndLowest(float[] data){
+        float highest = data[0];
+        float lowest = data[0]; // make it the first number of the element can't be zero numbers might always be bigger than zero,
+        // TODO: lead to getting divide by zero... by putting default value as 0
+        for(float num: data){
+            if (num > highest){
+                highest = num;
+            }
+            else if (num < lowest){
+                lowest = num;
+            }
+        }
+
+        return new float[]{highest, lowest};
+    }
+
 }

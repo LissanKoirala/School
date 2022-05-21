@@ -17,7 +17,7 @@ public class YahooFinanceApi {
         // "-5364662325" - since the start
         // "1620777600" - 1y
         // "1589241600" - 2y
-        String request_url = String.format(historical_data_url, ticker, "1620777600", unixNow, "1d"); // url, ticker, start time, end time, time interval eg: 1d, 1M
+        String request_url = String.format(historical_data_url, ticker, "1589241600", unixNow, "1d"); // url, ticker, start time, end time, time interval eg: 1d, 1M
         return ReqHandler.getString(request_url);
     }
 

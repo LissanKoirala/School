@@ -79,7 +79,7 @@ public class Main {
         Crypto crypto = new Crypto("ETHUSD");
         Forex forex = new Forex("GBPUSD");
 
-        GUICaller.Simulate(crypto);
+//        GUICaller.Simulate(crypto);
 
 
 //        System.out.println(stock.name);

@@ -5,6 +5,8 @@ package com.gui;
 
 import com.stock.Asset;
 import com.utils.FileHandler;
+import com.utils.Utils;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -19,8 +21,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+import static java.lang.Math.abs;
+
 public class StockInfo extends JPanel {
     // canvas for other GUI widgets
+
+    int width;
+    int height;
 
     Asset asset;
 
@@ -32,6 +39,8 @@ public class StockInfo extends JPanel {
 
     // TODO: Add a iframe and embed tradingview 
     public StockInfo(int width, int height, Asset asset) throws IOException {
+        this.width = width;
+        this.height = height;
         this.asset = asset;
 
         this.setPreferredSize(new Dimension(width, height));
@@ -92,21 +101,25 @@ public class StockInfo extends JPanel {
     // TODO: for eg: BTC's price of 30,000 shoots off the graph... make it relative, probably graph the percentage increase?
     // TODO: find the highest and lowest point, plot the percentage increase
     // TODO: just find the higest point and divide everything by it...
-//    public void paint(Graphics g){ // paints the stock chart
-//        Float[][] historical_data = asset.historical_data;
-//
-//        int base_number = 600;
-//
-//        float previous_close = historical_data[0][5]; // getting the first data point as previous close so that it doesn't start from 0
-//        int day_counter = 0;
-//
-//        for (Float[] daily_data : historical_data) {
-//            float close_price = daily_data[5]; // 5 for close price
-//
-//            g.drawLine(day_counter, base_number-(int) previous_close, day_counter+3, base_number-(int) close_price); // TODO: adjust the +2 based on the number of data points
-//
-//            previous_close = close_price;
-//            day_counter++;
-//        }
-//    }
+    public void paint(Graphics g){ // paints the stock chart
+        Float[][] historical_data = asset.historical_data;
+
+        float[] highest_and_lowest = Utils.findHighestAndLowest(asset.getHistorical_data(5));
+
+        float highest_data_point = highest_and_lowest[0];
+        float lowest_data_point = highest_and_lowest[1];
+
+        int base_number = 800; // getting the point in the middle... making that tha base...
+        float previous_close = historical_data[0][5]/highest_data_point * height; // getting the first data point as previous close so that it doesn't start from 0
+        int day_counter = 0;
+
+        for (Float[] daily_data : historical_data) {
+            float close_price = daily_data[5]/highest_data_point * height; // 5 for close price
+
+            g.drawLine(day_counter, base_number-(int) previous_close, day_counter+1, base_number-(int) close_price); // TODO: adjust the +2 based on the number of data points
+
+            previous_close = close_price;
+            day_counter++;
+        }
+    }
 }
