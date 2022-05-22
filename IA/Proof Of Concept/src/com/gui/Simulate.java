@@ -83,6 +83,8 @@ public class Simulate extends JPanel {
 //
 //    }
 
+        // TODO: Animate the stock close price like every 5 days or so, then also animate the sma lines, when there's a trade draw a vertical line of color...
+        // TODO: Then below that stock graph, have a portfolio graph which too updates in the same frequency, if profit draw the lines in green if goes to loss draw the lines in red...
 
 //    // Found this... source : https://stackoverflow.com/a/21801845
 //    Timer timer = new Timer(75, new ActionListener() {
