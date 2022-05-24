@@ -23,3 +23,7 @@
 
 // TODO: Might have a dark and light theme option, and for the stock logos, make like a circle or a square and make background of it
 White so it remains consistent, and the rest in dark mode... but might just be a hassle, just an if idea
+
+// Commands to get git commit logs...
+$ git log --pretty=format:"%cD, %cr, %s" > history.csv
+$ git log --pretty=format:"%cr, %s" > history.csv
