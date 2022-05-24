@@ -10,7 +10,8 @@ public class FinnhubAPI {
 
     public FinnhubAPI(){
     }
-
+    
+    // TODO: make this function cache requests... so that probably at startup, all companies in watchlists will be called so it's faster for later... 
     public JsonArray make_request(String request_url) throws Exception {
         return ReqHandler.get(request_url+"&token="+api_key_token);
     }
