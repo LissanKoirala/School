@@ -115,6 +115,22 @@ public class Asset {
         }
     }
 
+    public static Asset create(String ticker) throws Exception {
+        String type = type(ticker);
+        System.out.println(type);
+        switch (type) {
+            case "us_equity":
+                return new Stock(ticker);
+            case "crypto":
+                return new Crypto(ticker);
+            default:
+                System.out.println("default");
+                // TODO: try forex, else say doesn't exists...
+                return new Forex(ticker);
+        }
+
+    }
+
     public static String type(String ticker) throws Exception { // returns if it's a stock or crypto
         AlpacaAPI AlpacaAPIHandler = new AlpacaAPI(); // to restrict it's scope
         JsonObject response = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();

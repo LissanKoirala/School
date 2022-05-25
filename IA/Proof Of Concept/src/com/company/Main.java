@@ -73,11 +73,11 @@ public class Main {
 //            multiThreadRunner.start();
 //        }
 
-        System.out.println(AlpacaAPIHandler.ticker_info("TSLA"));
+//        System.out.println(AlpacaAPIHandler.ticker_info("TSLA"));
 
-        Stock stock = new Stock("AAPL");
-        Crypto crypto = new Crypto("ETHUSD");
-        Forex forex = new Forex("GBPUSD");
+//        Stock stock = new Stock("AAPL");
+//        Crypto crypto = new Crypto("ETHUSD");
+//        Forex forex = new Forex("GBPUSD");
 
 //        GUICaller.Simulate(crypto);
 
@@ -85,7 +85,7 @@ public class Main {
 //        System.out.println(stock.name);
 //        System.out.println(stock.getNewsData());
 
-        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(forex);
+//        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(forex);
 
         // run a simulation to figure out which one smas would have done the best for this stock...
 //        System.out.println("\n\nSMA1 : 61 & SMA2 : 39 - " + Arrays.toString(smaCrossoverTester.test(51, 39, true)));
@@ -94,10 +94,10 @@ public class Main {
 //        smaCrossoverTester.simulate();
 
         // Simulating for a array of stocks...
-//        String[] stocks = {"AAPL","MSFT","AMZN","TSLA","GOOG","BRK.B","FB","NVDA","JPM","V","MA","BAC","DIS","MCD","NFLX","BLK","BA","BTCUSD","ETHUSD"};
+//        String[] stocks = {"BTCUSD","ETHUSD","AAPL","MSFT","AMZN","TSLA","GOOG","FB","NVDA","JPM","V","MA","BAC","DIS","MCD","NFLX","BLK","BA"};
 //        for (String s: stocks){
-//            stock = new Stock(s);
-//            SMACrossoverTester smaCrossoverTester1 = new SMACrossoverTester(stock);
+//            Asset asset = Asset.create(s); // gets the proper class for the asset, either stock, crypto or forex...
+//            SMACrossoverTester smaCrossoverTester1 = new SMACrossoverTester(asset);
 //
 //            new Thread(() -> {
 //                try {
