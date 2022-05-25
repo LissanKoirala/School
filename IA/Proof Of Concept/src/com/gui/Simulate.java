@@ -71,6 +71,7 @@ public class Simulate extends JPanel {
     // Basically calculates the sma crossover over and shows the results on screen as it does it...
     // TODO: name the method as simulateSMACrossover
     // TODO: do the test() function but in one for loop?
+    // TODO: there is no need copy paste the test() code, you just find the sma1 and sma2 and loop through the price array, then on each loop count, check it sma crossover or not, if happens, draw the vertical line, take the trade, then update the money value every day after based on the price of the stock, then chart the stock price, the smas and below chart the value of the money as the days pass...
 //    public void paintComponent(Graphics g) {
 //        super.paintComponent(g);
 //        g.setColor(Color.BLACK);
