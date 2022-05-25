@@ -125,7 +125,7 @@ public class Asset {
                 return new Crypto(ticker);
             default:
                 System.out.println("default");
-                // TODO: try forex, else say doesn't exists...
+                // TODO: try forex, else say doesn't exists... throw an exception if the stock doesn't exists
                 return new Forex(ticker);
         }
 

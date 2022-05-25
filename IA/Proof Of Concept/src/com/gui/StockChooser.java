@@ -49,11 +49,7 @@ public class StockChooser extends JPanel {
 
                 try {
                     String type = Asset.type(textFieldValue);
-                    Asset asset = switch (type) {
-                        case "crypto" -> new Crypto(textFieldValue);
-                        case "us_equity" -> new Stock(textFieldValue); // normal stock essentially...
-                        default -> new Forex(textFieldValue);
-                    };
+                    Asset asset = Asset.create(textFieldValue);
 
                     GUICaller.StockInfo(asset);
 

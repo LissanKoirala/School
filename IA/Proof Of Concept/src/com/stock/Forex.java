@@ -8,6 +8,7 @@ public class Forex extends Asset {
 
     public Forex(String ticker) throws Exception {
         super(ticker);
+        this.ticker = ticker;
         this.YFticker = ticker + "=X"; // separate ticker convention for YF...
         getHistorical_data();
     }
