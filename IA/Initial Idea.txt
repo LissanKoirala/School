@@ -33,6 +33,8 @@ parameters for example, for the SMA crossover, try with all the possible (and re
 performance data for each one of them and see what's worked the best for that stock over the time and use that
 KIND OF LIKE A SIMULATION...
 
+Probably you could use Benford's law to determine the probability of where the stock price is headed?
+
 
 See what data are available in platforms like webull and try to make use of that too...
 
