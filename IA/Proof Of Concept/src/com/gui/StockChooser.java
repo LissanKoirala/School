@@ -13,7 +13,6 @@ import java.awt.event.ActionListener;
 // TODO: Considering making this the home page so will include other info as well...
 public class StockChooser extends JPanel {
     // canvas for other GUI widgets
-    GUICaller GUICaller = new GUICaller();
 
     JButton button;
     JTextField textfield;

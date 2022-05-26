@@ -1,5 +1,7 @@
 package com.gui;
 
+import com.stock.Stock;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,6 +9,7 @@ import java.awt.event.ActionListener;
 
 public class Login extends JPanel implements ActionListener{
     // canvas for other GUI widgets
+    JFrame frame;
 
     String username = "admin";
     String password = "admin";
@@ -17,10 +20,13 @@ public class Login extends JPanel implements ActionListener{
     JLabel passwordLabel;
     JPasswordField passwordField;
 
-    public Login(int width, int height) {
-        System.out.println("SEQUENCE: GUI constructor");
+    public Login(int width, int height, JFrame frame) {
+        this.frame = frame;
+
+        System.out.println("SEQUENCE: GUI Login");
         this.setPreferredSize(new Dimension(width, height));
         setLayout(null);
+
 
         usernameLabel = new JLabel("Username");
         usernameLabel.setBounds(40,20, 80, 25);
@@ -52,6 +58,9 @@ public class Login extends JPanel implements ActionListener{
 
         if (inputUsername.equals(username) && inputPassword.equals(password)){
             System.out.print("User Authenticated...");
+            GUICaller.StockChooser();
+            frame.dispose();
+
 
         } else { // if authentication credentials invalid...
             JOptionPane.showMessageDialog(this, "Invalid Credentials, Try Again");

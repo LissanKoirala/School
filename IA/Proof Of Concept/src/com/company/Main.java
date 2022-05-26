@@ -66,7 +66,7 @@ public class Main {
 
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
-        GUICaller.StockChooser();
+        GUICaller.startup();
 
 //        for(int i = 0; i < 5; i++) {
 //            MultiThreadRunner multiThreadRunner = new MultiThreadRunner();
