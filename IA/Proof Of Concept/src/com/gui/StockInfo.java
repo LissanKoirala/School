@@ -20,6 +20,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 
 import static java.lang.Math.abs;
 
@@ -102,7 +103,9 @@ public class StockInfo extends JPanel {
     // TODO: find the highest and lowest point, plot the percentage increase
     // TODO: just find the higest point and divide everything by it...
     public void paint(Graphics g){ // paints the stock chart
-        Float[][] historical_data = asset.historical_data;
+        ArrayList<Float> all_historical_data = asset.getHistorical_data(5);
+        ArrayList<Float> historical_data = Utils.stripArrayList(all_historical_data, 550, false);
+
 
         float[] highest_and_lowest = Utils.findHighestAndLowest(asset.getHistorical_data(5));
 
@@ -110,11 +113,11 @@ public class StockInfo extends JPanel {
         float lowest_data_point = highest_and_lowest[1];
 
         int max_y_point = 630; // getting the point in the middle... making that tha base...
-        float previous_close = (historical_data[0][5]/highest_data_point * (height/2))+10; // getting the first data point as previous close so that it doesn't start from 0
+        float previous_close = (historical_data.get(0) /highest_data_point * (height/2))+10; // getting the first data point as previous close so that it doesn't start from 0
         int day_counter = 20;
 
-        for (Float[] daily_data : historical_data) {
-            float close_price = (daily_data[5]/highest_data_point * (height/2))+10; // 5 for close price
+        for (Float daily_data : historical_data) {
+            float close_price = (daily_data/highest_data_point * (height/2))+10; // 5 for close price
             g.drawLine(day_counter, max_y_point-(int) previous_close, day_counter+1, max_y_point-(int) close_price); // TODO: adjust the +2 based on the number of data points
 
             previous_close = close_price;
