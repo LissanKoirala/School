@@ -72,7 +72,7 @@ public class Simulate extends JPanel {
         // TODO: Animate the stock close price like every 5 days or so, then also animate the sma lines, when there's a trade draw a vertical line of color...
         // TODO: Then below that stock graph, have a portfolio graph which too updates in the same frequency, if profit draw the lines in green if goes to loss draw the lines in red...
 
-        Float[][] historical_data = asset.historical_data;
+        ArrayList<Float> all_historical_data = asset.getHistorical_data(5); // getting 5 - close price
 
         // TODO: run the simulation for the highest returns in screen at last
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(asset);
@@ -84,8 +84,16 @@ public class Simulate extends JPanel {
         SMA SMA_1 = new SMA(bestsma1);
         SMA SMA_2 = new SMA(bestsma2);
 
-        ArrayList<Float> sma_data_1 =  SMA_1.getSMAData(asset);
-        ArrayList<Float> sma_data_2 =  SMA_2.getSMAData(asset);
+        ArrayList<Float> all_sma_data_1 =  SMA_1.getSMAData(asset);
+        ArrayList<Float> all_sma_data_2 =  SMA_2.getSMAData(asset);
+
+        // TODO: this is only useful if using simulation over it's lifetime and see how it performed in the 2 years
+        // TODO: mention this : stripping the data points of historical data points to the last 550 data points, this means sma1 and sma2 also no longer start from the bottom as they would have been calculated from previous time frames already
+        // stripping the data points to the last 550 data points - that 2 years and about 3 months, fits perfectly in the screen
+        ArrayList<Float> historical_data = Utils.stripArrayList(all_historical_data, 550, false);
+        ArrayList<Float> sma_data_1 = Utils.stripArrayList(all_sma_data_1, 550, false);
+        ArrayList<Float> sma_data_2 = Utils.stripArrayList(all_sma_data_2, 550, false);
+
 
 
 //        // Found this... source : https://stackoverflow.com/a/21801845
@@ -98,7 +106,7 @@ public class Simulate extends JPanel {
                 } else {
                     // TODO: add to the arraylist of lines... then repaint...
 
-                    close_prices.add(historical_data[counter][5]);
+                    close_prices.add(historical_data.get(counter));
                     sma1.add(sma_data_1.get(counter));
                     sma2.add(sma_data_2.get(counter));
 
@@ -160,7 +168,7 @@ public class Simulate extends JPanel {
             float previous_sma1 = (sma1.get(0) / highest_data_point * (height / 2)) + 10;
             float previous_sma2 = (sma2.get(0) / highest_data_point * (height / 2)) + 10;
 
-            int day_counter = 0;
+            int day_counter = 20; // padding of 20 days to the left of screen in GUI
 
             for (int i = 0; i<close_prices.size(); i++) {
                 // printing the stock price

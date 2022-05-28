@@ -111,7 +111,7 @@ public class StockInfo extends JPanel {
 
         int max_y_point = 630; // getting the point in the middle... making that tha base...
         float previous_close = (historical_data[0][5]/highest_data_point * (height/2))+10; // getting the first data point as previous close so that it doesn't start from 0
-        int day_counter = 0;
+        int day_counter = 20;
 
         for (Float[] daily_data : historical_data) {
             float close_price = (daily_data[5]/highest_data_point * (height/2))+10; // 5 for close price

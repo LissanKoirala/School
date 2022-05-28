@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class Utils {
@@ -115,4 +116,29 @@ public class Utils {
         }
         return findHighestAndLowest(float_data);
     }
+
+    // data, int index_to_stop, boolean from front or from start...
+    public static ArrayList<Float> stripArrayList(ArrayList<Float> data, int index_to_stop, boolean from_front){
+        ArrayList<Float> newarraylist = new ArrayList<>();
+
+        if (from_front){
+            for (int i = 0; i<index_to_stop; i++){
+                newarraylist.add(data.get(i));
+            }
+
+        } else { // if strip from back
+            // TODO: might want to use Stack, last in first out, for complexity
+
+            int counter = data.size() - index_to_stop;
+            for(int i = 0; i<data.size(); i++){
+                if (i>counter){
+                    newarraylist.add(data.get(i));
+                }
+            }
+        }
+
+        return newarraylist;
+    }
+
+
 }

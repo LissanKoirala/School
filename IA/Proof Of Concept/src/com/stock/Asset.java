@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 // TODO: Probably use polygon.io to get the data instead of finnhub, it seems to be really show sometimes... or just create a hashmap to store the classes, this might be a better solution, so load things while use it loggin in etc
 // TODO: Add Inheritance to this class for crypto and forex, so that their symbols are dealt on their own class, and override methods to get info about them and it's different instead of bunch of ifs and try catch in the main stock class, this means you add inheritance and polymorphism and also will make it a lot cleaner and easier to deal with
@@ -144,11 +145,11 @@ public class Asset {
         return historical_data;
     }
 
-    public float[] getHistorical_data(int row) {
-        float[] row_prices = new float[historical_data.length]; // figuring out how big the original array was
+    public ArrayList<Float> getHistorical_data(int row) {
+        ArrayList<Float> row_prices = new ArrayList<>();
 
         for (int x = 0; x < historical_data.length; x++){
-            row_prices[x] = historical_data[x][row];
+            row_prices.add(historical_data[x][row]);
         }
         return row_prices;
     }

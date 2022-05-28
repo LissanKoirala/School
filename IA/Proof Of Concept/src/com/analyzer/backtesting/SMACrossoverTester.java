@@ -141,21 +141,23 @@ public class SMACrossoverTester {
             for (int sma2 = 20; sma2<201; sma2++){
                 // TODO: if sma1 is bigger than sma2, this means that shorting is going one instead of buying, make this clear
 
-                result = test(sma1, sma2, false);
-                float gain = result[0];
-                number_of_trades = (int) result[1];
+                // adding a gap min of 20 sma in between and making is so that sma1 is always smaller than sma2
+                if (sma2-sma1 > 20) {
+                    result = test(sma1, sma2, false);
+                    float gain = result[0];
+                    number_of_trades = (int) result[1];
 
-                // Comment this out to not log... TODO: Add a section in Preferences...
-                String log = sma1 + "," + sma2 + "," + gain + "," + number_of_trades+"\n";
-                simulation_log.append(log); // TODO: Include in Criterion - FAR FAR FAR more effieicne then just String += log; less time and processing power
+                    // Comment this out to not log... TODO: Add a section in Preferences...
+                    String log = sma1 + "," + sma2 + "," + gain + "," + number_of_trades + "\n";
+                    simulation_log.append(log); // TODO: Include in Criterion - FAR FAR FAR more effieicne then just String += log; less time and processing power
 
-                if (gain > highest_returns) {
-                    highest_returns = gain;
-                    bestSMA1 = sma1;
-                    bestSMA2 = sma2;
-                    number_of_trades_best = number_of_trades;
+                    if (gain > highest_returns) {
+                        highest_returns = gain;
+                        bestSMA1 = sma1;
+                        bestSMA2 = sma2;
+                        number_of_trades_best = number_of_trades;
+                    }
                 }
-
             }
         }   
         
