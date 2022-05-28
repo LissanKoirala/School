@@ -13,18 +13,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
 
-public class StockInfo extends JPanel {
+public class AssetInfo extends JPanel {
     // canvas for other GUI widgets
 
     int width;
@@ -39,7 +33,7 @@ public class StockInfo extends JPanel {
     JLabel name, info, icon, chart;
 
     // TODO: Add a iframe and embed tradingview 
-    public StockInfo(int width, int height, Asset asset) throws IOException {
+    public AssetInfo(int width, int height, Asset asset) throws IOException {
         this.width = width;
         this.height = height;
         this.asset = asset;
@@ -54,23 +48,23 @@ public class StockInfo extends JPanel {
         icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
         icon.setBounds(20,50, 64, 64);
 
-
-        // TODO: Implement my own in python and open an api endpoint...
-        // Options : [1m,3m,5m,15m,30m,45m,1h,2h,3h,4h,1d,1w]
-        String url = "https://api.chart-img.com/v1/tradingview/advanced-chart?interval=1d&height=550&width=800&theme=light&format=png&key=00e94094-4d2c-4658-b32e-776be716517b&symbol="+asset.ticker;
-
-        File directory = new File("data/temp/");
-        if (! directory.exists()){
-            directory.mkdirs();
-        }
-
-        try (InputStream in = new URL(url).openStream()) {
-            Files.copy(in, Paths.get("data/temp/chart.png"), StandardCopyOption.REPLACE_EXISTING);
-        }
-
-        chart = new JLabel(new ImageIcon(new ImageIcon("data/temp/chart.png").getImage().getScaledInstance(560, 385, Image.SCALE_SMOOTH)));  // scaling the image properly so that there is no stretch
-        chart.setBounds(20,200, 560, 385);
-
+        // Using external api for charts...
+//        // TODO: Implement my own in python and open an api endpoint...
+//        // Options : [1m,3m,5m,15m,30m,45m,1h,2h,3h,4h,1d,1w]
+//        String url = "https://api.chart-img.com/v1/tradingview/advanced-chart?interval=1d&height=550&width=800&theme=light&format=png&key=00e94094-4d2c-4658-b32e-776be716517b&symbol="+asset.ticker;
+//
+//        File directory = new File("data/temp/");
+//        if (! directory.exists()){
+//            directory.mkdirs();
+//        }
+//
+//        try (InputStream in = new URL(url).openStream()) {
+//            Files.copy(in, Paths.get("data/temp/chart.png"), StandardCopyOption.REPLACE_EXISTING);
+//        }
+//
+//        chart = new JLabel(new ImageIcon(new ImageIcon("data/temp/chart.png").getImage().getScaledInstance(560, 385, Image.SCALE_SMOOTH)));  // scaling the image properly so that there is no stretch
+//        chart.setBounds(20,200, 560, 385);
+//        add(chart);
 
 
 
@@ -94,7 +88,7 @@ public class StockInfo extends JPanel {
 
         add(name);
         add(icon);
-        add(chart);
+
     }
 
 
@@ -102,7 +96,7 @@ public class StockInfo extends JPanel {
     // TODO: for eg: BTC's price of 30,000 shoots off the graph... make it relative, probably graph the percentage increase?
     // TODO: find the highest and lowest point, plot the percentage increase
     // TODO: just find the higest point and divide everything by it...
-    public void paint(Graphics g){ // paints the stock chart
+    public void paintComponent(Graphics g){ // paints the stock chart
         ArrayList<Float> all_historical_data = asset.getHistorical_data(5);
         ArrayList<Float> historical_data = Utils.stripArrayList(all_historical_data, 550, false);
 
