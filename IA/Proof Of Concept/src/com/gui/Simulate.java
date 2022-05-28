@@ -34,7 +34,7 @@ public class Simulate extends JPanel {
     JTextField textfield;
     JLabel name, info, icon, chart;
 
-    // for paint canvas
+    // for paint canvas - putting it here for scopes
     ArrayList<Float> close_prices = new ArrayList<>();
     ArrayList<Float> sma1 = new ArrayList<>();
     ArrayList<Float> sma2 = new ArrayList<>();
@@ -42,6 +42,9 @@ public class Simulate extends JPanel {
     float highest_data_point;
     float previous_highest_data_point;
 
+    // making them non-primitive to hold null
+    Boolean sma_crossover_buy_state; // true if sma1 > sma2
+    Boolean previous_sma_crossover_buy_state;
 
     // TODO: Add a iframe and embed tradingview
     public Simulate(int width, int height, Asset asset) throws Exception {
@@ -179,19 +182,43 @@ public class Simulate extends JPanel {
 
 
                 // printing the sma1
-                float paintsma1 = (sma1.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
+                float current_sma1 = (sma1.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
                 g.setColor(Color.RED);
-                g.drawLine(day_counter, max_y_point - (int) previous_sma1, day_counter + 1, max_y_point - (int) paintsma1); // TODO: adjust the +2 based on the number of data points
-                previous_sma1 = paintsma1;
+                g.drawLine(day_counter, max_y_point - (int) previous_sma1, day_counter + 1, max_y_point - (int) current_sma1); // TODO: adjust the +2 based on the number of data points
+                previous_sma1 = current_sma1;
 
 
                 // printing the sma2
-                float paintsma2 = (sma2.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
+                float current_sma2 = (sma2.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
                 g.setColor(Color.GREEN);
-                g.drawLine(day_counter, max_y_point - (int) previous_sma2, day_counter + 1, max_y_point - (int) paintsma2); // TODO: adjust the +2 based on the number of data points
-                previous_sma2 = paintsma2;
+                g.drawLine(day_counter, max_y_point - (int) previous_sma2, day_counter + 1, max_y_point - (int) current_sma2); // TODO: adjust the +2 based on the number of data points
+                previous_sma2 = current_sma2;
 
 
+                // drawing the horizontal lines for crossovers
+
+                if (current_sma1 > current_sma2){
+                    sma_crossover_buy_state = true;
+                } else {
+                    sma_crossover_buy_state = false;
+                }
+
+                if (sma_crossover_buy_state !=previous_sma_crossover_buy_state){ // then crossover happened
+                    if (sma_crossover_buy_state) { // if it changed to true, it means buy state
+                        System.out.println("BUY");
+                        System.out.println(close_price);
+                        g.setColor(Color.GREEN);
+                        g.drawLine(day_counter,0, day_counter, height);
+                    } else { // if current was false, it's a short
+                        System.out.println("SHORT");
+                        System.out.println(close_price);
+                        g.setColor(Color.RED);
+                        g.drawLine(day_counter,0, day_counter, height);
+                    }
+                }
+
+
+                previous_sma_crossover_buy_state = sma_crossover_buy_state;
                 day_counter++;
 
             }

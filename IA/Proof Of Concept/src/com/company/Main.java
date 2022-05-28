@@ -57,7 +57,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Asset stock = Asset.create("AAPL");
+        Asset stock = Asset.create("TSLA");
 //        System.out.println(stock.info);
 //        System.out.println(stock.getNewsData());
 

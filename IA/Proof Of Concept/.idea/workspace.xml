@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Asset simulation works, animated graph is presented, with close price, sma1 and sma2, and they auto-scale vertically with price change, also screen is redrawn when scaling">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Stripping data show the past 2 years performance but using full historical data points if wanted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/backtesting/SMACrossoverTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/YahooFinanceApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/Simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Simulate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/StockInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/StockInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stock/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stock/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/analyzer/backtesting/SMACrossoverTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/YahooFinanceApi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/StockInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653745515567</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Stripping data show the past 2 years performance but using full historical data points if wanted">
+      <created>1653748533013</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1653748533014</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -282,7 +284,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added a RequestHandler Class to handle GET request, Yahoo Finance Class for historical data, and some many other methods" />
     <MESSAGE value="Improvements and functionality across all the Classes" />
     <MESSAGE value="Restructured the Classes into packages" />
     <MESSAGE value="StockChooser works" />
@@ -307,7 +308,8 @@
     <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api" />
     <MESSAGE value="Avoiding unnecessary API calls" />
     <MESSAGE value="Asset simulation works, animated graph is presented, with close price, sma1 and sma2, and they auto-scale vertically with price change, also screen is redrawn when scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Asset simulation works, animated graph is presented, with close price, sma1 and sma2, and they auto-scale vertically with price change, also screen is redrawn when scaling" />
+    <MESSAGE value="Stripping data show the past 2 years performance but using full historical data points if wanted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stripping data show the past 2 years performance but using full historical data points if wanted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
