@@ -1,4 +1,4 @@
-package com.stock;
+package com.asset;
 
 import com.api.YahooFinanceApi;
 import com.utils.FileHandler;

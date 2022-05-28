@@ -2,7 +2,7 @@ package com.analyzer.tools;
 
 // Source : https://www.geeksforgeeks.org/program-find-simple-moving-average/
 
-import com.stock.Asset;
+import com.asset.Asset;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.stock;
+package com.asset;
 
 public class Forex extends Asset {
 

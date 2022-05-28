@@ -1,18 +1,9 @@
 package com.company;
 
-import com.analyzer.backtesting.SMACrossoverTester;
 import com.api.AlpacaAPI;
-import com.api.CoinMarketCapAPI;
 import com.api.FinnhubAPI;
 import com.gui.GUICaller;
-import com.stock.Asset;
-import com.stock.Crypto;
-import com.stock.Forex;
-import com.stock.Stock;
-import com.utils.Utils;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.asset.Asset;
 
 public class Main {
 

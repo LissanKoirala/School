@@ -1,6 +1,6 @@
 package com.gui;
 
-import com.stock.Asset;
+import com.asset.Asset;
 
 import javax.swing.*;
 import java.awt.*;

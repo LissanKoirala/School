@@ -1,9 +1,8 @@
 package com.gui;
 
 import com.analyzer.backtesting.SMACrossoverTester;
-import com.analyzer.strategies.SMACrossover;
 import com.analyzer.tools.SMA;
-import com.stock.Asset;
+import com.asset.Asset;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
@@ -11,14 +10,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Array;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import javax.swing.Timer;
 

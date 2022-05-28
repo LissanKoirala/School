@@ -1,7 +1,7 @@
 package com.analyzer.backtesting;
 
 import com.analyzer.tools.SMA;
-import com.stock.Asset;
+import com.asset.Asset;
 import com.utils.FileHandler;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.stock;
+package com.asset;
 
 import com.api.AlpacaAPI;
 import com.api.FinnhubAPI;

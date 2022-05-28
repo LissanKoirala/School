@@ -1,7 +1,7 @@
 package com.analyzer.strategies;
 
 import com.analyzer.tools.SMA;
-import com.stock.Asset;
+import com.asset.Asset;
 
 import java.util.ArrayList;
 

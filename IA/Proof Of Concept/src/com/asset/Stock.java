@@ -1,4 +1,4 @@
-package com.stock;
+package com.asset;
 
 public class Stock extends Asset {
 

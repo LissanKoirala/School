@@ -2,7 +2,7 @@ package com.trader;
 
 import com.analyzer.backtesting.SMACrossoverTester;
 import com.analyzer.strategies.SMACrossover;
-import com.stock.Asset;
+import com.asset.Asset;
 
 public class Trader {
     String type; // probably having different types helps as there might be some changes to the parameters in the algo

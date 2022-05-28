@@ -1,9 +1,6 @@
-package com.stock;
+package com.asset;
 
 import com.api.CoinMarketCapAPI;
-import com.api.RequestHandler;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import javax.swing.*;

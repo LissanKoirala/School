@@ -3,7 +3,7 @@ package com.gui;
 // https://finnhub.io/docs/api/company-profile2
 
 
-import com.stock.Asset;
+import com.asset.Asset;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
