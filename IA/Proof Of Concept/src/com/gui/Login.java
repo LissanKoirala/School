@@ -56,7 +56,11 @@ public class Login extends JPanel implements ActionListener{
 
         if (inputUsername.equals(username) && inputPassword.equals(password)){
             System.out.print("User Authenticated...");
-            GUICaller.AssetChooser();
+            try {
+                GUICaller.HomeScreen();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
             frame.dispose();
 
 

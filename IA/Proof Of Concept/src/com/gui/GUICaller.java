@@ -14,11 +14,11 @@ public class GUICaller {
         Login();
     }
 
-    public static void AssetChooser(){
-        System.out.println("SEQUENCE: Stock Chooser");
-        JFrame frame = new JFrame("Stock");
+    public static void HomeScreen() throws Exception {
+        System.out.println("SEQUENCE: Home Screen");
+        JFrame frame = new JFrame("Home Screen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        AssetChooser myGUI = new AssetChooser(300, 50);
+        HomeScreen myGUI = new HomeScreen(600, 450);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);

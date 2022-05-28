@@ -4,6 +4,9 @@ import com.api.AlpacaAPI;
 import com.api.FinnhubAPI;
 import com.gui.GUICaller;
 import com.asset.Asset;
+import com.user.Watchlist;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -62,7 +65,8 @@ public class Main {
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 //        GUICaller.startup();
-        GUICaller.Simulate(stock);
+        GUICaller.HomeScreen();
+//        GUICaller.Simulate(stock);
 
 
 //        for(int i = 0; i < 5; i++) {
@@ -104,6 +108,14 @@ public class Main {
 //                }
 //            }).start();
 //        }
+
+//        Watchlist watchlist = new Watchlist("default");
+//        watchlist.addTicker("AAPL");
+//        watchlist.addTicker("TSLA");
+//        watchlist.addTicker("BTCUSD");
+//        watchlist.remove("TSLA");
+//        System.out.println(Arrays.toString(watchlist.get()));
+
 
         // TODO: Add dates to the trades log... [for backtesting log]
     }
