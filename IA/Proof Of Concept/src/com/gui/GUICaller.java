@@ -3,7 +3,6 @@ package com.gui;
 import com.stock.Asset;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 
 public class GUICaller {
@@ -15,20 +14,20 @@ public class GUICaller {
         Login();
     }
 
-    public static void StockChooser(){
+    public static void AssetChooser(){
         System.out.println("SEQUENCE: Stock Chooser");
         JFrame frame = new JFrame("Stock");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        StockChooser myGUI = new StockChooser(300, 50);
+        AssetChooser myGUI = new AssetChooser(300, 50);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
     }
 
-    public static void StockInfo(Asset asset) throws IOException {
+    public static void AssetInfo(Asset asset) throws IOException {
         System.out.println("SEQUENCE: Stock Info");
         JFrame frame = new JFrame("Stock");
-        StockInfo myGUI = new StockInfo(600, 630, asset);
+        AssetInfo myGUI = new AssetInfo(600, 630, asset);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);

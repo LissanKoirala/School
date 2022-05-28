@@ -1,9 +1,6 @@
 package com.gui;
 
 import com.stock.Asset;
-import com.stock.Crypto;
-import com.stock.Forex;
-import com.stock.Stock;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 // TODO: Considering making this the home page so will include other info as well...
-public class StockChooser extends JPanel {
+public class AssetChooser extends JPanel {
     // canvas for other GUI widgets
 
     JButton button;
@@ -19,7 +16,7 @@ public class StockChooser extends JPanel {
     JLabel label;
     JLabel label1;
 
-    public StockChooser(int width, int height) {
+    public AssetChooser(int width, int height) {
         System.out.println("SEQUENCE: GUI constructor");
         this.setPreferredSize(new Dimension(width, height));
         setLayout(null);
@@ -50,7 +47,7 @@ public class StockChooser extends JPanel {
                     String type = Asset.type(textFieldValue);
                     Asset asset = Asset.create(textFieldValue);
 
-                    GUICaller.StockInfo(asset);
+                    GUICaller.AssetInfo(asset);
 
                 } catch (Exception e) {
                     System.out.println("Stock Doesn't Exists"); // TODO: check if it's true if not print the error message

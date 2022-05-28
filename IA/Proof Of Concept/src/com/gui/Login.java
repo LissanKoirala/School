@@ -1,7 +1,5 @@
 package com.gui;
 
-import com.stock.Stock;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -58,7 +56,7 @@ public class Login extends JPanel implements ActionListener{
 
         if (inputUsername.equals(username) && inputPassword.equals(password)){
             System.out.print("User Authenticated...");
-            GUICaller.StockChooser();
+            GUICaller.AssetChooser();
             frame.dispose();
 
 
