@@ -1,14 +1,11 @@
 package com.stock;
 
 import com.api.AlpacaAPI;
+import com.google.gson.JsonObject;
 
 public class Calendar {
     AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
     public Calendar(){
-    }
-
-    public void isMarketOpen() throws Exception {
-        AlpacaAPIHandler.clock();
     }
     
     // returns is_open=true: next_close, or is_open=false: next_open 

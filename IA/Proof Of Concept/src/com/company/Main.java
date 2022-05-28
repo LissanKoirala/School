@@ -9,6 +9,10 @@ import com.stock.Asset;
 import com.stock.Crypto;
 import com.stock.Forex;
 import com.stock.Stock;
+import com.utils.Utils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
@@ -53,7 +57,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-//        Stock stock = new Stock("TSLA");
+        Asset stock = Asset.create("AAPL");
 //        System.out.println(stock.info);
 //        System.out.println(stock.getNewsData());
 
@@ -66,7 +70,9 @@ public class Main {
 
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
-        GUICaller.startup();
+//        GUICaller.startup();
+        GUICaller.Simulate(stock);
+
 
 //        for(int i = 0; i < 5; i++) {
 //            MultiThreadRunner multiThreadRunner = new MultiThreadRunner();

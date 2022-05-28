@@ -108,4 +108,11 @@ public class Utils {
         return new float[]{highest, lowest};
     }
 
+    public static float[] findHighestAndLowest(ArrayList<Float> data){
+        float[] float_data = new float[data.size()];
+        for (int i = 0; i<data.size(); i++){
+            float_data[i] = data.get(i);
+        }
+        return findHighestAndLowest(float_data);
+    }
 }
