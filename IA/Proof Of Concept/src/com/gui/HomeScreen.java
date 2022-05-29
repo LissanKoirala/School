@@ -36,9 +36,18 @@ public class HomeScreen extends JPanel {
         String open_or_close = marketStatus[0];
         String next_open_or_close = marketStatus[1];
 
-        JLabel open_or_close_label = new JLabel(open_or_close);
+        JLabel open_or_close_label = new JLabel(" " + open_or_close);
+        ;
+        if (open_or_close.equals("Market Closed")){
+            open_or_close_label.setIcon(new ImageIcon(new ImageIcon("data/default/red.png").getImage().getScaledInstance(8, 8, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+            open_or_close_label.setBounds(360,90, 100, 30);
+
+        } else {
+            open_or_close_label.setIcon(new ImageIcon(new ImageIcon("data/default/green.jpg").getImage().getScaledInstance(8, 8, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+            open_or_close_label.setBounds(350,90, 110, 30);
+        }
+
 //        open_or_close_label.setFont(new Font("Verdana", Font.BOLD, 20));
-        open_or_close_label.setBounds(370,90, 90, 30);
         open_or_close_label.setHorizontalAlignment(SwingConstants.RIGHT);
         add(open_or_close_label);
 
@@ -75,8 +84,8 @@ public class HomeScreen extends JPanel {
 
             watchlistlabel[i] = new JButton("  " + asset.ticker);
             watchlistlabel[i].setFont(new Font("Verdana", Font.BOLD,12));
-            watchlistlabel[i].setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(36, 36, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-            watchlistlabel[i].setBounds(500,(i*60)+100, 140, 50);
+            watchlistlabel[i].setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+            watchlistlabel[i].setBounds(500,(i*61)+100, 140, 50);
             watchlistlabel[i].setHorizontalAlignment(SwingConstants.LEFT);
             watchlistlabel[i].setContentAreaFilled(false); // TODO: Try how this differs for MacOS
 
@@ -131,7 +140,6 @@ public class HomeScreen extends JPanel {
         counter = 20;
         JButton[] newslabel = new JButton[5];
         for (int i = 0; i < 2; i++) {
-            System.out.println(watchlist[i]);
 
             JsonArray response = NewsData.get(watchlist[i], 1);
             JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
@@ -140,13 +148,11 @@ public class HomeScreen extends JPanel {
             String summary = newsdata.get("summary").getAsString();
             String image = newsdata.get("images").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
 
-            System.out.println(header);
             // Truncating the header and summary
             if (header.length() > 71){
                 String temp = header.substring(0, 70).strip();
                 header = temp + "…";
             }
-            System.out.println(header);
 
             if (summary.length() > 154){
                 String temp = summary.substring(0, 153).strip();

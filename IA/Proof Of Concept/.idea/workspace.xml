@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Removed debugging code">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added market hours status in home page">
+      <change afterPath="$PROJECT_DIR$/data/default/green.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/temp/green_blinking.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/temp/red.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/default/red.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/asset/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/default" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
@@ -64,8 +65,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\default" />
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\temp" />
       <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\stock\ETHUSD" />
       <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\stock\ETH-USD" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\data\default" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -306,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653836104870</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Added market hours status in home page">
+      <created>1653854706046</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1653854706046</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -325,7 +337,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SMA Crossover Works" />
     <MESSAGE value="Login GUI Added" />
     <MESSAGE value="Added Backtester for SMACrossovers" />
     <MESSAGE value="Fixed ticker for Crypto Usage, Fixed YF timeframe" />
@@ -350,7 +361,8 @@
     <MESSAGE value="Integrated simulation in AssetInfo +improvements to graph" />
     <MESSAGE value="Added news to the GUI, Retired FinnhubAPI, Improved Asset (parent class), made Forex class work &amp; fixed bugs" />
     <MESSAGE value="Removed debugging code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed debugging code" />
+    <MESSAGE value="Added market hours status in home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added market hours status in home page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
