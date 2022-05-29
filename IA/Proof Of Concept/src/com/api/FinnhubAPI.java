@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+// TODO: Retired api, not in use cause slow and inconsistent
 public class FinnhubAPI {
     RequestHandler ReqHandler = new RequestHandler();
     private String api_key_token = "c9tbouqad3i1pjtuimu0";

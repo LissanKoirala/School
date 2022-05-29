@@ -14,8 +14,8 @@ public class Watchlist {
         addTicker("AAPL");
         addTicker("TSLA");
         addTicker("BTCUSD");
-        addTicker("ETHUSD");
-        addTicker("TWTR");
+        addTicker("GOOG");
+        addTicker("GBPUSD");
     }
 
     public void addTicker(String ticker){

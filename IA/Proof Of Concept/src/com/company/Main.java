@@ -1,11 +1,14 @@
 package com.company;
 
 import com.api.AlpacaAPI;
-import com.api.FinnhubAPI;
+import com.asset.NewsData;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.gui.GUICaller;
 import com.asset.Asset;
 import com.user.Watchlist;
 
+import javax.swing.*;
 import java.util.Arrays;
 
 public class Main {
@@ -21,7 +24,6 @@ public class Main {
 
 
         AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
-        FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
 //        System.out.println(AlpacaAPIHandler.clock());
 //        System.out.println(AlpacaAPIHandler.account());
 //        System.out.println(AlpacaAPIHandler.orders());
@@ -51,7 +53,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Asset stock = Asset.create("TSLA");
+//        Asset stock = Asset.create("EURGBP");
 //        System.out.println(stock.info);
 //        System.out.println(stock.getNewsData());
 
@@ -109,7 +111,8 @@ public class Main {
 //            }).start();
 //        }
 
-//        Watchlist watchlist = new Watchlist("default");
+//        Watchlist watchlists = new Watchlist("default");
+//        String[] watchlist = watchlists.get();
 //        watchlist.addTicker("AAPL");
 //        watchlist.addTicker("TSLA");
 //        watchlist.addTicker("BTCUSD");

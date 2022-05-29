@@ -1,7 +1,6 @@
 package com.asset;
 
 import com.api.AlpacaAPI;
-import com.api.FinnhubAPI;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -40,20 +39,25 @@ public class Asset {
     public Float[][] historical_data;
 
     AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
-    FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
     HistoricalData HistoricalDataGetter = new HistoricalData();
-
 
 
     // instantiate the stock with getting useful data automatically
     public Asset(String ticker) throws Exception {
-        // using two sources to get the relevant data about the stock...
-        JsonObject response = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();
 
-        info = response;
+        // Creating directory to store asset details
+        File directory = new File("data/stock/" + ticker);
+        if (! directory.exists()){
+            directory.mkdirs();
+        }
 
         // info about the stock
         try {
+
+            // using sources to get the relevant data about the stock...
+
+            info = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();
+
             this.ticker = info.get("symbol").getAsString();
             this.name = info.get("name").getAsString();
             this.exchange = info.get("exchange").getAsString();
@@ -70,49 +74,27 @@ public class Asset {
             // we only want to run this if it's not a crypto // TODO: make it neater by perhaps adding it to a different function
 
             if (!type.equals("crypto")) { // speeds us the program as doesn't need to do unnecessary requests...
-                try {
 
-                    JsonObject other_data = FinnhubAPIHandler.company_profile(ticker).get(0).getAsJsonObject();
+                // checking if local file for icon exists // TODO: add this to criterion for caching complexity
+                if (!local_icon.exists()) { // if file doesn't exists// setting the icon to the local file if exists
 
-                    this.country = other_data.get("country").getAsString();
-                    this.industry = other_data.get("finnhubIndustry").getAsString();
-                    this.marketcap = other_data.get("marketCapitalization").getAsString();
-                    this.ipo = other_data.get("ipo").getAsString();
-                    this.weburl = other_data.get("weburl").getAsString();
+                    String url = "https://companiesmarketcap.com/img/company-logos/128/" + ticker + ".png";
 
-
-                    // checking if local file for icon exists // TODO: add this to criterion for caching complexity
-                    if (local_icon.exists() == false) { // if file doesn't exists// setting the icon to the local file if exists
-
-                        String url = other_data.get("logo").getAsString();
-                        try (InputStream in = new URL(url).openStream()) {
-                            Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
-                        }
-
-                        this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
-
+                    try (InputStream in = new URL(url).openStream()) {
+                        Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
+                    } catch (Exception e){
+                        System.out.println("Icon error : " + e);
                     }
 
-                } catch (Exception e) {
-                    System.out.println("Stock not found in Finnhub...");
-                    other_info_flag = false; // flagging it that no info was found, helps other methods...
+                    this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
                 }
             }
 
-
-
         } catch (Exception e){ // if stock doesn't exists
-
+            System.out.println("Stock Not Found");
             System.out.println(e);
 
-            String error_message = "asset not found for " + ticker;
-            String message = response.get("message").getAsString();
-
-            if (error_message.equals(message)) {
-                System.out.println("Stock Not Found");
-            } else {
-                System.out.print(message);
-            }
+            this.ticker = ticker;
         }
     }
 
@@ -133,9 +115,15 @@ public class Asset {
     }
 
     public static String type(String ticker) throws Exception { // returns if it's a stock or crypto
-        AlpacaAPI AlpacaAPIHandler = new AlpacaAPI(); // to restrict it's scope
-        JsonObject response = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();
-        return response.get("class").getAsString();
+        try {
+            AlpacaAPI AlpacaAPIHandler = new AlpacaAPI(); // to restrict it's scope
+            JsonObject response = AlpacaAPIHandler.ticker_info(ticker).get(0).getAsJsonObject();
+            return response.get("class").getAsString();
+        } catch (Exception e){
+            System.out.println("Asset not found");
+            System.out.println(e);
+            return "null"; // not found
+        }
     }
 
     // gets and updates the historical data, can also be accessed directly by the shared variable

@@ -14,6 +14,14 @@ public class NewsData {
         return AlpacaAPIHandler.get_news(ticker);
     }
 
+    public JsonArray get(String ticker, int limit) throws Exception {
+        return AlpacaAPIHandler.get_news(ticker, limit);
+    }
+
+    public JsonArray get() throws Exception {
+        return AlpacaAPIHandler.get_news("");
+    }
+
     // Insider Info
     // TODO: Insider Transaction : https://finnhub.io/docs/api/insider-transactions
     // TODO: Insider Sentiment : https://finnhub.io/docs/api/insider-sentiment

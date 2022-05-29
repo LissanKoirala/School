@@ -81,13 +81,12 @@ public class AlpacaAPI {
     }
 
 
-
-    public JsonArray get_news() throws Exception {
-        String request_url = "https://data.alpaca.markets/v1beta1/news";
+    // Can add multiples if separated with +
+    public JsonArray get_news(String tickers, int limit) throws Exception {
+        String request_url = "https://data.alpaca.markets/v1beta1/news?symbols="+tickers + "&limit=" + limit;
         return make_request(request_url);
     }
 
-    // Can add multiples if separated with +
     public JsonArray get_news(String tickers) throws Exception {
         String request_url = "https://data.alpaca.markets/v1beta1/news?symbols="+tickers;
         return make_request(request_url);
