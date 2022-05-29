@@ -19,11 +19,7 @@ public class Forex extends Asset {
         this.ticker = ticker;
         this.YFticker = ticker + "=X"; // separate ticker convention for YF...
 
-        System.out.println("got here 1");
-
         getHistorical_data();
-
-        System.out.println("got here 2");
 
         File local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
         if (local_icon.exists()) {
@@ -42,10 +38,8 @@ public class Forex extends Asset {
 
     @Override
     public Float[][] getHistorical_data() throws Exception {
-        System.out.println("Got here 4");
         HistoricalData HistoricalDataGetter = new HistoricalData();
         this.historical_data = HistoricalDataGetter.getForex(ticker, YFticker);
-        System.out.println("got here 5");
         return historical_data;
     }
 }

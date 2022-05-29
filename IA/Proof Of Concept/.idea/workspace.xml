@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Integrated simulation in AssetInfo +improvements to graph">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added news to the GUI, Retired FinnhubAPI, Improved Asset (parent class), made Forex class work &amp; fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/AlpacaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/AlpacaAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/FinnhubAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/FinnhubAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Forex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Forex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/NewsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/NewsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/user/Watchlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/user/Watchlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653822771875</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added news to the GUI, Retired FinnhubAPI, Improved Asset (parent class), made Forex class work &amp; fixed bugs">
+      <created>1653835467908</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1653835467908</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -317,7 +316,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Pre-processed data, converted historical prices to floats" />
     <MESSAGE value="Added data Analyzers" />
     <MESSAGE value="SMA Crossover Works" />
     <MESSAGE value="Login GUI Added" />
@@ -342,7 +340,8 @@
     <MESSAGE value="Truncating StockInfo graph to 2 years" />
     <MESSAGE value="Rename" />
     <MESSAGE value="Integrated simulation in AssetInfo +improvements to graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated simulation in AssetInfo +improvements to graph" />
+    <MESSAGE value="Added news to the GUI, Retired FinnhubAPI, Improved Asset (parent class), made Forex class work &amp; fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added news to the GUI, Retired FinnhubAPI, Improved Asset (parent class), made Forex class work &amp; fixed bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
