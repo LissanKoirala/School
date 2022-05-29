@@ -48,7 +48,7 @@ public class HomeScreen extends JPanel {
         JButton[] watchlistlabel = new JButton[5];
         for (int i = 0; i < 5; i++) {
 
-            Asset asset = new Asset(watchlist[i]);
+            Asset asset = Asset.create(watchlist[i]);
 
             watchlistlabel[i] = new JButton("  " + asset.ticker);
             watchlistlabel[i].setFont(new Font("Verdana", Font.BOLD,12));

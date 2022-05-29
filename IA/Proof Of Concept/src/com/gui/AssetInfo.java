@@ -7,12 +7,10 @@ import com.asset.Asset;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -28,7 +26,7 @@ public class AssetInfo extends JPanel {
 
     FileHandler FileHandler = new FileHandler();
 
-    JButton button;
+    JButton button, simulate;
     JTextField textfield;
     JLabel name, info, icon, chart;
 
@@ -88,6 +86,24 @@ public class AssetInfo extends JPanel {
 
         add(name);
         add(icon);
+
+
+        // TODO: Organise the action listener, make the class implement Action Listener
+        simulate = new JButton("Simulate"); // TODO: or call it Backtesting/Backtracking?
+        simulate.setFont(new Font("Verdana", Font.BOLD,12));
+        simulate.setBounds(130,160, 95, 25);
+
+        simulate.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try {
+                    GUICaller.Simulate(asset);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        add(simulate);
+
 
     }
 

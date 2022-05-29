@@ -10,7 +10,7 @@ public class GUICaller {
     }
 
     public static void startup(){
-        // TODO: Start everything off here, manage caching etc... Start instantiating assets from watchlist etc...
+        // TODO: Start everything off here, manage caching etc... Start instantiating assets from watchlist etc... and save it a arraylist
         Login();
     }
 

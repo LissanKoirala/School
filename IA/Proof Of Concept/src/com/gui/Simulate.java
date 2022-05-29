@@ -47,6 +47,13 @@ public class Simulate extends JPanel {
         setLayout(null);
 
 
+        JLabel label = new JLabel("Backtesting");
+        label.setFont(new Font("Verdana", Font.BOLD, 20));
+        label.setBounds(100, 50, 150, 50);
+        add(label);
+
+
+
         // TODO: Show an animation of this as it's happening... and a new thread will do the normal .simulate() call...
         // TODO: will keep the user busy while the real whole simulation runs...
 //        int[][] sma_to_show = {{20,50}, {50,180}};
@@ -114,7 +121,7 @@ public class Simulate extends JPanel {
 
 
         JButton start = new JButton("Simulate");
-        start.setBounds(130,80,80,40);
+        start.setBounds(100,100,90,25);
 
         start.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
@@ -199,12 +206,23 @@ public class Simulate extends JPanel {
                         System.out.println("BUY");
                         System.out.println(close_price);
                         g.setColor(Color.GREEN);
-                        g.drawLine(day_counter,0, day_counter, height);
+//                        g.drawLine(day_counter,0, day_counter, height);
+
+                        g.drawPolygon(new int[] {day_counter-5, day_counter, day_counter+5}, new int[] {(int) (max_y_point-current_sma1+5), (int) (max_y_point-current_sma1-5), (int) (max_y_point-current_sma1+5)}, 3);
+                        g.setColor(Color.green);
+                        g.fillPolygon(new int[] {day_counter-5, day_counter, day_counter+5}, new int[] {(int) (max_y_point-current_sma1+5), (int) (max_y_point-current_sma1-5), (int) (max_y_point-current_sma1+5)}, 3);
+
+
                     } else { // if current was false, it's a short
                         System.out.println("SHORT");
                         System.out.println(close_price);
                         g.setColor(Color.RED);
-                        g.drawLine(day_counter,0, day_counter, height);
+//                        g.drawLine(day_counter,0, day_counter, height);
+
+                        g.drawPolygon(new int[] {day_counter-5, day_counter, day_counter+5}, new int[] {(int) (max_y_point-current_sma1-5), (int) (max_y_point-current_sma1+5), (int) (max_y_point-current_sma1-5)}, 3);
+                        g.setColor(Color.red);
+                        g.fillPolygon(new int[] {day_counter-5, day_counter, day_counter+5}, new int[] {(int) (max_y_point-current_sma1-5), (int) (max_y_point-current_sma1+5), (int) (max_y_point-current_sma1-5)}, 3);
+
                     }
                 }
 
