@@ -66,8 +66,8 @@ public class Main {
 
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
-        GUICaller.startup();
-//        GUICaller.HomeScreen();
+//        GUICaller.startup();
+        GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
 
 

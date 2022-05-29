@@ -4,12 +4,13 @@ import com.api.AlpacaAPI;
 import com.google.gson.JsonObject;
 
 public class Calendar {
-    AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+    static AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+
     public Calendar(){
     }
     
     // returns is_open=true: next_close, or is_open=false: next_open 
-    public String[] isMarketOpen() throws Exception {
+    public static String[] isMarketOpen() throws Exception {
         JsonObject response = AlpacaAPIHandler.clock().get(0).getAsJsonObject();
         String is_open = response.get("is_open").getAsString();
 
@@ -17,9 +18,9 @@ public class Calendar {
         String next_close = response.get("next_close").getAsString();
 
         if (is_open.equals("true")){
-            return new String[]{is_open, next_close};
+            return new String[]{"Market Open", next_close};
         } else {
-            return new String[]{is_open, next_open};
+            return new String[]{"Market Closed", next_open};
         }
     }
 }

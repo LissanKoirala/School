@@ -18,7 +18,7 @@ public class GUICaller {
         System.out.println("SEQUENCE: Home Screen");
         JFrame frame = new JFrame("Home Screen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        HomeScreen myGUI = new HomeScreen(600, 450);
+        HomeScreen myGUI = new HomeScreen(700, 450);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
