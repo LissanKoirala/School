@@ -52,6 +52,11 @@ public class Simulate extends JPanel {
         label.setBounds(100, 50, 150, 50);
         add(label);
 
+        JLabel type = new JLabel("SMA Crossover");
+        type.setFont(new Font("Verdana", Font.BOLD, 12));
+        type.setBounds(100, 75, 150, 50);
+        add(type);
+
 
 
         // TODO: Show an animation of this as it's happening... and a new thread will do the normal .simulate() call...
@@ -121,7 +126,7 @@ public class Simulate extends JPanel {
 
 
         JButton start = new JButton("Simulate");
-        start.setBounds(100,100,90,25);
+        start.setBounds(100,130,90,25);
 
         start.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
