@@ -39,7 +39,7 @@ public class Forex extends Asset {
     @Override
     public Float[][] getHistorical_data() throws Exception {
         HistoricalData HistoricalDataGetter = new HistoricalData();
-        this.historical_data = HistoricalDataGetter.getForex(ticker, YFticker);
+        this.historical_data = HistoricalDataGetter.get(ticker, YFticker);
         return historical_data;
     }
 }
