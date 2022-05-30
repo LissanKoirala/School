@@ -10,7 +10,7 @@ public class Calendar {
     }
     
     // returns is_open=true: next_close, or is_open=false: next_open 
-    public static String[] isMarketOpen() throws Exception {
+    public static String[] marketStatus() throws Exception {
         JsonObject response = AlpacaAPIHandler.clock().get(0).getAsJsonObject();
         String is_open = response.get("is_open").getAsString();
 
@@ -22,6 +22,11 @@ public class Calendar {
         } else {
             return new String[]{"Market Closed", next_open};
         }
+    }
+
+    public static boolean isMarketOpen() throws Exception {
+        String[] status = marketStatus();
+        return status[0].equals("Market Open");
     }
 }
 

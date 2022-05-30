@@ -19,6 +19,10 @@ public class Forex extends Asset {
         this.ticker = ticker;
         this.YFticker = ticker + "=X"; // separate ticker convention for YF...
 
+        this.name = ticker;
+        this.exchange = "FOREX";
+        this.type = "forex";
+
         getHistorical_data();
 
         File local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
@@ -33,8 +37,8 @@ public class Forex extends Asset {
             }
             this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
         }
-
     }
+
 
     @Override
     public Float[][] getHistorical_data() throws Exception {

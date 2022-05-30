@@ -4,6 +4,7 @@ package com.gui;
 
 
 import com.asset.Asset;
+import com.asset.Calendar;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
@@ -31,7 +32,7 @@ public class AssetInfo extends JPanel {
     JLabel name, info, icon, chart;
 
     // TODO: Add a iframe and embed tradingview 
-    public AssetInfo(int width, int height, Asset asset) throws IOException {
+    public AssetInfo(int width, int height, Asset asset) throws Exception {
         this.width = width;
         this.height = height;
         this.asset = asset;
@@ -40,11 +41,27 @@ public class AssetInfo extends JPanel {
         setLayout(null);
 
         name = new JLabel(asset.name);
-        name.setBounds(130,45, 100000, 40);
+        name.setHorizontalAlignment(SwingConstants.LEFT);
+        name.setBounds(170, 40, 500, 40);
+        add(name);
+
+        JLabel country_exchange = new JLabel("Exchange : " + asset.exchange);
+        country_exchange.setHorizontalAlignment(SwingConstants.LEFT);
+        country_exchange.setBounds(170, 60, 100000, 40);
+        add(country_exchange);
+
+        // TODO: worth mentioning in Criterion C?
+        if ((asset.type.equals("us_equity") && Calendar.isMarketOpen()) || asset.type.equals("crypto")){
+            JLabel price = new JLabel("Price : " + asset.quote());
+            price.setHorizontalAlignment(SwingConstants.LEFT);
+            price.setBounds(170, 80, 100000, 40);
+            add(price);
+        }
 
         icon = new JLabel(asset.icon);
         icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-        icon.setBounds(20,50, 64, 64);
+        icon.setBounds(60,50, 64, 64);
+        add(icon);
 
         // Using external api for charts...
 //        // TODO: Implement my own in python and open an api endpoint...
@@ -65,27 +82,6 @@ public class AssetInfo extends JPanel {
 //        add(chart);
 
 
-
-        if (asset.other_info_flag){
-            JLabel country_exchange = new JLabel("Exchange : " + asset.exchange);
-            country_exchange.setBounds(130,65, 100000, 40);
-
-            JLabel industry = new JLabel("Industry : " + asset.industry);
-            industry.setBounds(130,80, 100000, 40);
-
-            JLabel marketcap = new JLabel("MarketCap : " + asset.marketcap);
-            marketcap.setBounds(130,95, 100000, 40);
-
-
-            add(country_exchange);
-            add(industry);
-            add(marketcap);
-        }
-
-
-
-        add(name);
-        add(icon);
 
 
         // TODO: Organise the action listener, make the class implement Action Listener

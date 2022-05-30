@@ -29,7 +29,7 @@ public class HomeScreen extends JPanel {
 
         // Market Hours
         // TODO: add the gif and image for open and close
-        String[] marketStatus = Calendar.isMarketOpen();
+        String[] marketStatus = Calendar.marketStatus();
         String open_or_close = marketStatus[0];
         String next_open_or_close = marketStatus[1];
 
@@ -59,7 +59,7 @@ public class HomeScreen extends JPanel {
         add(search);
 
         textfield = new JTextField();
-        textfield.setMargin(new Insets(2,10,3,2)); // padding the text
+        textfield.setMargin(new Insets(2,13,3,2)); // padding the text
         textfield.setBounds(60,100, 150, 30);
 
         // TODO: currently only auto capitalizes, might add suggestions etc...
@@ -155,9 +155,15 @@ public class HomeScreen extends JPanel {
             JsonArray response = NewsData.get(watchlist[i], 1);
             JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
 
-            String header = newsdata.get("headline").getAsString();
-            String summary = newsdata.get("summary").getAsString();
-            String image = newsdata.get("images").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+            String header = "", summary = "", image = "";
+            try {
+                header = newsdata.get("headline").getAsString();
+                summary = newsdata.get("summary").getAsString();
+                image = newsdata.get("images").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+            } catch (Exception e){
+                System.out.println("Error fetching info from news");
+                System.out.println(e);
+            }
 
             // Truncating the header and summary
             if (header.length() > 71){
@@ -165,8 +171,8 @@ public class HomeScreen extends JPanel {
                 header = temp + "…";
             }
 
-            if (summary.length() > 154){
-                String temp = summary.substring(0, 153).strip();
+            if (summary.length() > 149){
+                String temp = summary.substring(0, 148).strip();
                 summary = temp + "…";
             }
 

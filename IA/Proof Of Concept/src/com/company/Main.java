@@ -121,5 +121,8 @@ public class Main {
 
 
         // TODO: Add dates to the trades log... [for backtesting log]
+
+        Asset asset = Asset.create("AAPL");
+        System.out.println(asset.quote());
     }
 }

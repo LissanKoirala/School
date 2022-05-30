@@ -92,4 +92,14 @@ public class AlpacaAPI {
         return make_request(request_url);
     }
 
+    public JsonArray quoteStock(String ticker) throws Exception {
+        String request_url = "https://data.alpaca.markets/v2/stocks/" + ticker + "/quotes/latest";
+        return make_request(request_url);
+    }
+
+    public JsonArray quoteCrypto(String ticker) throws Exception {
+        String request_url = "https://data.alpaca.markets/v1beta1/crypto/" + ticker + "/quotes/latest?exchange=FTXU";
+        return make_request(request_url);
+    }
 }
+

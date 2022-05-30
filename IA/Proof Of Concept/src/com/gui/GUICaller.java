@@ -24,7 +24,7 @@ public class GUICaller {
         frame.setVisible(true);
     }
 
-    public static void AssetInfo(Asset asset) throws IOException {
+    public static void AssetInfo(Asset asset) throws Exception {
         System.out.println("SEQUENCE: Stock Info");
         JFrame frame = new JFrame("Stock");
         AssetInfo myGUI = new AssetInfo(600, 630, asset);

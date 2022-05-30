@@ -1,5 +1,8 @@
 package com.asset;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 // https://companiesmarketcap.com/
 public class Stock extends Asset {
 

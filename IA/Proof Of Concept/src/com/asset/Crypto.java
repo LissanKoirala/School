@@ -49,4 +49,12 @@ public class Crypto extends Asset {
         this.historical_data = HistoricalDataGetter.get(ticker, YFticker);
         return historical_data;
     }
+
+    @Override
+    public String quote() throws Exception {
+        JsonObject response = AlpacaAPIHandler.quoteCrypto(ticker).get(0).getAsJsonObject();
+        System.out.println(response);
+        String quote = response.get("quote").getAsJsonObject().get("ap").getAsString();
+        return quote;
+    }
 }
