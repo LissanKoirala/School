@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Added icons to market status">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Solved a major bug, preventing program from crashing if null data points in HistoricalData">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/default/chart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Forex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Forex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653858401873</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Solved a major bug, preventing program from crashing if null data points in HistoricalData">
+      <created>1653910323846</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1653910323846</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -342,7 +347,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Backtester for SMACrossovers" />
     <MESSAGE value="Fixed ticker for Crypto Usage, Fixed YF timeframe" />
     <MESSAGE value="Simulation on SMACrossover" />
     <MESSAGE value="Few Improvements" />
@@ -367,7 +371,8 @@
     <MESSAGE value="Removed debugging code" />
     <MESSAGE value="Added market hours status in home page" />
     <MESSAGE value="Added icons to market status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added icons to market status" />
+    <MESSAGE value="Solved a major bug, preventing program from crashing if null data points in HistoricalData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved a major bug, preventing program from crashing if null data points in HistoricalData" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

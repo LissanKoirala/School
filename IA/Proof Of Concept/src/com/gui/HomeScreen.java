@@ -9,10 +9,7 @@ import com.user.Watchlist;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.Arrays;
 
 // TODO: Considering making this the home page so will include other info as well...
@@ -62,7 +59,21 @@ public class HomeScreen extends JPanel {
         add(search);
 
         textfield = new JTextField();
+        textfield.setMargin(new Insets(2,10,3,2)); // padding the text
         textfield.setBounds(60,100, 150, 30);
+
+        // TODO: currently only auto capitalizes, might add suggestions etc...
+        textfield.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                char keyChar = e.getKeyChar();
+                if (Character.isLowerCase(keyChar)) {
+                    e.setKeyChar(Character.toUpperCase(keyChar));
+                }
+            }
+        });
+
+
+
 
         button = new JButton("\uD83D\uDD0D"); // search icon
         button.setBounds(230,99, 50, 30);
@@ -170,7 +181,7 @@ public class HomeScreen extends JPanel {
                     "</style>" +
 
                     "<style>h4 {\n" +
-                    "font: 10px Verdana;\n" +
+                    "font: 9px Verdana;\n" +
                     "padding-right: 60px;\n"+
                     "font-weight: bold;\n"+
                     "};\n" +
@@ -181,7 +192,7 @@ public class HomeScreen extends JPanel {
             newslabel[i].setText(imageInHtml);
 
 //            newslabel[i].setIcon(new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-            newslabel[i].setBounds(60,(i*115)+180, 400, 100);
+            newslabel[i].setBounds(60,(i*110)+180, 400, 105);
 //            newslabel[i].setHorizontalAlignment(SwingConstants.LEFT);
             newslabel[i].setContentAreaFilled(false); // TODO: Try how this differs for MacOS
             add(newslabel[i]);
