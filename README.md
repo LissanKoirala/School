@@ -4,7 +4,7 @@ Projects while at BGS doing IB Computer Science
 # [IA] Stock trader project
 ## 1 Year returns (2021-05-12 - 2022-05-11)
 
-|Algo-Type    |Ticker |SMA1|SMA2|Profit   |No. of Trades|Type |
+|Algo-Type    |Ticker |SMA1|SMA2|Profit (%)|No. of Trades|Type |
 |-------------|-------|----|----|---------|-------------|-----|
 |SMA-Crossover|AAPL   |37  |41  |30.55191 |8            |long |
 |SMA-Crossover|MSFT   |33  |27  |17.677576|7            |short|
