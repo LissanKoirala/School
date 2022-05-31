@@ -2,6 +2,11 @@
 Projects while at BGS doing IB Computer Science
 
 # [IA] Stock trader project
+
+[Stock Analyzer/Trader](https://github.com/LissanKoirala/School/tree/main/IA/Proof%20Of%20Concept)&nbsp;&nbsp;&nbsp;<sub><sup>Last trade [PLTR]: 🔻Short @ $166.53</sup></sub>
+
+<img src="https://user-images.githubusercontent.com/58141138/171060731-0106af86-9f7c-41a2-8d40-e643bbfb9a8e.gif" alt="drawing"/>
+
 ## 1 Year returns (2021-05-12 - 2022-05-11)
 
 |Algo-Type    |Ticker |SMA1|SMA2|Profit (%)|No. of Trades|Type |
