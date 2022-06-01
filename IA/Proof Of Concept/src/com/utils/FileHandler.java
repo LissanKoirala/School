@@ -1,6 +1,8 @@
 package com.utils;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 
 public class FileHandler {
@@ -65,6 +67,10 @@ public class FileHandler {
         }
 
         return row;
+    }
+
+    public static void copyFile(File source, File dest) throws IOException {
+        Files.copy(source.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING);
     }
 
 }

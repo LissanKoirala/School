@@ -1,6 +1,5 @@
 package com.gui;
 
-import com.analyzer.backtesting.SMACrossoverTester;
 import com.analyzer.tools.SMA;
 import com.asset.Asset;
 import com.utils.FileHandler;
@@ -13,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.Timer;
 
-public class Simulate extends JPanel {
+public class SimulateGraphically extends JPanel {
     // canvas for other GUI widgets
 
     int width, height;
@@ -27,8 +26,8 @@ public class Simulate extends JPanel {
 
     // for paint canvas - putting it here for scopes
     ArrayList<Float> close_prices = new ArrayList<>();
-    ArrayList<Float> sma1 = new ArrayList<>();
-    ArrayList<Float> sma2 = new ArrayList<>();
+    ArrayList<Float> sma1_data = new ArrayList<>();
+    ArrayList<Float> sma2_data = new ArrayList<>();
 
     float highest_data_point;
     float previous_highest_data_point;
@@ -38,7 +37,7 @@ public class Simulate extends JPanel {
     Boolean previous_sma_crossover_buy_state;
 
     // TODO: Add a iframe and embed tradingview
-    public Simulate(int width, int height, Asset asset) throws Exception {
+    public SimulateGraphically(int width, int height, Asset asset, int sma1, int sma2) throws Exception {
         this.width = width;
         this.height = height;
         this.asset = asset;
@@ -80,15 +79,11 @@ public class Simulate extends JPanel {
 
         ArrayList<Float> all_historical_data = asset.getHistorical_data(5); // getting 5 - close price
 
-        // TODO: run the simulation for the highest returns in screen at last
-        SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(asset);
-        int[] data = smaCrossoverTester.simulate();
-        int bestsma1 = data[0];
-        int bestsma2 = data[1];
 
-        System.out.println(bestsma1 + " , " + bestsma2);
-        SMA SMA_1 = new SMA(bestsma1);
-        SMA SMA_2 = new SMA(bestsma2);
+
+        System.out.println(sma1 + " , " + sma2);
+        SMA SMA_1 = new SMA(sma1);
+        SMA SMA_2 = new SMA(sma2);
 
         ArrayList<Float> all_sma_data_1 =  SMA_1.getSMAData(asset);
         ArrayList<Float> all_sma_data_2 =  SMA_2.getSMAData(asset);
@@ -113,8 +108,8 @@ public class Simulate extends JPanel {
                     // TODO: add to the arraylist of lines... then repaint...
 
                     close_prices.add(historical_data.get(counter));
-                    sma1.add(sma_data_1.get(counter));
-                    sma2.add(sma_data_2.get(counter));
+                    sma1_data.add(sma_data_1.get(counter));
+                    sma2_data.add(sma_data_2.get(counter));
 
                     counter++;
                     repaint();
@@ -171,8 +166,8 @@ public class Simulate extends JPanel {
 
             int max_y_point = 630; // getting the point in the middle... making that tha base...
             float previous_close = (close_prices.get(0) / highest_data_point * (height / 2)) + 10; // getting the first data point as previous close so that it doesn't start from 0
-            float previous_sma1 = (sma1.get(0) / highest_data_point * (height / 2)) + 10;
-            float previous_sma2 = (sma2.get(0) / highest_data_point * (height / 2)) + 10;
+            float previous_sma1 = (sma1_data.get(0) / highest_data_point * (height / 2)) + 10;
+            float previous_sma2 = (sma2_data.get(0) / highest_data_point * (height / 2)) + 10;
 
             int day_counter = 20; // padding of 20 days to the left of screen in GUI
 
@@ -185,14 +180,14 @@ public class Simulate extends JPanel {
 
 
                 // printing the sma1
-                float current_sma1 = (sma1.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
+                float current_sma1 = (sma1_data.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
                 g.setColor(Color.RED);
                 g.drawLine(day_counter, max_y_point - (int) previous_sma1, day_counter + 1, max_y_point - (int) current_sma1); // TODO: adjust the +2 based on the number of data points
                 previous_sma1 = current_sma1;
 
 
                 // printing the sma2
-                float current_sma2 = (sma2.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
+                float current_sma2 = (sma2_data.get(i) / highest_data_point * (height / 2)) + 10; // 5 for close price
                 g.setColor(Color.GREEN);
                 g.drawLine(day_counter, max_y_point - (int) previous_sma2, day_counter + 1, max_y_point - (int) current_sma2); // TODO: adjust the +2 based on the number of data points
                 previous_sma2 = current_sma2;

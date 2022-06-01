@@ -1,18 +1,17 @@
 package com.utils;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Stack;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Utils {
     public Utils(){
     }
 
-    // convert to multi Dimension array
-    public String[][] convertToMultiDArray(String fileName, int column){ // only needs columns cause can find row with preious methods
+    // convert to multi Dimension array from a CSV
+    public static String[][] convertToMultiDArrayFromCSV(String fileName, int column){ // only needs columns cause can find row with preious methods
         FileHandler FileHandler = new FileHandler();
 
         int row = 0;
@@ -139,6 +138,5 @@ public class Utils {
 
         return newarraylist;
     }
-
 
 }

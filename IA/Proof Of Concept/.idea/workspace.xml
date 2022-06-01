@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding quotes to assets and showing prices on GUI based on market hours">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="&#10;GUI Improvements">
+      <change afterPath="$PROJECT_DIR$/data/default/export.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gui/SimulationResults.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/Simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/Simulate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/AlpacaAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/HistoricalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/GUICaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/GUICaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Simulate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/SimulateGraphically.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gui/GUICaller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utils/Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653932450744</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="&#10;GUI Improvements">
+      <created>1653944092299</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1653944092299</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -364,7 +379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Few Improvements" />
     <MESSAGE value="Skipped the caching of HistoricalData for now" />
     <MESSAGE value="Fixed Stock ticker bug, simulating a array of stocks..." />
     <MESSAGE value="Added Multi-Threading to simulation..." />
@@ -389,7 +403,8 @@
     <MESSAGE value="Solved a major bug, preventing program from crashing if null data points in HistoricalData" />
     <MESSAGE value="GUI improvements, Padding and auto Capitalisation for ticker field" />
     <MESSAGE value="Adding quotes to assets and showing prices on GUI based on market hours" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding quotes to assets and showing prices on GUI based on market hours" />
+    <MESSAGE value="&#10;GUI Improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;GUI Improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

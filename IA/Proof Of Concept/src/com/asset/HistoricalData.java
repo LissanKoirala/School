@@ -4,9 +4,6 @@ import com.api.YahooFinanceApi;
 import com.utils.FileHandler;
 import com.utils.Utils;
 
-import java.io.File;
-import java.util.Arrays;
-
 public class HistoricalData {
     private YahooFinanceApi YFHandler = new YahooFinanceApi();
     private FileHandler fileHandler = new FileHandler();
@@ -27,7 +24,7 @@ public class HistoricalData {
 
 //        System.out.println(FileHandler.getRowNumber(filename)); // this many data points, could look good in console...
 
-        String[][] data = Utils.convertToMultiDArray(filename, 7); // 7 because it stays the same, 7 things in the column
+        String[][] data = Utils.convertToMultiDArrayFromCSV(filename, 7); // 7 because it stays the same, 7 things in the column
 
         Float[][] final_data;
 

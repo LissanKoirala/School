@@ -53,7 +53,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-//        Asset stock = Asset.create("EURGBP");
+        Asset stock = Asset.create("TSLA");
 //        System.out.println(stock.info);
 //        System.out.println(stock.getNewsData());
 
@@ -67,8 +67,9 @@ public class Main {
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 //        GUICaller.startup();
-        GUICaller.HomeScreen();
+//        GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
+        GUICaller.SimulationResults(stock);
 
 
 //        for(int i = 0; i < 5; i++) {
@@ -122,7 +123,5 @@ public class Main {
 
         // TODO: Add dates to the trades log... [for backtesting log]
 
-        Asset asset = Asset.create("AAPL");
-        System.out.println(asset.quote());
     }
 }

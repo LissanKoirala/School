@@ -92,7 +92,7 @@ public class AssetInfo extends JPanel {
         simulate.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
                 try {
-                    GUICaller.Simulate(asset);
+                    GUICaller.SimulationResults(asset);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

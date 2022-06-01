@@ -3,7 +3,6 @@ package com.gui;
 import com.asset.Asset;
 
 import javax.swing.*;
-import java.io.IOException;
 
 public class GUICaller {
     public GUICaller(){
@@ -33,10 +32,19 @@ public class GUICaller {
         frame.setVisible(true);
     }
 
-    public static void Simulate(Asset asset) throws Exception {
+    public static void SimulationResults(Asset asset) throws Exception {
+        System.out.println("SEQUENCE: SimulationResults");
+        JFrame frame = new JFrame("Simulation Results");
+        SimulationResults myGUI = new SimulationResults(600, 630, asset);
+        frame.add(myGUI);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public static void Simulate(Asset asset, int sma1, int sma2) throws Exception {
         System.out.println("SEQUENCE: Simulate");
         JFrame frame = new JFrame("Backdating");
-        Simulate myGUI = new Simulate(600, 630, asset);
+        SimulateGraphically myGUI = new SimulateGraphically(600, 630, asset, sma1, sma2);
         frame.add(myGUI);
         frame.pack();
         frame.setVisible(true);
