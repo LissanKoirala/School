@@ -48,3 +48,8 @@ THE STRATEGY WHILE I HOLD THE POSITION OR JUST FOR NEW POSITIONS?
 
 Using kind of inverse curves to determine the leverage to use, higher for smaller smas but lower for higher smas as intrests are higher and will be holding for long, also will make certain will not go over a certain limit...
 : https://www.youtube.com/watch?v=DDElFveODJU
+
+Covid correlation 
+
+Also correlation of one asset with another
+Mainly the delayed ones, run simulation with x days gap so see if one asset movement affects the another one
