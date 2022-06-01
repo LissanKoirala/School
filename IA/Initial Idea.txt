@@ -53,3 +53,7 @@ Covid correlation
 
 Also correlation of one asset with another
 Mainly the delayed ones, run simulation with x days gap so see if one asset movement affects the another one
+
+Acending order simulation results shown when clicked simulate with the info as a table and user
+can click to open that simulation as a graph, so make simulation constructor accept sma1 and sma2
+instead of figuring it out the best one itself
