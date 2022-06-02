@@ -11,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
@@ -57,7 +59,26 @@ public class SimulationResults extends JPanel {
 
         // top 5
         for (int i = 0; i<5; i++){
-            results[i] = new JButton("" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + simulation_results[i][2] + ", " + simulation_results[i][3]);
+            results[i] = new JButton();
+
+            float percentage_gain = Float.parseFloat(simulation_results[i][2]);
+            BigDecimal bd = new BigDecimal(percentage_gain);
+            bd = bd.round(new MathContext(5)); // TODO: make this relative
+            float rounded = bd.floatValue();
+
+            String gain;
+
+            if (rounded > 0){
+                gain = "\uD83D\uDD3B " + rounded + " %";
+            } else {
+                gain = "\uD83D\uDD3B " + rounded + " %";
+            }
+
+            String text = "" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + gain + ", " + simulation_results[i][3];
+            results[i].setText(text);
+
+
+
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
             results[i].setBounds(100,(i*35)+130, 310, 30);
             results[i].setHorizontalAlignment(SwingConstants.LEFT);
