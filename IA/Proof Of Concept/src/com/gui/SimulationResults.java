@@ -54,33 +54,54 @@ public class SimulationResults extends JPanel {
         // converting into 2D parsed csv file
         String[][] simulation_results = Utils.convertToMultiDArrayFromCSV("data/stock/" + asset.ticker + "/simulation-sma.csv", 4);
 
+
+        // Showing the best result
+        JButton top = new JButton();
+        top.setText("" + bestsma1 + ", " + bestsma2);
+        top.setBounds(100,135, 310, 30);
+        top.setHorizontalAlignment(SwingConstants.LEFT);
+        top.setContentAreaFilled(false);
+        top.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    GUICaller.Simulate(asset, bestsma1, bestsma2);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        add(top);
+
+
+
+
+
         // Showing top 5 results...
         JButton[] results = new JButton[5];
 
         // top 5
         for (int i = 0; i<5; i++){
-            results[i] = new JButton();
 
+            // padding the results
             float percentage_gain = Float.parseFloat(simulation_results[i][2]);
             BigDecimal bd = new BigDecimal(percentage_gain);
-            bd = bd.round(new MathContext(5)); // TODO: make this relative
+            bd = bd.round(new MathContext(4)); // TODO: make this relative
             float rounded = bd.floatValue();
 
             String gain;
 
             if (rounded > 0){
-                gain = "\uD83D\uDD3B " + rounded + " %";
+                gain = "+" + rounded + " %";
             } else {
-                gain = "\uD83D\uDD3B " + rounded + " %";
+                gain = "\uD83D\uDD3B -" + rounded + " %";
             }
 
+
+            results[i] = new JButton();
             String text = "" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + gain + ", " + simulation_results[i][3];
             results[i].setText(text);
-
-
-
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
-            results[i].setBounds(100,(i*35)+130, 310, 30);
+            results[i].setBounds(100,(i*35)+165, 310, 30);
             results[i].setHorizontalAlignment(SwingConstants.LEFT);
             results[i].setContentAreaFilled(false);
             int current = i;
