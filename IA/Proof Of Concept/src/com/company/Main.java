@@ -1,10 +1,10 @@
 package com.company;
 
+import com.analyzer.tools.Correlation;
 import com.api.AlpacaAPI;
 import com.asset.NewsData;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.gui.Correlation;
 import com.gui.GUICaller;
 import com.asset.Asset;
 import com.user.Watchlist;
@@ -68,7 +68,7 @@ public class Main {
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 //        GUICaller.startup();
-//        GUICaller.HomeScreen();
+        GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
         GUICaller.SimulationResults(stock);
 
@@ -126,8 +126,8 @@ public class Main {
 
         // TODO: Add dates to the trades log... [for backtesting log]
 
-        Correlation Correlation = new Correlation();
-        Correlation.find(watchlists.getAsString(), "2020-01-01", "2022-06-01");
+//        Correlation Correlation = new Correlation();
+//        Correlation.find(watchlists.getAsString(), "2020-01-01", "2022-06-01");
 
     }
 }

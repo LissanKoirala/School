@@ -44,6 +44,11 @@ public class SimulationResults extends JPanel {
         type.setBounds(100, 75, 150, 50);
         add(type);
 
+        JLabel name = new JLabel(asset.name);
+        name.setFont(new Font("Verdana", Font.BOLD, 15));
+        name.setBounds(100, 110, 350, 50);
+        add(name);
+
 
         SMACrossoverTester smaCrossoverTester = new SMACrossoverTester(asset);
         int[] data = smaCrossoverTester.simulate(); // does the simulation and saves it to a file...
@@ -56,8 +61,8 @@ public class SimulationResults extends JPanel {
 
         // Showing the best result
         JButton top = new JButton();
-        top.setText("" + bestsma1 + ", " + bestsma2 + ", " + paddGain(String.valueOf(data[2])) + ", " + data[3]);
-        top.setBounds(100,135, 310, 30);
+        top.setText("<html>" + bestsma1 + ", " + bestsma2 + ", " + paddGain(String.valueOf(data[2])) + ", " + data[3] + "</html>");
+        top.setBounds(100,160, 310, 30);
         top.setHorizontalAlignment(SwingConstants.LEFT);
         top.setContentAreaFilled(false);
         top.addActionListener(new ActionListener(){
@@ -82,10 +87,10 @@ public class SimulationResults extends JPanel {
         for (int i = 0; i<5; i++){
 
             results[i] = new JButton();
-            String text = "" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + paddGain(simulation_results[i][2]) + ", " + simulation_results[i][3];
+            String text = "<html>" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + paddGain(simulation_results[i][2]) + ", " + simulation_results[i][3] + "</html>";
             results[i].setText(text);
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
-            results[i].setBounds(100,(i*35)+165, 310, 30);
+            results[i].setBounds(100,(i*35)+195, 310, 30);
             results[i].setHorizontalAlignment(SwingConstants.LEFT);
             results[i].setContentAreaFilled(false);
             int current = i;
@@ -130,8 +135,6 @@ public class SimulationResults extends JPanel {
             }
         });
         add(export);
-
-
     }
 
     private String paddGain(String text){
@@ -143,10 +146,11 @@ public class SimulationResults extends JPanel {
 
         String gain;
 
+        // TODO: Use local files
         if (rounded > 0){
-            gain = "+" + rounded + " %";
+            gain = "<img src='" + new File("data/default/profit.png").toURI() + "' width='9' height='10'> " + rounded + " %";
         } else {
-            gain = "\uD83D\uDD3B -" + rounded + " %";
+            gain = "<img src='" + new File("data/default/loss.png").toURI() + "' width='9' height='9'> " + rounded + " %";
         }
         return gain;
     }

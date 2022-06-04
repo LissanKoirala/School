@@ -1,4 +1,4 @@
-package com.gui;
+package com.analyzer.tools;
 
 import java.io.IOException;
 
