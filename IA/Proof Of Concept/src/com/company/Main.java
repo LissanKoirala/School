@@ -2,6 +2,7 @@ package com.company;
 
 import com.analyzer.tools.Correlation;
 import com.api.AlpacaAPI;
+import com.api.FinnhubAPI;
 import com.asset.NewsData;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -25,6 +26,8 @@ public class Main {
 
 
         AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
+        FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
+
 //        System.out.println(AlpacaAPIHandler.clock());
 //        System.out.println(AlpacaAPIHandler.account());
 //        System.out.println(AlpacaAPIHandler.orders());
@@ -70,7 +73,7 @@ public class Main {
 //        GUICaller.startup();
         GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
-        GUICaller.SimulationResults(stock);
+//        GUICaller.SimulationResults(stock);
 
 
 //        for(int i = 0; i < 5; i++) {

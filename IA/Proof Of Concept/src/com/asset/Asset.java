@@ -1,6 +1,7 @@
 package com.asset;
 
 import com.api.AlpacaAPI;
+import com.api.RequestHandler;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -26,10 +27,9 @@ public class Asset {
     public ImageIcon icon = new ImageIcon("data/default/default.jpg"); // if icon not found... will only happen for crypto
 
     public String country, industry, weburl, marketcap, ipo;
-
+    public String about = null;
     public JsonObject info;
-
-    public boolean other_info_flag = true; // will be false if fetching other info was unsuccessful...
+    File local_icon;
 
     // points to a class of price data and news data, they will be created on the constructor of the class
     // data will be parsed and stored in a way that can be processed later
@@ -40,6 +40,7 @@ public class Asset {
 
     AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
     HistoricalData HistoricalDataGetter = new HistoricalData();
+    RequestHandler RequestHandler = new RequestHandler();
 
 
     // instantiate the stock with getting useful data automatically
@@ -51,7 +52,7 @@ public class Asset {
             directory.mkdirs();
         }
 
-        // info about the stock
+        // info about the asset, TODO: add to criterion, will work for stocks and cryptos, use of inheritance
         try {
 
             // using sources to get the relevant data about the stock...
@@ -63,32 +64,27 @@ public class Asset {
             this.exchange = info.get("exchange").getAsString();
             this.type = info.get("class").getAsString();
 
+            // TODO: Try using this, this gets the info about the company...
+            // https://lissanchatbot.herokuapp.com/get?msg=ticker
+            // TODO: works but taking long to load
+//            try {
+//                // TODO: See if the response is actually about the asset
+//                String response = RequestHandler.getString("https://lissanchatbot.herokuapp.com/get?msg="+ticker);
+//                if(!response.equals("Sorry, I cannot think of a reply for that!")){
+//                    this.about = response;
+//                }
+//            } catch (Exception e){
+//                System.out.println(e);
+//            }
+
+
 
             // checking if local file for icon exists // TODO: add this to criterion for caching complexity
-            File local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
+            local_icon = new File("data/stock/" + ticker + "/" + ticker + ".png");
             if (local_icon.exists()) {
                 this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
             }
 
-            // Trying to get other info from finnhub... won't work for cryptos...
-            // we only want to run this if it's not a crypto // TODO: make it neater by perhaps adding it to a different function
-
-            if (!type.equals("crypto")) { // speeds us the program as doesn't need to do unnecessary requests...
-
-                // checking if local file for icon exists // TODO: add this to criterion for caching complexity
-                if (!local_icon.exists()) { // if file doesn't exists// setting the icon to the local file if exists
-
-                    String url = "https://companiesmarketcap.com/img/company-logos/128/" + ticker + ".png";
-
-                    try (InputStream in = new URL(url).openStream()) {
-                        Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
-                    } catch (Exception e){
-                        System.out.println("Icon error : " + e);
-                    }
-
-                    this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
-                }
-            }
 
         } catch (Exception e){ // if stock doesn't exists
             System.out.println("Stock Not Found");
@@ -111,7 +107,6 @@ public class Asset {
                 // TODO: try forex, else say doesn't exists... throw an exception if the stock doesn't exists
                 return new Forex(ticker);
         }
-
     }
 
     public static String type(String ticker) throws Exception { // returns if it's a stock or crypto
@@ -141,7 +136,6 @@ public class Asset {
         }
         return row_prices;
     }
-
 
     public JsonArray getNewsData() throws Exception {
         NewsData newsData = new NewsData();
