@@ -113,8 +113,10 @@ public class Main {
 //            }).start();
 //        }
 
-//        Watchlist watchlists = new Watchlist("default");
-//        String[] watchlist = watchlists.get();
+        Watchlist watchlists = new Watchlist("default");
+        String[] watchlist = watchlists.get();
+
+
 //        watchlist.addTicker("AAPL");
 //        watchlist.addTicker("TSLA");
 //        watchlist.addTicker("BTCUSD");
@@ -125,7 +127,7 @@ public class Main {
         // TODO: Add dates to the trades log... [for backtesting log]
 
         Correlation Correlation = new Correlation();
-        Correlation.find("AAPL,GOOG,TSLA,MSFT", "2020-01-01", "2022-06-01");
+        Correlation.find(watchlists.getAsString(), "2020-01-01", "2022-06-01");
 
     }
 }

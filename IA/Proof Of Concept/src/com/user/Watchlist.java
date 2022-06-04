@@ -11,6 +11,8 @@ public class Watchlist {
 
     // TODO: instantiate this class by reading in a file or just setting it to default
     public Watchlist(String name){
+        // TODO: these tickers need to be yf compatible somehow... to call the correlation function etc...
+        // TODO: instead of saving the ticker as string, save them as a ArrayList of class etc...
         addTicker("AAPL");
         addTicker("TSLA");
         addTicker("BTCUSD");
@@ -37,5 +39,13 @@ public class Watchlist {
         }
 
         return arraywatchlist;
+    }
+
+    public String getAsString(){
+        String tickers = "";
+        for (String s : watchlist) {
+            tickers += s + ",";
+        }
+        return tickers.substring(0, tickers.length() - 1); // removing the last character // https://www.baeldung.com/java-remove-last-character-of-string
     }
 }
