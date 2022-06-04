@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Improvements to SimulationResults GUI">
-      <change afterPath="$PROJECT_DIR$/Python/StockInfoServer.py" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Idea of saving Watchlist as a ArrayList of Asset classes instead of ticker strings">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdatepicker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source Code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Source Code.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/SimulationResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/SimulationResults.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
@@ -389,14 +390,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654350538333</updated>
     </task>
-    <task id="LOCAL-00042" summary="Improvements to SimulationResults GUI">
-      <created>1654358341364</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1654358341364</updated>
-    </task>
-    <option name="localTasksCounter" value="43" />
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -412,9 +406,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added more links to data sources..." />
     <MESSAGE value="Bug Fixes in backtesting and added simulation results" />
     <MESSAGE value="Labelled data" />
     <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets and makes the constructor clean &amp; added a new api" />
@@ -439,8 +435,7 @@
     <MESSAGE value="Adding the backtracking results at top" />
     <MESSAGE value="Added Correlation chart using Python, callable from Java, +few bug fixes" />
     <MESSAGE value="Idea of saving Watchlist as a ArrayList of Asset classes instead of ticker strings" />
-    <MESSAGE value="Improvements to SimulationResults GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to SimulationResults GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Idea of saving Watchlist as a ArrayList of Asset classes instead of ticker strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

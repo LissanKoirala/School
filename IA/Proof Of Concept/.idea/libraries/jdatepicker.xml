@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdatepicker" type="repository">
+    <properties maven-id="org.jdatepicker:jdatepicker:1.3.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jdatepicker/jdatepicker/1.3.4/jdatepicker-1.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

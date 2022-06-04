@@ -4,6 +4,9 @@ import com.analyzer.backtesting.SMACrossoverTester;
 import com.asset.Asset;
 import com.utils.FileHandler;
 import com.utils.Utils;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +18,10 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Properties;
 
 
 public class SimulationResults extends JPanel {
@@ -44,9 +51,15 @@ public class SimulationResults extends JPanel {
         type.setBounds(100, 75, 150, 50);
         add(type);
 
+
+        JLabel icon = new JLabel(asset.icon);
+        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        icon.setBounds(100,120, 32, 32);
+        add(icon);
+
         JLabel name = new JLabel(asset.name);
         name.setFont(new Font("Verdana", Font.BOLD, 15));
-        name.setBounds(100, 110, 350, 50);
+        name.setBounds(150, 110, 350, 50);
         add(name);
 
 
@@ -62,7 +75,7 @@ public class SimulationResults extends JPanel {
         // Showing the best result
         JButton top = new JButton();
         top.setText("<html>" + bestsma1 + ", " + bestsma2 + ", " + paddGain(String.valueOf(data[2])) + ", " + data[3] + "</html>");
-        top.setBounds(100,160, 310, 30);
+        top.setBounds(100,250, 310, 30);
         top.setHorizontalAlignment(SwingConstants.LEFT);
         top.setContentAreaFilled(false);
         top.addActionListener(new ActionListener(){
@@ -90,7 +103,7 @@ public class SimulationResults extends JPanel {
             String text = "<html>" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + paddGain(simulation_results[i][2]) + ", " + simulation_results[i][3] + "</html>";
             results[i].setText(text);
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
-            results[i].setBounds(100,(i*35)+195, 310, 30);
+            results[i].setBounds(100,(i*35)+285, 310, 30);
             results[i].setHorizontalAlignment(SwingConstants.LEFT);
             results[i].setContentAreaFilled(false);
             int current = i;
@@ -135,6 +148,39 @@ public class SimulationResults extends JPanel {
             }
         });
         add(export);
+
+
+        // start_date and end_date selector
+
+        JLabel start_time_l = new JLabel("Start time");
+//        start_time.setFont(new Font("Verdana", Font.BOLD, 20));
+        start_time_l.setBounds(100, 165, 150, 50);
+        add(start_time_l);
+
+        JLabel end_time_l = new JLabel("End Time");
+//        end_time.setFont(new Font("Verdana", Font.BOLD, 20));
+        end_time_l.setBounds(280, 165, 150, 50);
+        add(end_time_l);
+
+
+
+        UtilDateModel model = new UtilDateModel();
+//model.setDate(20,04,2014);
+// Need this...
+        Properties p = new Properties();
+        p.put("text.today", "Today");
+        p.put("text.month", "Month");
+        p.put("text.year", "Year");
+        JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
+// Don't know about the formatter, but there it is...
+        JDatePickerImpl start_time = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+        start_time.setBounds(100, 200, 120, 350);
+        add(start_time);
+
+        JDatePickerImpl end_time = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+        end_time.setBounds(280, 200, 120, 350);
+        add(end_time);
+
     }
 
     private String paddGain(String text){
@@ -155,5 +201,31 @@ public class SimulationResults extends JPanel {
         return gain;
     }
 
+
+}
+
+
+// Code Required for the JDatePicker to work
+// https://stackoverflow.com/a/26794863
+
+class DateLabelFormatter extends JFormattedTextField.AbstractFormatter {
+
+    private String datePattern = "yyyy-MM-dd";
+    private SimpleDateFormat dateFormatter = new SimpleDateFormat(datePattern);
+
+    @Override
+    public Object stringToValue(String text) throws ParseException {
+        return dateFormatter.parseObject(text);
+    }
+
+    @Override
+    public String valueToString(Object value) throws ParseException {
+        if (value != null) {
+            Calendar cal = (Calendar) value;
+            return dateFormatter.format(cal.getTime());
+        }
+
+        return "";
+    }
 
 }
