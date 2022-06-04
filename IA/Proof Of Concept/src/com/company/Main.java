@@ -4,6 +4,7 @@ import com.api.AlpacaAPI;
 import com.asset.NewsData;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.gui.Correlation;
 import com.gui.GUICaller;
 import com.asset.Asset;
 import com.user.Watchlist;
@@ -122,6 +123,9 @@ public class Main {
 
 
         // TODO: Add dates to the trades log... [for backtesting log]
+
+        Correlation Correlation = new Correlation();
+        Correlation.find("AAPL,GOOG,TSLA,MSFT", "2020-01-01", "2022-06-01");
 
     }
 }

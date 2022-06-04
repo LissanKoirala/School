@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Added simulation results for SMACrossovers" />
+    <list default="true" id="57c5fcaa-bac8-4fec-bb47-ca43f73304b6" name="Changes" comment="Added correlation graph with python, callable by the Java">
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/Python/AlpacaDataStream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/Python/Browser_plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/Python/PlotCorrelation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/Python/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IA/Proof Of Concept/Python/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/gui/Correlation.java" beforeDir="false" afterPath="$PROJECT_DIR$/IA/Proof Of Concept/src/com/analyzer/tools/Correlation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Python/AlpacaDataStream.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IA/Python/README.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +44,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept" />
+      <recent name="C:\Users\aryal\IdeaProjects\School\IA\Proof Of Concept\src\com\analyzer\tools" />
       <recent name="N:\Java\IA\Proof Of Concept" />
       <recent name="N:\Java\IA" />
     </key>

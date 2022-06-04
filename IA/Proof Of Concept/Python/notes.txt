@@ -1,0 +1,18 @@
+## If wanting to get the chart as a image file using an api call, use the following code:
+
+# from flask import Flask, request, send_from_directory
+# app = Flask(__name__)
+
+# # flask api endpoint to call the plot_correlation function
+# @app.route('/plot_correlation', methods=['GET'])
+# def get_correlation():
+#     tickers = request.args.get('tickers').split(',')
+#     start_date = request.args.get('start_date')
+#     end_date = request.args.get('end_date')
+
+#     plot_correlation(tickers, start_date, end_date) # saves to a file
+#     return send_from_directory('.', 'correlation.png')
+
+# # start the flask server
+# if __name__ == '__main__':
+#     app.run(debug=True)

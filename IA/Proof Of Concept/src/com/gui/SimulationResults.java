@@ -54,10 +54,9 @@ public class SimulationResults extends JPanel {
         // converting into 2D parsed csv file
         String[][] simulation_results = Utils.convertToMultiDArrayFromCSV("data/stock/" + asset.ticker + "/simulation-sma.csv", 4);
 
-
         // Showing the best result
         JButton top = new JButton();
-        top.setText("" + bestsma1 + ", " + bestsma2);
+        top.setText("" + bestsma1 + ", " + bestsma2 + ", " + paddGain(String.valueOf(data[2])) + ", " + data[3]);
         top.setBounds(100,135, 310, 30);
         top.setHorizontalAlignment(SwingConstants.LEFT);
         top.setContentAreaFilled(false);
@@ -82,23 +81,8 @@ public class SimulationResults extends JPanel {
         // top 5
         for (int i = 0; i<5; i++){
 
-            // padding the results
-            float percentage_gain = Float.parseFloat(simulation_results[i][2]);
-            BigDecimal bd = new BigDecimal(percentage_gain);
-            bd = bd.round(new MathContext(4)); // TODO: make this relative
-            float rounded = bd.floatValue();
-
-            String gain;
-
-            if (rounded > 0){
-                gain = "+" + rounded + " %";
-            } else {
-                gain = "\uD83D\uDD3B -" + rounded + " %";
-            }
-
-
             results[i] = new JButton();
-            String text = "" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + gain + ", " + simulation_results[i][3];
+            String text = "" + simulation_results[i][0] + ", " + simulation_results[i][1] + ", " + paddGain(simulation_results[i][2]) + ", " + simulation_results[i][3];
             results[i].setText(text);
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
             results[i].setBounds(100,(i*35)+165, 310, 30);
@@ -148,6 +132,23 @@ public class SimulationResults extends JPanel {
         add(export);
 
 
+    }
+
+    private String paddGain(String text){
+        // padding the results
+        float percentage_gain = Float.parseFloat(text);
+        BigDecimal bd = new BigDecimal(percentage_gain);
+        bd = bd.round(new MathContext(4)); // TODO: make this relative
+        float rounded = bd.floatValue();
+
+        String gain;
+
+        if (rounded > 0){
+            gain = "+" + rounded + " %";
+        } else {
+            gain = "\uD83D\uDD3B -" + rounded + " %";
+        }
+        return gain;
     }
 
 

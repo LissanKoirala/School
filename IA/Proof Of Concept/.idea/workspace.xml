@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding padding to the table">
-      <change afterPath="$PROJECT_DIR$/src/com/gui/Correlation.java" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding the backtracking results at top">
+      <change afterPath="$PROJECT_DIR$/Python/AlpacaDataStream.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/Browser_plotting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/PlotCorrelation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/Correlation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/analyzer/tools/Correlation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/SimulationResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/SimulationResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/AlpacaDataStream.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
@@ -366,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654174701452</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Adding the backtracking results at top">
+      <created>1654180826445</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1654180826445</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -385,7 +398,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Multi-Threading to simulation..." />
     <MESSAGE value="Made huge improvements to the backtesting" />
     <MESSAGE value="Few improvements and Added Trader class" />
     <MESSAGE value="Added more links to data sources..." />
@@ -410,7 +422,8 @@
     <MESSAGE value="&#10;GUI Improvements" />
     <MESSAGE value="Added a SimulationResult GUI, with an option to export the data" />
     <MESSAGE value="Adding padding to the table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding padding to the table" />
+    <MESSAGE value="Adding the backtracking results at top" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the backtracking results at top" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
