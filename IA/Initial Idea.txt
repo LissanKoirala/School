@@ -57,3 +57,17 @@ Mainly the delayed ones, run simulation with x days gap so see if one asset move
 Acending order simulation results shown when clicked simulate with the info as a table and user
 can click to open that simulation as a graph, so make simulation constructor accept sma1 and sma2
 instead of figuring it out the best one itself
+
+
+In the login page, add a already known user session button, so if there is a user that has previously logged in, we show a button with that user name,
+then when the user clicks it, we start instantiating the assets in their watchlists and saving them to a hashmap, so when that asset is needed, it much much
+quicker to load as it has already been instantiating when the user was typing in their password, or perhaps you could just make the homescreen start loading 
+and show to the user once the authentication process has been completed as we know what user's session we are starting as they clicked on their username.
+
+
+In the search bar, why not show suggestions? we can have a list of possible stocks, or just call the finnhub api, list of possible stocks might be a good idea,
+then show the stock on the drop down which are closest, this might also add to complexity for developing an algorithm that does the searching of the closest ticker,
+or name. yes, make it able to search by ticker and name, this would be very complex... then if the delay is not much, add the logo from the website's url, DON'T
+instantiate the whole Asset Class, that is just unnecessary.
+In the suggestions perhaps have like a [logo Apple Inc (NASDAQ:AAPL)] - also add the exchange perhaps, will benefit for the cryptocurrencies as the user can make
+the decision which exchange prices to use instead of us making it unilateral. 
