@@ -62,7 +62,7 @@ public class Main {
 //        float average = Math.average(numbs);
 //        System.out.println(average);
 
-        Asset stock = Asset.create("TSLA");
+//        Asset stock = Asset.create("TSLA");
 //        System.out.println(stock.info);
 //        System.out.println(stock.getNewsData());
 
@@ -76,7 +76,7 @@ public class Main {
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 //        GUICaller.startup();
-        GUICaller.HomeScreen();
+//        GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
 //        GUICaller.SimulationResults(stock);
 
@@ -146,6 +146,10 @@ public class Main {
 //        Correlation.find("GBTC,BTC-USD", "2020-01-01", "2022-06-01");
 
         HomeScreen.searchTickerOrName("");
+
+        Asset crypto = Asset.create("BTCUSD");
+        System.out.println(crypto.price());
+        System.out.println(crypto.quote());
 
 
     }

@@ -57,4 +57,12 @@ public class Crypto extends Asset {
         String quote = response.get("quote").getAsJsonObject().get("ap").getAsString();
         return quote;
     }
+
+    @Override
+    public String price() throws Exception {
+        JsonObject response = AlpacaAPIHandler.latestTradeCrypto(ticker).get(0).getAsJsonObject();
+        System.out.println(response);
+        String quote = response.get("trade").getAsJsonObject().get("p").getAsString();
+        return quote;
+    }
 }

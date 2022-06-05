@@ -148,6 +148,13 @@ public class Asset {
         return quote;
     }
 
+    public String price() throws Exception {
+        JsonObject response = AlpacaAPIHandler.latestTradeStock(ticker).get(0).getAsJsonObject();
+        System.out.println(response);
+        String quote = response.get("trade").getAsJsonObject().get("p").getAsString();
+        return quote;
+    }
+
 
     public String buy(int number){
         // TODO: Add this method to AlpacaAPI

@@ -62,4 +62,5 @@ public class Stock extends Asset {
         this.historical_data = HistoricalDataGetter.get(ticker, YFticker);
         return historical_data;
     }
+
 }

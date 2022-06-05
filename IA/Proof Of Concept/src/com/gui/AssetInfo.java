@@ -59,7 +59,7 @@ public class AssetInfo extends JPanel {
 
         // TODO: worth mentioning in Criterion C?
         if ((asset.type.equals("us_equity") && Calendar.isMarketOpen()) || asset.type.equals("crypto")){
-            JLabel price = new JLabel("Price : " + asset.quote());
+            JLabel price = new JLabel("Price : " + asset.price());
             price.setHorizontalAlignment(SwingConstants.LEFT);
             price.setBounds(170, 80, 100000, 40);
             add(price);

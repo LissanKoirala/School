@@ -106,5 +106,15 @@ public class AlpacaAPI {
         String request_url = "https://data.alpaca.markets/v1beta1/crypto/" + ticker + "/quotes/latest?exchange=FTXU";
         return make_request(request_url);
     }
+
+    public JsonArray latestTradeStock(String ticker) throws Exception {
+        String request_url = "https://data.alpaca.markets/v1beta1/stock/" + ticker + "/trades/latest?exchange=FTXU";
+        return make_request(request_url);
+    }
+
+    public JsonArray latestTradeCrypto(String ticker) throws Exception {
+        String request_url = "https://data.alpaca.markets/v1beta1/crypto/" + ticker + "/trades/latest?exchange=FTXU";
+        return make_request(request_url);
+    }
 }
 
