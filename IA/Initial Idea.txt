@@ -69,4 +69,5 @@ In the search bar, why not show suggestions? we can have a list of possible stoc
 then show the stock on the drop down which are closest, this might also add to complexity for developing an algorithm that does the searching of the closest ticker,
 or name. yes, make it able to search by ticker and name, this would be very complex... then if the delay is not much, add the logo from the website's url, DON'T
 instantiate the whole Asset Class, that is just unnecessary.
-In the suggestions perhaps have like a [logo Apple Inc (AAPL)] 
+In the suggestions perhaps have like a [logo Apple Inc (NASDAQ:AAPL)] - also add the exchange perhaps, will benefit for the cryptocurrencies as the user can make
+the decision which exchange prices to use instead of us making it unilateral. 
