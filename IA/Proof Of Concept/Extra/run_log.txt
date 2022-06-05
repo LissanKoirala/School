@@ -1,0 +1,221 @@
+STOCK: Saudi Aramco (2222.SR)
+STOCK: Apple (AAPL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Microsoft (MSFT), Found in Alpaca, Found in Yahoo Finance
+STOCK: Alphabet (Google) (GOOG), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Bitcoin (BTCUSD)
+STOCK: Amazon (AMZN), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Ethereum (ETHUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Tesla (TSLA), Found in Alpaca, Found in Yahoo Finance
+STOCK: Berkshire Hathaway (BRK-B)
+CRYPTO: Tether (USDTUSD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: USD Coin (USDCUSD)
+STOCK: Meta (Facebook) (FB), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: BNB (BNBUSD)
+CRYPTO: XRP (XRPUSD)
+STOCK: TSMC (TSM), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Cardano (ADAUSD)
+CRYPTO: Binance USD (BUSDUSD)
+STOCK: NVIDIA (NVDA), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Solana (SOLUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Johnson & Johnson (JNJ), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Dogecoin (DOGEUSD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Polkadot (DOTUSD)
+STOCK: UnitedHealth (UNH), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Wrapped Bitcoin (WBTCUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Visa (V), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: TRON (TRXUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Tencent (TCEHY), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Avalanche (AVAXUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Exxon Mobil (XOM), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Dai (DAIUSD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: SHIBA INU (SHIBUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: JPMorgan Chase (JPM), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: UNUS SED LEO (LEOUSD)
+STOCK: Samsung (005930.KS)
+CRYPTO: Polygon (MATICUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Mastercard (MA), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Cronos (CROUSD)
+CRYPTO: Litecoin (LTCUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Procter & Gamble (PG), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: NEAR Protocol (NEARUSD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Stellar (XLMUSD)
+STOCK: Chevron (CVX), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Uniswap (UNIUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Walmart (WMT), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Bitcoin Cash (BCHUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Kweichow Moutai (600519.SS)
+CRYPTO: FTX Token (FTTUSD)
+STOCK: Nestlé (NESN.SW)
+CRYPTO: Monero (XMRUSD)
+STOCK: LVMH (MC.PA)
+CRYPTO: Chainlink (LINKUSD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Bitcoin BEP2 (BTCBUSD)
+STOCK: Home Depot (HD), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Ethereum Classic (ETCUSD)
+CRYPTO: Algorand (ALGOUSD), Found in Alpaca, Found in Yahoo Finance
+STOCK: Pfizer (PFE), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Cosmos (ATOMUSD)
+STOCK: Roche (ROG.SW)
+STOCK: Bank of America (BAC)
+CRYPTO: Flow (FLOWUSD)
+STOCK: Eli Lilly (LLY), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: VeChain (VETUSD)
+STOCK: Coca-Cola (KO), Found in Alpaca, Found in Yahoo Finance
+CRYPTO: Hedera (HBARUSD)
+STOCK: AbbVie (ABBV)
+CRYPTO: Decentraland (MANAUSD)
+STOCK: Novo Nordisk (NVO)
+CRYPTO: ApeCoin (APEUSD)
+CRYPTO: Internet Computer (ICPUSD)
+STOCK: Alibaba (BABA), Found in Alpaca, Found in Yahoo Finance
+...
+STOCK: Cepton (CPTN), Found in Alpaca, Found in Yahoo Finance
+STOCK: DHI Group (DHX), Found in Alpaca, Found in Yahoo Finance
+STOCK: REE Automotive (REE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Teekay (TK), Found in Alpaca, Found in Yahoo Finance
+STOCK: Willdan Group (WLDN), Found in Alpaca, Found in Yahoo Finance
+STOCK: Velodyne Lidar (VLDR), Found in Alpaca, Found in Yahoo Finance
+STOCK: Sequent Scientific (SEQUENT.NS)
+STOCK: Hyderabad Industries Limited (HIL.NS)
+STOCK: Planet13 (PLTH.CN)
+STOCK: HIVE Blockchain Technologies (HIVE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Summit Financial Group (SMMF), Found in Alpaca, Found in Yahoo Finance
+STOCK: Spandana Sphoorty Financial (SPANDANA.NS)
+STOCK: Athira Pharma (ATHA), Found in Alpaca, Found in Yahoo Finance
+STOCK: Third Coast Bancshares (TCBX), Found in Alpaca, Found in Yahoo Finance
+STOCK: SciPlay (SCPL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Ramkrishna Forgings (RKFORGE.NS)
+STOCK: Comtech Telecommunications (CMTL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Gaotu Techedu (GOTU), Found in Alpaca, Found in Yahoo Finance
+STOCK: HBL Power Systems (HBLPOWER.NS)
+STOCK: Astronics Corporation (ATRO), Found in Alpaca, Found in Yahoo Finance
+STOCK: CyberOptics (CYBE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Arvind (ARVIND.NS)
+STOCK: Rite Aid (RAD), Found in Alpaca, Found in Yahoo Finance
+STOCK: C4 Therapeutics (CCCC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Macquarie Infrastructure (MIC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Northwest Pipe Company (NWPX), Found in Alpaca, Found in Yahoo Finance
+STOCK: IRSA Propiedades Comerciales (IRCP)
+STOCK: BCB Bancorp (BCBP), Found in Alpaca, Found in Yahoo Finance
+sleep 3 seconds and retrying https://paper-api.alpaca.markets/v2/assets/SCHNEIDER.NS 3 more time(s)...
+STOCK: Schneider Electric Infrastructure (SCHNEIDER.NS)
+STOCK: LexinFintech Holdings (LX), Found in Alpaca, Found in Yahoo Finance
+STOCK: India Glycols (INDIAGLYCO.NS)
+STOCK: Ooma (OOMA), Found in Alpaca, Found in Yahoo Finance
+STOCK: Digimarc (DMRC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Action Construction Equipment (ACE.NS)
+STOCK: GasLog Partners (GLOP), Found in Alpaca, Found in Yahoo Finance
+STOCK: Sierra Bancorp (BSRR), Found in Alpaca, Found in Yahoo Finance
+STOCK: First Bancorp (FNLC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Solo Brands (DTC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Mersana Therapeutics (MRSN), Found in Alpaca, Found in Yahoo Finance
+STOCK: Orient Cement (ORIENTCEM.NS)
+STOCK: HilleVax (HLVX), Found in Alpaca, Found in Yahoo Finance
+STOCK: Marvelous (7844.T)
+STOCK: FutureFuel (FF), Found in Alpaca, Found in Yahoo Finance
+STOCK: The Original BARK Company (BARK), Found in Alpaca, Found in Yahoo Finance
+STOCK: ReneSola (SOL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Siyaram Silk Mills (SIYSIL.NS)
+STOCK: Powell Industries (POWL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Automotive Axles (AUTOAXLES.NS)
+STOCK: Generation Bio (GBIO), Found in Alpaca, Found in Yahoo Finance
+STOCK: Caesarstone (CSTE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Radiant Logistics (RLGT), Found in Alpaca, Found in Yahoo Finance
+STOCK: Bafang Yunji (2753.TW)
+STOCK: Valens Semiconductor (VLN), Found in Alpaca, Found in Yahoo Finance
+STOCK: National Fertilizers (NFL.NS)
+STOCK: Somany Ceramics (SOMANYCERA.NS)
+STOCK: Hindustan Oil Exploration Company (HINDOILEXP.NS)
+STOCK: Alico (ALCO), Found in Alpaca, Found in Yahoo Finance
+STOCK: Hovnanian Enterprises (HOV), Found in Alpaca, Found in Yahoo Finance
+STOCK: KORE (KORE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Macatawa Bank (MCBC), Found in Alpaca, Found in Yahoo Finance
+STOCK: Preformed Line Products (PLPC), Found in Alpaca, Found in Yahoo Finance
+STOCK: First Guaranty Bancshares (FGBI), Found in Alpaca, Found in Yahoo Finance
+sleep 3 seconds and retrying https://paper-api.alpaca.markets/v2/assets/ITIC 3 more time(s)...
+STOCK: Investors Title Company (ITIC), Found in Alpaca, Found in Yahoo Finance
+STOCK: LianBio (LIAN), Found in Alpaca, Found in Yahoo Finance
+STOCK: BlackSky Technology (BKSY), Found in Alpaca, Found in Yahoo Finance
+STOCK: Inox Wind (INOXWIND.NS)
+STOCK: Filatex India (FILATEX.NS)
+STOCK: Benefitfocus (BNFT), Found in Alpaca, Found in Yahoo Finance
+STOCK: RumbleON (RMBL), Found in Alpaca, Found in Yahoo Finance
+STOCK: PTC India (PTC.NS)
+STOCK: Information Services Group (III), Found in Alpaca, Found in Yahoo Finance
+STOCK: UBM Development (UBS.VI)
+STOCK: Berkeley Lights (BLI), Found in Alpaca, Found in Yahoo Finance
+STOCK: Ashoka Buildcon (ASHOKA.NS)
+STOCK: Kimball International (KBAL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Unity Bancorp (UNTY), Found in Alpaca, Found in Yahoo Finance
+STOCK: EyePoint Pharmaceuticals (EYPT), Found in Alpaca, Found in Yahoo Finance
+STOCK: Heron Therapeutics (HRTX), Found in Alpaca, Found in Yahoo Finance
+STOCK: Dish TV (DISHTV.NS)
+STOCK: Build-A-Bear (BBW), Found in Alpaca, Found in Yahoo Finance
+STOCK: ACNB Corporation (ACNB), Found in Alpaca, Found in Yahoo Finance
+STOCK: Pollux Properti Indonesia (POLL.JK)
+STOCK: First Western Financial (MYFW), Found in Alpaca, Found in Yahoo Finance
+STOCK: Voltamp Transformers (VOLTAMP.NS)
+STOCK: Prime Focus (PFOCUS.NS)
+STOCK: Kezar Life Sciences (KZR), Found in Alpaca, Found in Yahoo Finance
+STOCK: Chicago Atlantic Real Estate Finance (REFI), Found in Alpaca, Found in Yahoo Finance
+STOCK: AN2 Therapeutics (ANTX), Found in Alpaca, Found in Yahoo Finance
+STOCK: Civista Bancshares (CIVB), Found in Alpaca, Found in Yahoo Finance
+STOCK: Centessa Pharmaceuticals (CNTA), Found in Alpaca, Found in Yahoo Finance
+STOCK: GrowGeneration (GRWG), Found in Alpaca, Found in Yahoo Finance
+STOCK: Hydrofarm (HYFM), Found in Alpaca, Found in Yahoo Finance
+STOCK: Ideanomics (IDEX), Found in Alpaca, Found in Yahoo Finance
+STOCK: Destination XL (DXLG), Found in Alpaca, Found in Yahoo Finance
+STOCK: Ellomay Capital (ELLO), Found in Alpaca, Found in Yahoo Finance
+STOCK: Northeast Bank (NBN), Found in Alpaca, Found in Yahoo Finance
+STOCK: Arteris (AIP), Found in Alpaca, Found in Yahoo Finance
+STOCK: Méliuz (CASH3.SA)
+STOCK: Jain Irrigation Systems (JISLDVREQS.NS)
+STOCK: Resonant (RESN)
+sleep 3 seconds and retrying https://paper-api.alpaca.markets/v2/assets/PCSB 3 more time(s)...
+STOCK: PCSB Financial (PCSB), Found in Alpaca, Found in Yahoo Finance
+STOCK: PolyMet (PLM), Found in Alpaca, Found in Yahoo Finance
+STOCK: First Business Financial Services (FBIZ), Found in Alpaca, Found in Yahoo Finance
+STOCK: Green Plains Partners (GPP), Found in Alpaca, Found in Yahoo Finance
+STOCK: Xeris Pharmaceuticals (XERS), Found in Alpaca, Found in Yahoo Finance
+STOCK: Latch (LTCH), Found in Alpaca, Found in Yahoo Finance
+STOCK: Parke Bancorp (PKBK), Found in Alpaca, Found in Yahoo Finance
+STOCK: Identiv (INVE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Iris Energy (IREN), Found in Alpaca, Found in Yahoo Finance
+STOCK: West Coast Paper Mills (WSTCSTPAPR.NS)
+STOCK: Argonaut Gold (AR.TO)
+STOCK: Home Bancorp (HBCP), Found in Alpaca, Found in Yahoo Finance
+STOCK: MBM Resources (5983.KL)
+STOCK: Time Technoplast (TIMETECHNO.NS)
+STOCK: Redwire (RDW), Found in Alpaca, Found in Yahoo Finance
+STOCK: Aemetis (AMTX), Found in Alpaca, Found in Yahoo Finance
+STOCK: Lightning eMotors (ZEV), Found in Alpaca, Found in Yahoo Finance
+STOCK: Akero Therapeutics (AKRO), Found in Alpaca, Found in Yahoo Finance
+STOCK: SeaSpine (SPNE), Found in Alpaca, Found in Yahoo Finance
+STOCK: TrueCar (TRUE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Whole Earth Brands (FREE), Found in Alpaca, Found in Yahoo Finance
+STOCK: Rigel Pharmaceuticals (RIGL), Found in Alpaca, Found in Yahoo Finance
+STOCK: Huttig Building Products (HBP)
+STOCK: AppHarvest (APPH), Found in Alpaca, Found in Yahoo Finance
+STOCK: IronNet (IRNT), Found in Alpaca, Found in Yahoo Finance
+STOCK: 11 bit studios (11B.WA)
+STOCK: RattanIndia Power (RTNPOWER.NS)
+STOCK: Air Busan (298690.KS)
+STOCK: A.S. Roma (ASR.MI)
+STOCK: Vst Tillers Tractors (VSTTILLERS.NS)
+STOCK: Greenply (GREENPLY.NS)
+sleep 3 seconds and retrying https://paper-api.alpaca.markets/v2/assets/NN 3 more time(s)...
+STOCK: NextNav (NN), Found in Alpaca, Found in Yahoo Finance
+STOCK: eGain (EGAN), Found in Alpaca, Found in Yahoo Finance
+STOCK: Vesuvius India (VESUVIUS.NS)
+STOCK: Puravankara (PURVA.NS)
+STOCK: Brightcove (BCOV), Found in Alpaca, Found in Yahoo Finance
+STOCK: Tupperware Brands (TUP), Found in Alpaca, Found in Yahoo Finance
+STOCK: Unifi (UFI), Found in Alpaca, Found in Yahoo Finance
+STOCK: Motorcar Parts of America (MPAA), Found in Alpaca, Found in Yahoo Finance
+STOCK: eHealth (EHTH), Found in Alpaca, Found in Yahoo Finance
+STOCK: MM Forgings (MMFL.NS)
+STOCK: Rent the Runway (RENT), Found in Alpaca, Found in Yahoo Finance
+STOCK: Momentus (MNTS), Found in Alpaca, Found in Yahoo Finance
+STOCK: Eneti (NETI), Found in Alpaca, Found in Yahoo Finance
+
+Execution time: 1854.141987323761 seconds

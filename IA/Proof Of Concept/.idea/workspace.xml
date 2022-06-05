@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding an autocomplete for ticker search GUI, successfully collected famous/all stock, crypto forex tickers">
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding current price for asset">
       <change afterPath="$PROJECT_DIR$/Extra/run_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Extra/ValidateYF.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extra/ValidateYF.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Extra/new_crypto_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Extra/new_crypto_list.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/api/AlpacaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/api/AlpacaAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Asset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Crypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Crypto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/asset/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/asset/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654439358558</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Adding current price for asset">
+      <created>1654442632204</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1654442632204</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -424,7 +424,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Labelled data" />
     <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets and makes the constructor clean &amp; added a new api" />
     <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api" />
     <MESSAGE value="Avoiding unnecessary API calls" />
@@ -449,7 +448,8 @@
     <MESSAGE value="Idea of saving Watchlist as a ArrayList of Asset classes instead of ticker strings" />
     <MESSAGE value="Improvements to SimulationResults GUI" />
     <MESSAGE value="Adding an autocomplete for ticker search GUI, successfully collected famous/all stock, crypto forex tickers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding an autocomplete for ticker search GUI, successfully collected famous/all stock, crypto forex tickers" />
+    <MESSAGE value="Adding current price for asset" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding current price for asset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
