@@ -18,6 +18,8 @@ import java.util.ArrayList;
 
 import static java.lang.Math.abs;
 
+// TODO: Useful info: https://www.cnbc.com/quotes/TSLA?tab=ownership & on Webull
+
 public class AssetInfo extends JPanel {
     // canvas for other GUI widgets
 
