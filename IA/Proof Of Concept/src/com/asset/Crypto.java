@@ -13,13 +13,13 @@ import java.nio.file.Paths;
 public class Crypto extends Asset {
 
     private String YFticker;
-    private String CMCticker;
+    private String Baseticker;
     CoinMarketCapAPI CoinMarketCapAPIHandler = new CoinMarketCapAPI();
 
     public Crypto(String ticker) throws Exception {
         super(ticker);
         this.YFticker = ticker.replace("USD", "-USD"); // convention ticker for YF...
-        this.CMCticker = ticker.replace("USD", "");
+        this.Baseticker = ticker.replace("USD", "");
         getHistorical_data();
 
 
@@ -30,9 +30,9 @@ public class Crypto extends Asset {
         if (local_icon.exists()) {
             this.icon = new ImageIcon("data/stock/" + ticker + "/" + ticker + ".png"); // setting the icon to the local file if exists
         } else {
-            JsonObject response = CoinMarketCapAPIHandler.crypto_info(CMCticker).get(0).getAsJsonObject();
+            JsonObject response = CoinMarketCapAPIHandler.crypto_info(Baseticker).get(0).getAsJsonObject();
             JsonObject data = response.get("data").getAsJsonObject();
-            data = data.get(CMCticker).getAsJsonObject();
+            data = data.get(Baseticker).getAsJsonObject();
 
             String url = data.get("logo").getAsString().replace("64x64","128x128"); // asking for a higher quality image...
 

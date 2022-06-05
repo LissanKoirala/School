@@ -12,9 +12,12 @@ import java.nio.file.Paths;
 // https://companiesmarketcap.com/
 public class Stock extends Asset {
     FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
+    private String YFticker;
+
 
     public Stock(String ticker) throws Exception {
         super(ticker);
+        this.YFticker = ticker.replace(".", "-"); // convention ticker for YF...
         getHistorical_data();
 
         // adding basic info to the stock
@@ -24,7 +27,7 @@ public class Stock extends Asset {
         // checking if local file for icon exists // TODO: add this to criterion for caching complexity
         if (!local_icon.exists()) { // if file doesn't exists// setting the icon to the local file if exists
 
-            String url = "https://companiesmarketcap.com/img/company-logos/128/" + ticker + ".png";
+            String url = "https://companiesmarketcap.com/img/company-logos/128/" + YFticker + ".png";
 
             try (InputStream in = new URL(url).openStream()) {
                 Files.copy(in, Paths.get("data/stock/" + ticker + "/" + ticker + ".png"));
@@ -52,5 +55,11 @@ public class Stock extends Asset {
 //            System.out.println("Stock info not found in Finnhub...");
 //        }
 
+    }
+
+    @Override
+    public Float[][] getHistorical_data() throws Exception {
+        this.historical_data = HistoricalDataGetter.get(ticker, YFticker);
+        return historical_data;
     }
 }

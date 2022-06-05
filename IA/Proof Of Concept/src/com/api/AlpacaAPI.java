@@ -42,8 +42,13 @@ public class AlpacaAPI {
         return make_request(request_url);
     }
 
-    public JsonArray assets() throws Exception {
-        String request_url = base_url+"/v2/assets";
+    public JsonArray getStockList() throws Exception {
+        String request_url = base_url+"/v2/assets?asset_class=us_equity";
+        return make_request(request_url);
+    }
+
+    public JsonArray getCryptoList() throws Exception {
+        String request_url = base_url+"/v2/assets?asset_class=crypto";
         return make_request(request_url);
     }
 

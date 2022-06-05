@@ -8,9 +8,13 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.gui.GUICaller;
 import com.asset.Asset;
+import com.gui.HomeScreen;
 import com.user.Watchlist;
+import com.utils.FileHandler;
+import com.utils.Utils;
 
 import javax.swing.*;
+import java.io.File;
 import java.util.Arrays;
 
 public class Main {
@@ -27,6 +31,7 @@ public class Main {
 
         AlpacaAPI AlpacaAPIHandler = new AlpacaAPI();
         FinnhubAPI FinnhubAPIHandler = new FinnhubAPI();
+        FileHandler FileHandler = new FileHandler();
 
 //        System.out.println(AlpacaAPIHandler.clock());
 //        System.out.println(AlpacaAPIHandler.account());
@@ -75,6 +80,14 @@ public class Main {
 //        GUICaller.Simulate(stock);
 //        GUICaller.SimulationResults(stock);
 
+//        JsonArray data = AlpacaAPIHandler.getStockList();
+//        String value = String.valueOf(data);
+//        FileHandler.writeToFile("stock.csv", value, false);
+//
+//        data = AlpacaAPIHandler.getStockList();
+//        value = String.valueOf(data);
+//        FileHandler.writeToFile("crypto.csv", value, false);
+
 
 //        for(int i = 0; i < 5; i++) {
 //            MultiThreadRunner multiThreadRunner = new MultiThreadRunner();
@@ -116,8 +129,8 @@ public class Main {
 //            }).start();
 //        }
 
-        Watchlist watchlists = new Watchlist("default");
-        String[] watchlist = watchlists.get();
+//        Watchlist watchlists = new Watchlist("default");
+//        String[] watchlist = watchlists.get();
 
 
 //        watchlist.addTicker("AAPL");
@@ -130,7 +143,10 @@ public class Main {
         // TODO: Add dates to the trades log... [for backtesting log]
 
 //        Correlation Correlation = new Correlation();
-//        Correlation.find(watchlists.getAsString(), "2020-01-01", "2022-06-01");
+//        Correlation.find("GBTC,BTC-USD", "2020-01-01", "2022-06-01");
+
+        HomeScreen.searchTickerOrName("");
+
 
     }
 }

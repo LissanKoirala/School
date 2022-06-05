@@ -1,0 +1,7 @@
+crypto - https://www.investing.com/crypto/currencies
+stock - https://companiesmarketcap.com/?download=csv
+
+// TODO: make it dynamic, automatically get the data and update it...
+
+// Add to criterion: Ran this original list against the Yahoo Finance to elimate the ones that aren't there 
+as we need the historical data...

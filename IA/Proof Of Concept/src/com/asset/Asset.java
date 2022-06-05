@@ -87,7 +87,7 @@ public class Asset {
 
 
         } catch (Exception e){ // if stock doesn't exists
-            System.out.println("Stock Not Found");
+            System.out.println("Stock Not Found in Alpaca");
             System.out.println(e);
 
             this.ticker = ticker;

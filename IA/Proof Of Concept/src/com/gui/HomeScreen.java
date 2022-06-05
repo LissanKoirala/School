@@ -6,6 +6,7 @@ import com.asset.NewsData;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.user.Watchlist;
+import com.utils.Utils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -204,6 +205,44 @@ public class HomeScreen extends JPanel {
             add(newslabel[i]);
         }
 
+
+    }
+
+    public static String searchTickerOrName(String input){
+
+        String[][] stock_l = Utils.convertToMultiDArrayFromCSV("data/default/stocks.csv", 2);
+        String[][] crypto = Utils.convertToMultiDArrayFromCSV("data/default/crypto.csv", 2);
+        String[][] forex = Utils.convertToMultiDArrayFromCSV("data/default/forex.csv", 2);
+
+        String[][] combined = new String[stock_l.length + crypto.length + forex.length][3];
+
+        // combining stock and crypto
+        // TODO: missing 1 value at the start
+        for(int j = 0; j < stock_l.length + crypto.length + forex.length; j++){
+            if (j < stock_l.length){
+                combined[j][0] = stock_l[j][0];
+                combined[j][1] = stock_l[j][1];
+                combined[j][2] = "stock";
+
+            } else if (j > stock_l.length && j < stock_l.length + crypto.length){
+                combined[j][0] = crypto[j-(stock_l.length)][0];
+                combined[j][1] = crypto[j-(stock_l.length)][1];
+                combined[j][2] = "crypto";
+
+            } if (j > stock_l.length + crypto.length){
+                combined[j][0] = forex[j-(stock_l.length + crypto.length)][0];
+                combined[j][1] = forex[j-(stock_l.length + crypto.length)][1];
+                combined[j][2] = "forex";
+            }
+        }
+
+        // TODO: find matches for tickers & names
+        for(String[] s: combined){
+//            System.out.print("\"" + s[0] + " - (" + s[1].replace("\"", "'") + ")\", ");
+            System.out.println(Arrays.toString(s));
+        }
+
+        return "";
 
     }
 }
