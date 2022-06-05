@@ -76,7 +76,7 @@ public class Main {
         GUICaller GUICaller = new GUICaller();
 //        GUICaller.Login();
 //        GUICaller.startup();
-//        GUICaller.HomeScreen();
+        GUICaller.HomeScreen();
 //        GUICaller.Simulate(stock);
 //        GUICaller.SimulationResults(stock);
 
@@ -147,9 +147,9 @@ public class Main {
 
         HomeScreen.searchTickerOrName("");
 
-        Asset crypto = Asset.create("BTCUSD");
-        System.out.println(crypto.price());
-        System.out.println(crypto.quote());
+//        Asset crypto = Asset.create("BTCUSD");
+//        System.out.println(crypto.price());
+//        System.out.println(crypto.quote());
 
 
     }

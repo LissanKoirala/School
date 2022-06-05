@@ -44,7 +44,7 @@ public class AssetInfo extends JPanel {
 
         icon = new JLabel(asset.icon);
         icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
-        icon.setBounds(60,50, 64, 64);
+        icon.setBounds(70,50, 64, 64);
         add(icon);
 
         name = new JLabel(asset.name);

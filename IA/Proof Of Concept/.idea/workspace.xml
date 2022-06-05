@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Adding current price for asset">
-      <change afterPath="$PROJECT_DIR$/Extra/run_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra/ValidateYF.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extra/ValidateYF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra/new_crypto_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Extra/new_crypto_list.csv" afterDir="false" />
+    <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Proper validation of asset lists against AlpacaAPI and YahooFinanceAPI">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/AssetInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654442632204</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Proper validation of asset lists against AlpacaAPI and YahooFinanceAPI">
+      <created>1654447215575</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1654447215576</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -424,7 +433,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets and makes the constructor clean &amp; added a new api" />
     <MESSAGE value="Massive Upgrade, implemented Inheritance so that now it supports all the assets (stock, crypto, forex) and makes the constructor clean &amp; added a new api" />
     <MESSAGE value="Avoiding unnecessary API calls" />
     <MESSAGE value="Asset simulation works, animated graph is presented, with close price, sma1 and sma2, and they auto-scale vertically with price change, also screen is redrawn when scaling" />
@@ -449,7 +457,8 @@
     <MESSAGE value="Improvements to SimulationResults GUI" />
     <MESSAGE value="Adding an autocomplete for ticker search GUI, successfully collected famous/all stock, crypto forex tickers" />
     <MESSAGE value="Adding current price for asset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding current price for asset" />
+    <MESSAGE value="Proper validation of asset lists against AlpacaAPI and YahooFinanceAPI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proper validation of asset lists against AlpacaAPI and YahooFinanceAPI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
