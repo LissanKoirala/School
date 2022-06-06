@@ -207,7 +207,8 @@ public class HomeScreen extends JPanel {
 
 
     }
-
+    
+    // Add a text field that auto updates as you type, like below the JTextField, instead of the autocomplete thing I was planning about...
     public static String searchTickerOrName(String input){
 
         String[][] stock_l = Utils.convertToMultiDArrayFromCSV("data/default/stocks.csv", 2);
