@@ -8,9 +8,14 @@ import com.google.gson.JsonObject;
 import com.user.Watchlist;
 import com.utils.Utils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Arrays;
 
 // TODO: Considering making this the home page so will include other info as well...
@@ -151,16 +156,18 @@ public class HomeScreen extends JPanel {
         System.out.println(Arrays.toString(watchlist));
         counter = 20;
         JButton[] newslabel = new JButton[5];
+        JLabel[] newsicon = new JLabel[5];
         for (int i = 0; i < 2; i++) {
 
             JsonArray response = NewsData.get(watchlist[i], 1);
             JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
-
-            String header = "", summary = "", image = "";
+            System.out.println(newsdata);
+            String header = "", summary = "", link = "", image = "";
             try {
                 header = newsdata.get("headline").getAsString();
                 summary = newsdata.get("summary").getAsString();
-                image = newsdata.get("images").getAsJsonArray().get(0).getAsJsonObject().get("url").getAsString();
+                link = newsdata.get("url").getAsString();
+                image = newsdata.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
             } catch (Exception e){
                 System.out.println("Error fetching info from news");
                 System.out.println(e);
@@ -176,7 +183,6 @@ public class HomeScreen extends JPanel {
                 String temp = summary.substring(0, 148).strip();
                 summary = temp + "…";
             }
-
 
             newslabel[i] = new JButton();
             String imageInHtml = "<html>" +
@@ -198,11 +204,32 @@ public class HomeScreen extends JPanel {
 
             newslabel[i].setText(imageInHtml);
 
-//            newslabel[i].setIcon(new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
             newslabel[i].setBounds(60,(i*110)+180, 400, 105);
+            String finalLink = link;
+            newslabel[i].addActionListener(new ActionListener(){ // opens the news in browser
+                public void actionPerformed(ActionEvent ae){
+                    openWebpage(URI.create(finalLink));
+                }
+            });
 //            newslabel[i].setHorizontalAlignment(SwingConstants.LEFT);
             newslabel[i].setContentAreaFilled(false); // TODO: Try how this differs for MacOS
             add(newslabel[i]);
+
+
+            // the image
+            //String local_path = Utils.downloadFromLink(image); // downloading the image locally
+            BufferedImage news_image;
+            URL url = new URL(image);
+            news_image = ImageIO.read(url);
+
+            newsicon[i] = new JLabel();
+            newsicon[i].setIcon(new ImageIcon(new ImageIcon(news_image).getImage().getScaledInstance(93, 70, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
+//            newsicon[i].setIcon(new ImageIcon(news_image));
+            newsicon[i].setBounds(360,(i*110)+205, 93, 70);
+            add(newsicon[i]);
+
+
+
         }
 
 
@@ -245,5 +272,20 @@ public class HomeScreen extends JPanel {
 
         return "";
 
+    }
+
+
+    // https://stackoverflow.com/a/10967469
+    public static boolean openWebpage(URI uri) {
+        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+            try {
+                desktop.browse(uri);
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
     }
 }

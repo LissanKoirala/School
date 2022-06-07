@@ -53,7 +53,7 @@ public class SimulationResults extends JPanel {
 
 
         JLabel icon = new JLabel(asset.icon);
-        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
         icon.setBounds(100,120, 32, 32);
         add(icon);
 
@@ -125,7 +125,7 @@ public class SimulationResults extends JPanel {
 
         JButton export = new JButton("Export");
 //            results[i].setFont(new Font("Verdana", Font.BOLD,12));
-        export.setIcon(new ImageIcon(new ImageIcon("data/default/export.png").getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        export.setIcon(new ImageIcon(new ImageIcon("data/default/export.png").getImage().getScaledInstance(16, 16, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
         export.setBounds(300, 70, 100, 30);
         export.setHorizontalAlignment(SwingConstants.LEFT);
         export.setContentAreaFilled(false);

@@ -45,35 +45,36 @@ public class AssetInfo extends JPanel {
 
 
         icon = new JLabel(asset.icon);
-        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_DEFAULT))); // scaling the image properly so that there is no stretch
+        icon.setIcon(new ImageIcon(asset.icon.getImage().getScaledInstance(64, 64, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
         icon.setBounds(70,50, 64, 64);
         add(icon);
 
         name = new JLabel(asset.name);
+        name.setFont(new Font("Verdana", Font.BOLD, 15));
         name.setHorizontalAlignment(SwingConstants.LEFT);
-        name.setBounds(170, 40, 500, 40);
+        name.setBounds(170, 35, 500, 40);
         add(name);
 
         JLabel country_exchange = new JLabel("Exchange : " + asset.exchange);
         country_exchange.setHorizontalAlignment(SwingConstants.LEFT);
-        country_exchange.setBounds(170, 60, 100000, 40);
+        country_exchange.setBounds(170, 70, 100000, 15);
         add(country_exchange);
 
         // TODO: worth mentioning in Criterion C?
         if ((asset.type.equals("us_equity") && Calendar.isMarketOpen()) || asset.type.equals("crypto")){
             JLabel price = new JLabel("Price : " + asset.price());
             price.setHorizontalAlignment(SwingConstants.LEFT);
-            price.setBounds(170, 80, 100000, 10);
+            price.setBounds(170, 85, 100000, 15);
             add(price);
         }
 
         // TODO: bug in the graphics
-        JLabel about = new JLabel();
-        if (asset.about != null){
-            about.setText(asset.about); // "<html><h5>" + asset.about + "</h5></html>"
-            about.setBounds(170, 90, 300, 70);
-            add(about);
-        }
+//        if (asset.about != null){
+//            JLabel about = new JLabel();
+//            about.setText("<html><h5>" + asset.about + "</h5></html>");
+//            about.setBounds(170, 120, 300, 70);
+//            add(about);
+//        }
 
 
         // Using external api for charts...
@@ -100,7 +101,7 @@ public class AssetInfo extends JPanel {
         // TODO: Organise the action listener, make the class implement Action Listener
         simulate = new JButton("Simulate"); // TODO: or call it Backtesting/Backtracking?
         simulate.setFont(new Font("Verdana", Font.BOLD,12));
-        simulate.setBounds(170,200, 95, 25);
+        simulate.setBounds(170,120, 95, 25);
 
         simulate.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){

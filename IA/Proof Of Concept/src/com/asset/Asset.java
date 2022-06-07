@@ -67,15 +67,15 @@ public class Asset {
             // TODO: Try using this, this gets the info about the company...
             // https://lissanchatbot.herokuapp.com/get?msg=ticker
             // TODO: works but taking long to load
-            try {
-                // TODO: See if the response is actually about the asset
-                String response = RequestHandler.getString("https://lissanchatbot.herokuapp.com/get?msg="+ticker);
-                if(!response.equals("Sorry, I cannot think of a reply for that!")){
-                    this.about = response;
-                }
-            } catch (Exception e){
-                System.out.println(e);
-            }
+//            try {
+//                // TODO: See if the response is actually about the asset
+//                String response = RequestHandler.getString("https://lissanchatbot.herokuapp.com/get?msg="+ticker);
+//                if(!response.equals("Sorry, I cannot think of a reply for that!")){
+//                    this.about = response;
+//                }
+//            } catch (Exception e){
+//                System.out.println(e);
+//            }
 
 
 

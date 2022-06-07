@@ -2,6 +2,13 @@ package com.utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -139,5 +146,27 @@ public class Utils {
 
         return newarraylist;
     }
+
+    public static String downloadFromLink(String url, String path) throws URISyntaxException {
+        String filename = Paths.get(new URI(url).getPath()).getFileName().toString(); // getting the filepath name // https://stackoverflow.com/a/33871029
+        String saving_to = path + filename;
+        try (InputStream in = new URL(url).openStream()) {
+            Files.copy(in, Paths.get(saving_to), StandardCopyOption.REPLACE_EXISTING); // https://stackoverflow.com/a/17169576
+        } catch (Exception e){
+            System.out.println("Icon error : " + e);
+        }
+
+        return saving_to;
+    }
+
+    // downloads file, default to temp/downloads
+    public static String downloadFromLink(String url) throws URISyntaxException {
+        String filename = Paths.get(new URI(url).getPath()).getFileName().toString(); // getting the filepath name // https://stackoverflow.com/a/33871029
+        String saving_to = "data/temp/downloads/" + filename; // default save location
+
+        return downloadFromLink(url, saving_to);
+    }
+
+
 
 }
