@@ -63,17 +63,17 @@ public class AssetInfo extends JPanel {
         if ((asset.type.equals("us_equity") && Calendar.isMarketOpen()) || asset.type.equals("crypto")){
             JLabel price = new JLabel("Price : " + asset.price());
             price.setHorizontalAlignment(SwingConstants.LEFT);
-            price.setBounds(170, 80, 100000, 40);
+            price.setBounds(170, 80, 100000, 10);
             add(price);
         }
 
         // TODO: bug in the graphics
-//        if (asset.about != null){
-//            JLabel about = new JLabel();
-//            about.setText("<html><h5>" + asset.about + "</h5></html>");
-//            about.setBounds(170, 120, 300, 70);
-//            add(about);
-//        }
+        JLabel about = new JLabel();
+        if (asset.about != null){
+            about.setText(asset.about); // "<html><h5>" + asset.about + "</h5></html>"
+            about.setBounds(170, 90, 300, 70);
+            add(about);
+        }
 
 
         // Using external api for charts...
@@ -100,7 +100,7 @@ public class AssetInfo extends JPanel {
         // TODO: Organise the action listener, make the class implement Action Listener
         simulate = new JButton("Simulate"); // TODO: or call it Backtesting/Backtracking?
         simulate.setFont(new Font("Verdana", Font.BOLD,12));
-        simulate.setBounds(170,120, 95, 25);
+        simulate.setBounds(170,200, 95, 25);
 
         simulate.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){

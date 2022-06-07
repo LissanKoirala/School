@@ -108,7 +108,7 @@ public class AlpacaAPI {
     }
 
     public JsonArray latestTradeStock(String ticker) throws Exception {
-        String request_url = "https://data.alpaca.markets/v2/stocks/ + ticker + "/trades/latest?exchange=FTXU";
+        String request_url = "https://data.alpaca.markets/v2/stocks/" + ticker + "/trades/latest";
         return make_request(request_url);
     }
 
