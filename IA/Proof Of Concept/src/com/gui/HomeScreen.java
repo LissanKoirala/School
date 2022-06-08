@@ -211,7 +211,7 @@ public class HomeScreen extends JPanel {
 
                     "<style>h4 {\n" +
                     "font: 9px Verdana;\n" +
-                    "padding-right: 60px;\n"+
+                    "padding-right: 65px;\n"+
                     "font-weight: bold;\n"+
                     "};\n" +
                     "</style>"+
