@@ -18,8 +18,11 @@ public class Login extends JPanel implements ActionListener{
     JLabel passwordLabel;
     JPasswordField passwordField;
 
-    public Login(int width, int height, JFrame frame) {
+    GUICaller guiCaller;
+
+    public Login(int width, int height, JFrame frame, GUICaller guiCaller) {
         this.frame = frame;
+        this.guiCaller = guiCaller;
 
         System.out.println("SEQUENCE: GUI Login");
         this.setPreferredSize(new Dimension(width, height));
@@ -57,12 +60,11 @@ public class Login extends JPanel implements ActionListener{
         if (inputUsername.equals(username) && inputPassword.equals(password)){
             System.out.print("User Authenticated...");
             try {
-                GUICaller.HomeScreen();
-            } catch (Exception ex) {
+                guiCaller.setHomeScreenVisible(true);
+            } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
             frame.dispose();
-
 
         } else { // if authentication credentials invalid...
             JOptionPane.showMessageDialog(this, "Invalid Credentials, Try Again");

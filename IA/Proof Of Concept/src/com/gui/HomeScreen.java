@@ -68,6 +68,12 @@ public class HomeScreen extends JPanel {
         textfield.setMargin(new Insets(2,13,3,2)); // padding the text
         textfield.setBounds(60,100, 150, 30);
 
+        JLabel recommendation = new JLabel("Recommendation: ");
+        recommendation.setBounds(60,30, 150, 30);
+        add(recommendation);
+
+
+
         // TODO: currently only auto capitalizes, might add suggestions etc...
         textfield.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
@@ -75,6 +81,11 @@ public class HomeScreen extends JPanel {
                 if (Character.isLowerCase(keyChar)) {
                     e.setKeyChar(Character.toUpperCase(keyChar));
                 }
+
+                // TODO: Add a method for the recommendation
+                recommendation.setText(String.valueOf(keyChar));
+
+
             }
         });
 
@@ -162,13 +173,18 @@ public class HomeScreen extends JPanel {
             JsonArray response = NewsData.get(watchlist[i], 1);
             JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
             System.out.println(newsdata);
-            String header = "", summary = "", link = "", image = "";
+            String header = "", summary = "", link = "", image = null;
             try {
                 header = newsdata.get("headline").getAsString();
                 summary = newsdata.get("summary").getAsString();
                 link = newsdata.get("url").getAsString();
-                image = newsdata.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
-            } catch (Exception e){
+                try {
+                    image = newsdata.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
+                } catch (Exception e){
+                    System.out.println("No image found for the news");
+                }
+
+                } catch (Exception e){
                 System.out.println("Error fetching info from news");
                 System.out.println(e);
             }
@@ -218,16 +234,18 @@ public class HomeScreen extends JPanel {
 
             // the image
             //String local_path = Utils.downloadFromLink(image); // downloading the image locally
-            BufferedImage news_image;
-            URL url = new URL(image);
-            news_image = ImageIO.read(url);
+            if (image != null) {
+                BufferedImage news_image;
+                System.out.println(image);
+                URL url = new URL(image);
+                news_image = ImageIO.read(url);
 
-            newsicon[i] = new JLabel();
-            newsicon[i].setIcon(new ImageIcon(new ImageIcon(news_image).getImage().getScaledInstance(93, 70, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
-//            newsicon[i].setIcon(new ImageIcon(news_image));
-            newsicon[i].setBounds(360,(i*110)+205, 93, 70);
-            add(newsicon[i]);
-
+                newsicon[i] = new JLabel();
+                newsicon[i].setIcon(new ImageIcon(new ImageIcon(news_image).getImage().getScaledInstance(93, 70, Image.SCALE_SMOOTH))); // scaling the image properly so that there is no stretch
+                // newsicon[i].setIcon(new ImageIcon(news_image));
+                newsicon[i].setBounds(360, (i * 110) + 205, 93, 70);
+                add(newsicon[i]);
+            }
 
 
         }
