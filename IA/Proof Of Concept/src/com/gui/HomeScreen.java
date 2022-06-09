@@ -169,18 +169,29 @@ public class HomeScreen extends JPanel {
         counter = 20;
         JButton[] newslabel = new JButton[5];
         JLabel[] newsicon = new JLabel[5];
+
+        // getting the news data
+        ArrayList<JsonObject> newsdata = new ArrayList<>();
+
+        // TODO: worth mentioning in criterion C, the newer method of getting the news
+        int limit = 2;
+        JsonArray response = NewsData.get(Watchlists.getAsString(), limit);
+        System.out.println(response);
+        for (int i = 0; i<2; i++) {
+            newsdata.add(response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(i).getAsJsonObject());
+        }
+
+
         for (int i = 0; i < 2; i++) {
 
-            JsonArray response = NewsData.get(watchlist[i], 1);
-            JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
-            System.out.println(newsdata);
+            System.out.println(newsdata.get(i));
             String header = "", summary = "", link = "", image = null;
             try {
-                header = newsdata.get("headline").getAsString();
-                summary = newsdata.get("summary").getAsString();
-                link = newsdata.get("url").getAsString();
+                header = newsdata.get(i).get("headline").getAsString();
+                summary = newsdata.get(i).get("summary").getAsString();
+                link = newsdata.get(i).get("url").getAsString();
                 try {
-                    image = newsdata.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
+                    image = newsdata.get(i).get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
                 } catch (Exception e){
                     System.out.println("No image found for the news");
                 }
