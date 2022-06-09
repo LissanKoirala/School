@@ -16,6 +16,7 @@ import java.awt.image.BufferedImage;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 // TODO: Considering making this the home page so will include other info as well...
@@ -282,10 +283,21 @@ public class HomeScreen extends JPanel {
             }
         }
 
+        ArrayList<String> matches = new ArrayList<>(); // using ArrayList because we don't know the size yet...
+
         // TODO: find matches for tickers & names
         for(String[] s: combined){
-//            System.out.print("\"" + s[0] + " - (" + s[1].replace("\"", "'") + ")\", ");
-            System.out.println(Arrays.toString(s));
+
+//            System.out.println(Arrays.toString(s));
+
+            if(s[0] != null){
+                /* TODO: Take the first character and narrow the array down with similar matches
+                 Then take the first two character and narrow the array down, and so on
+                 do that until the array of matches is small enough to fit it the label, if not just truncate it
+                 */
+
+                // matches.add(...)
+            }
         }
 
         return "";
