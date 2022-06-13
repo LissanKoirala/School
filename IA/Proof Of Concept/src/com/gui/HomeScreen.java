@@ -16,6 +16,7 @@ import java.awt.image.BufferedImage;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 // TODO: Considering making this the home page so will include other info as well...
@@ -168,18 +169,29 @@ public class HomeScreen extends JPanel {
         counter = 20;
         JButton[] newslabel = new JButton[5];
         JLabel[] newsicon = new JLabel[5];
+
+        // getting the news data
+        ArrayList<JsonObject> newsdata = new ArrayList<>();
+
+        // TODO: worth mentioning in criterion C, the newer method of getting the news
+        int limit = 2;
+        JsonArray response = NewsData.get(Watchlists.getAsString(), limit);
+        System.out.println(response);
+        for (int i = 0; i<2; i++) {
+            newsdata.add(response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(i).getAsJsonObject());
+        }
+
+
         for (int i = 0; i < 2; i++) {
 
-            JsonArray response = NewsData.get(watchlist[i], 1);
-            JsonObject newsdata = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(0).getAsJsonObject();
-            System.out.println(newsdata);
+            System.out.println(newsdata.get(i));
             String header = "", summary = "", link = "", image = null;
             try {
-                header = newsdata.get("headline").getAsString();
-                summary = newsdata.get("summary").getAsString();
-                link = newsdata.get("url").getAsString();
+                header = newsdata.get(i).get("headline").getAsString();
+                summary = newsdata.get(i).get("summary").getAsString();
+                link = newsdata.get(i).get("url").getAsString();
                 try {
-                    image = newsdata.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
+                    image = newsdata.get(i).get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
                 } catch (Exception e){
                     System.out.println("No image found for the news");
                 }
@@ -211,7 +223,7 @@ public class HomeScreen extends JPanel {
 
                     "<style>h4 {\n" +
                     "font: 9px Verdana;\n" +
-                    "padding-right: 60px;\n"+
+                    "padding-right: 65px;\n"+
                     "font-weight: bold;\n"+
                     "};\n" +
                     "</style>"+
@@ -282,10 +294,21 @@ public class HomeScreen extends JPanel {
             }
         }
 
+        ArrayList<String> matches = new ArrayList<>(); // using ArrayList because we don't know the size yet...
+
         // TODO: find matches for tickers & names
         for(String[] s: combined){
-//            System.out.print("\"" + s[0] + " - (" + s[1].replace("\"", "'") + ")\", ");
-            System.out.println(Arrays.toString(s));
+
+//            System.out.println(Arrays.toString(s));
+
+            if(s[0] != null){
+                /* TODO: Take the first character and narrow the array down with similar matches
+                 Then take the first two character and narrow the array down, and so on
+                 do that until the array of matches is small enough to fit it the label, if not just truncate it
+                 */
+
+                // matches.add(...)
+            }
         }
 
         return "";
