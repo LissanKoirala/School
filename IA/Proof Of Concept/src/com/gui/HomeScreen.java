@@ -171,24 +171,35 @@ public class HomeScreen extends JPanel {
         JLabel[] newsicon = new JLabel[5];
 
         // getting the news data
-        ArrayList<JsonObject> newsdata = new ArrayList<>();
+        ArrayList<JsonObject> all_newsdata = new ArrayList<>();
 
         // TODO: worth mentioning in criterion C, the newer method of getting the news
         int limit = 5;
         JsonArray response = NewsData.get(Watchlists.getAsString(), limit);
         System.out.println(response);
         for (int i = 0; i<5; i++) {
-            JsonObject data = response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(i).getAsJsonObject();
-            if (!data.get("summary").getAsString().equals("\n")) {
-                System.out.println(data.get("summary").getAsString());
-                newsdata.add(data);
-                counter++;
+            all_newsdata.add(response.get(0).getAsJsonObject().get("news").getAsJsonArray().get(i).getAsJsonObject());
+        }
+
+        // only add the ones with content and image
+        ArrayList<JsonObject> newsdata = new ArrayList<>();
+        int count = 0;
+        for (JsonObject n: all_newsdata){
+            if (count < 2){
+                try {
+                    if (!n.get("summary").getAsString().equals("\n")) {
+                        n.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
+                        newsdata.add(n);
+                        count++;
+                    }
+                } catch (Exception ignored){} // do nothing if it's not in it
             }
         }
 
 
         for (int i = 0; i < 2; i++) {
 
+            System.out.println(newsdata.get(i));
             String header = "", summary = "", link = "", image = null;
             try {
                 header = newsdata.get(i).get("headline").getAsString();
@@ -200,7 +211,7 @@ public class HomeScreen extends JPanel {
                     System.out.println("No image found for the news");
                 }
 
-                } catch (Exception e){
+            } catch (Exception e){
                 System.out.println("Error fetching info from news");
                 System.out.println(e);
             }
@@ -268,7 +279,7 @@ public class HomeScreen extends JPanel {
 
 
     }
-    
+
     // Add a text field that auto updates as you type, like below the JTextField, instead of the autocomplete thing I was planning about...
     public static String searchTickerOrName(String input){
 

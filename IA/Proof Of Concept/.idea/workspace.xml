@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd2ade17-5ccd-4425-a36d-a464e655ad91" name="Changes" comment="Ideas for searching through the 3D array for ticker recommendation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/simulation-result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/simulation-result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gui/HomeScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
