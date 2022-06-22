@@ -70,7 +70,7 @@ public class HomeScreen extends JPanel {
         textfield.setBounds(60,100, 150, 30);
 
         JLabel recommendation = new JLabel("Recommendation: ");
-        recommendation.setBounds(60,30, 150, 30);
+        recommendation.setBounds(60,30, 250, 30);
         add(recommendation);
 
 
@@ -84,7 +84,8 @@ public class HomeScreen extends JPanel {
                 }
 
                 // TODO: Add a method for the recommendation
-                recommendation.setText(String.valueOf(keyChar));
+                String recommendations = searchTickerOrName(textfield.getText() + keyChar);
+                recommendation.setText(recommendations);
 
 
             }
@@ -187,7 +188,7 @@ public class HomeScreen extends JPanel {
         for (JsonObject n: all_newsdata){
             if (count < 2){
                 try {
-                    if (!n.get("summary").getAsString().equals("\n")) {
+                    if (!n.get("summary").getAsString().equals("") || !n.get("summary").getAsString().equals("\n")) {
                         n.get("images").getAsJsonArray().get(2).getAsJsonObject().get("url").getAsString();
                         newsdata.add(n);
                         count++;
@@ -222,8 +223,8 @@ public class HomeScreen extends JPanel {
                 header = temp + "…";
             }
 
-            if (summary.length() > 149){
-                String temp = summary.substring(0, 148).strip();
+            if (summary.length() > 145){
+                String temp = summary.substring(0, 144).strip();
                 summary = temp + "…";
             }
 
@@ -232,7 +233,7 @@ public class HomeScreen extends JPanel {
                     "<style>h5 {\n" +
                     "font: 8px Verdana;\n" +
                     "margin-top: -12px;\n" +
-                    "padding-right: 60px;\n"+
+                    "padding-right: 65px;\n"+
                     "};\n" +
                     "</style>" +
 
@@ -281,7 +282,7 @@ public class HomeScreen extends JPanel {
     }
 
     // Add a text field that auto updates as you type, like below the JTextField, instead of the autocomplete thing I was planning about...
-    public static String searchTickerOrName(String input){
+    public String searchTickerOrName(String input){
 
         String[][] stock_l = Utils.convertToMultiDArrayFromCSV("data/default/stocks.csv", 2);
         String[][] crypto = Utils.convertToMultiDArrayFromCSV("data/default/crypto.csv", 2);
@@ -312,21 +313,27 @@ public class HomeScreen extends JPanel {
         ArrayList<String> matches = new ArrayList<>(); // using ArrayList because we don't know the size yet...
 
         // TODO: find matches for tickers & names
-        for(String[] s: combined){
+        int counter = 0;
 
-//            System.out.println(Arrays.toString(s));
+        for (String[] element : combined){
 
-            if(s[0] != null){
-                /* TODO: Take the first character and narrow the array down with similar matches
-                 Then take the first two character and narrow the array down, and so on
-                 do that until the array of matches is small enough to fit it the label, if not just truncate it
-                 */
+            if (counter > 5){
+                break;
+            }
 
-                // matches.add(...)
+            if (element[0] != null) {
+                if (element[0].toLowerCase().contains(input.toLowerCase())) { // TODO: this works but would be better to implement the contains yourself
+                    matches.add(element[0]);
+                    counter++;
+                }
             }
         }
 
-        return "";
+        System.out.println(matches);
+
+
+
+        return String.valueOf(matches);
 
     }
 
