@@ -326,6 +326,11 @@ public class HomeScreen extends JPanel {
                     matches.add(element[0]);
                     counter++;
                 }
+                // if not found, try searching for the matching string in the stock name
+                else if (element[1].toLowerCase().contains(input.toLowerCase())) { // TODO: this works but would be better to implement the contains yourself
+                    matches.add(element[0]);
+                    counter++;
+                }
             }
         }
 
