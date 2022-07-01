@@ -2,6 +2,7 @@ package com.api;
 
 import java.util.Date;
 
+// TODO: try out features from https://yahoofinanceapi.com/
 public class YahooFinanceApi {
     private String historical_data_url = "https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%d&interval=%s&events=history&includeAdjustedClose=true";
     RequestHandler ReqHandler = new RequestHandler();
