@@ -27,3 +27,10 @@ White so it remains consistent, and the rest in dark mode... but might just be a
 // Commands to get git commit logs...
 $ git log --pretty=format:"%cD, %cr, %s" > history.csv
 $ git log --pretty=format:"%cr, %s" > history.csv
+
+
+
+// TODO: Develop the user preference class, save the preference of the user or the entire user data into a seperate folder named the username, then while logging in, initialize the class with that
+// TODO: Make the news section have one news from just the trending so the user doesn't miss out on the news
+// TODO: Save the output of the simulation onto a single database, at the start when user creates an account, make the user choose from the data he would like to train the model from and a option to have it auto update daily (crossover might never happen), monthly, etc. So that when the application starts, it can start those simulations and then user the stock info page is open, have the best SMAs shown on the top right, then the last actual trades executed if done so, below that an option to buy and sell
+// TODO: Then add a option to choose which stocks to track for crossovers to execute trades live
