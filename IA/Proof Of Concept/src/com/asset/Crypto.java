@@ -18,10 +18,10 @@ public class Crypto extends Asset {
 
     public Crypto(String ticker) throws Exception {
         super(ticker);
+        this.ticker = ticker;
         this.YFticker = ticker.replace("USD", "-USD"); // convention ticker for YF...
         this.Baseticker = ticker.replace("USD", "");
         getHistorical_data();
-
 
         // getting the right logo...
 

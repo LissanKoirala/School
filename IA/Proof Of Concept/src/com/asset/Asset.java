@@ -45,7 +45,7 @@ public class Asset {
 
     // instantiate the stock with getting useful data automatically
     public Asset(String ticker) throws Exception {
-
+        this.ticker = ticker;
         // Creating directory to store asset details
         File directory = new File("data/stock/" + ticker);
         if (! directory.exists()){
@@ -89,8 +89,6 @@ public class Asset {
         } catch (Exception e){ // if stock doesn't exists
             System.out.println("Stock Not Found in Alpaca");
             System.out.println(e);
-
-            this.ticker = ticker;
         }
     }
 
